@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tarot</string>
+
+    <!-- Read aloud by a screen reader -->
+    <string name="cd_back">Back</string>
+    <string name="cd_about">About</string>
+    <string name="cd_settings">Settings</string>
+
+    <!-- ============================================================ -->
+    <!-- The four tabs -->
+
+    <string name="tab_today">Today</string>
+    <string name="tab_spread">Spread</string>
+    <string name="tab_journal">Journal</string>
+    <string name="tab_cards">Cards</string>
+
+    <!-- ============================================================ -->
+    <!-- A card -->
+
+    <!-- After a card's name when it lay upside down. %1$s is the name -->
+    <string name="card_reversed_name">%1$s, reversed</string>
+    <string name="upright">Upright</string>
+    <string name="reversed">Reversed</string>
+    <!-- Over the meaning that applies to the card as it was drawn -->
+    <string name="drawn_upright">Drawn upright</string>
+    <string name="drawn_reversed">Drawn reversed</string>
+    <!-- Under a card on its own page -->
+    <string name="zoom_hint">Tap the card to see it whole and zoom in.</string>
+    <string name="zoom_how">Double-tap to zoom in, pinch to zoom, drag to move.</string>
+
+    <!-- ============================================================ -->
+    <!-- Today -->
+
+    <string name="today_title">The card for today</string>
+    <string name="today_keep">Keep in the journal</string>
+    <string name="today_kept">In the journal</string>
+
+    <!-- ============================================================ -->
+    <!-- Spreads -->
+
+    <string name="spread_daily">Card of the day</string>
+    <string name="spread_one">One card</string>
+    <string name="spread_three">Past, present, future</string>
+    <string name="spread_celtic">Celtic Cross</string>
+    <string name="spread_choose">Hold a question in mind, or none, and choose a spread. Each reading is kept in the journal.</string>
+    <plurals name="cards_count">
+        <item quantity="one">%1$s card</item>
+        <item quantity="other">%1$s cards</item>
+    </plurals>
+
+    <string name="pos_daily">Today</string>
+    <string name="pos_one">The card</string>
+
+    <string name="pos_three_1">Past</string>
+    <string name="pos_three_2">Present</string>
+    <string name="pos_three_3">Future</string>
+
+    <string name="pos_celtic_1">The heart of it</string>
+    <string name="pos_celtic_2">What crosses it</string>
+    <string name="pos_celtic_3">What is above</string>
+    <string name="pos_celtic_4">What is beneath</string>
+    <string name="pos_celtic_5">What is passing</string>
+    <string name="pos_celtic_6">What is coming</string>
+    <string name="pos_celtic_7">You</string>
+    <string name="pos_celtic_8">Around you</string>
+    <string name="pos_celtic_9">Hopes and fears</string>
+    <string name="pos_celtic_10">Where it leads</string>
+
+    <!-- A position in a spread with its number. %1$s is the number, %2$s the name -->
+    <string name="position_numbered">%1$s · %2$s</string>
+
+    <!-- ============================================================ -->
+    <!-- A reading -->
+
+    <string name="note">Note</string>
+    <string name="note_add">Add a note</string>
+    <string name="note_edit">Change the note</string>
+    <string name="note_hint">What was asked, what came to mind</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="draw_again">Draw again</string>
+    <string name="delete_reading">Delete this reading</string>
+    <string name="delete_reading_armed">Delete — tap again</string>
+
+    <!-- ============================================================ -->
+    <!-- Journal -->
+
+    <string name="journal_empty">Every reading is kept here with its date, its cards and any note. There are none yet.</string>
+    <!-- A journal row's first line. %1$s is the date, %2$s the spread -->
+    <string name="journal_row">%1$s · %2$s</string>
+    <!-- The marker after a reversed card's name in a short list of cards -->
+    <string name="reversed_short">%1$s (r)</string>
+
+    <!-- ============================================================ -->
+    <!-- Settings -->
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_reversals">Reversed cards</string>
+    <string name="settings_reversals_note">Cards may come out upside down, with meanings of their own. Off, every card is upright, today’s card too.</string>
+    <string name="settings_guide">Guide</string>
+    <string name="settings_export">Export the journal</string>
+    <string name="settings_export_note">A JSON file, saved where you choose</string>
+    <string name="export_done">The journal is saved.</string>
+    <string name="export_failed">The journal could not be saved there.</string>
+    <string name="export_file_name">tarot-journal.json</string>
+
+    <!-- ============================================================ -->
+    <!-- Guide -->
+
+    <string name="guide_title">Guide</string>
+
+    <string name="guide_deck">The deck</string>
+    <string name="guide_deck_1">A tarot deck has 78 cards in two parts.</string>
+    <string name="guide_deck_2">The 22 Major Arcana, or trumps, are numbered from 0, The Fool, to 21, The World. They stand for the larger themes in a life: beginnings and endings, choices, losses, change, and coming to rest.</string>
+    <string name="guide_deck_3">The 56 Minor Arcana are four suits of fourteen cards, much like playing cards: ace to ten, and four court cards. They speak of the everyday: work, people, worries, small joys.</string>
+    <string name="guide_deck_4">A reading puts cards in places that each ask something, and lets the pictures suggest an answer. The cards describe; they do not decide anything, and they do not tell the future.</string>
+
+    <string name="guide_suits">The suits</string>
+    <string name="guide_suits_1">Cups are feeling: love, friendship, the heart and what it wants.</string>
+    <string name="guide_suits_2">Swords are thought: decisions, words, conflict and truth, and the worry a busy mind makes.</string>
+    <string name="guide_suits_3">Wands are drive and will: energy, ambition, the start of things and the push to see them through.</string>
+    <string name="guide_suits_4">Pentacles are the material and practical: work, money, the body, home and the slow building of things.</string>
+    <string name="guide_suits_5">The numbers run roughly from a seed to a harvest. An ace is the suit at its first and purest; the middle numbers are its tests and turns; a ten is the suit carried as far as it goes, for better or worse.</string>
+    <string name="guide_suits_6">The court cards are often read as people, or as ways of being. A page is a student or a message; a knight is the suit in motion, sometimes too fast; a queen holds the suit from the inside; a king holds it outwardly, with authority.</string>
+
+    <string name="guide_reversed">Reversed cards</string>
+    <string name="guide_reversed_1">A card can come out upside down. A reversed card usually suggests the card’s meaning blocked, delayed, turned inward, or taken too far, rather than simply its opposite.</string>
+    <string name="guide_reversed_2">Each card here has an upright and a reversed meaning, and its page shows both, with the one that applies to how it was drawn first.</string>
+    <string name="guide_reversed_3">Some readers do not use reversals at all. Switch them off in Settings, under Reversed cards, and every card comes out upright, the card for today included.</string>
+
+    <string name="guide_spreads">The spreads</string>
+    <string name="guide_spreads_1">Before a reading, hold a question in mind. An open question works better than a yes or no one: “What should I know about…” rather than “Will…”. No question at all is fine too.</string>
+    <string name="guide_spreads_2">One card: a single card for the question, or for the day. Simple, and often enough.</string>
+    <string name="guide_spreads_3">Past, present, future: three cards, left to right. What led here, where things stand, and where they seem to be going if nothing changes.</string>
+    <string name="guide_spreads_4">Celtic Cross: ten cards, from Waite. In the cross: 1, the heart of the matter; 2, laid across it, what helps or hinders; 3, above, what is aimed at or hoped for; 4, beneath, the ground it stands on; 5, what is passing; 6, what is coming.</string>
+    <string name="guide_spreads_5">Up the staff on the right: 7, you, and how you meet it; 8, the people and place around you; 9, hopes and fears, which are often the same thing; 10, where it leads.</string>
+    <string name="guide_spreads_6">Read each card in its place, then look at the spread as a whole: which suits gather, how many trumps there are, which way the figures face.</string>
+
+    <string name="guide_about">About the deck</string>
+    <string name="guide_about_1">The pictures are Pamela Colman Smith’s, drawn for the deck Arthur Edward Waite devised and Rider published in London in 1909.</string>
+    <string name="guide_about_2">They come from scans of an original 1909 “Roses &amp; Lilies” printing, made by Saskia Jansen from her own deck and published on Wikimedia Commons. The drawings are in the public domain. Here they are in sixteen greys, for this screen.</string>
+    <string name="guide_about_3">The meanings are written for this app in plain words, drawing on Waite’s The Pictorial Key to the Tarot (1910), which is also in the public domain.</string>
+
+    <!-- ============================================================ -->
+    <!-- About -->
+
+    <string name="about_title">Tarot %1$s</string>
+    <string name="about_what">The journal stays on this phone. The app has no internet access.</string>
+    <string name="about_licence">GNU General Public License v3</string>
+    <string name="about_art">Cards drawn by Pamela Colman Smith, 1909, public domain</string>
+    <string name="about_icons">Icons from Material Symbols, Apache 2.0</string>
+    <string name="about_feed_the_llamas">feed the llamas</string>
+    <string name="about_no_browser">There is no browser on this phone to open that with.</string>
+    <string name="about_close">Close</string>
+    <string name="list_jump_setting">Letters and page dots</string>
+    <string name="list_jump_shown">Shown</string>
+    <string name="list_jump_hidden">Hidden</string>
+</resources>

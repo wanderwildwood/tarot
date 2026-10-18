@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The 78 cards: name, then upright keywords and meaning, then reversed keywords and meaning.
+  Written for this app in plain words, drawing on A. E. Waite's "The Pictorial Key to the
+  Tarot" (1910), which is in the public domain. They describe; they do not predict.
+  The arrays at the foot list them in deck order and are how the app finds them.
+-->
+<resources>
+    <!-- The Fool -->
+    <string name="card_m00_name">The Fool</string>
+    <string name="card_m00_up_keys">Beginnings, trust, an open road</string>
+    <string name="card_m00_up">A step taken before the way is known. This card is about setting out with fresh eyes and trusting the ground to be there. Innocence here is a strength as long as it keeps looking where it walks.</string>
+    <string name="card_m00_rev_keys">Carelessness, hesitation, a leap without looking</string>
+    <string name="card_m00_rev">The same step taken too lightly, or not taken at all. Something may be rushed without thought, or held back out of fear of looking foolish. It asks which of the two is happening.</string>
+    <!-- The Magician -->
+    <string name="card_m01_name">The Magician</string>
+    <string name="card_m01_up_keys">Skill, will, what is at hand</string>
+    <string name="card_m01_up">Everything needed is already on the table. The card points to focus and the ability to turn an idea into something real. It asks what you would make with the tools you already have.</string>
+    <string name="card_m01_rev_keys">Scattered effort, trickery, untapped skill</string>
+    <string name="card_m01_rev">Ability that is not being used, or is being used to impress rather than to make. Attention may be split too many ways. It can also point to someone, perhaps oneself, saying more than is true.</string>
+    <!-- The High Priestess -->
+    <string name="card_m02_name">The High Priestess</string>
+    <string name="card_m02_up_keys">Inner knowing, stillness, what is hidden</string>
+    <string name="card_m02_up">A quiet card about what is known without being said. There may be more under the surface of things than is showing yet. It suggests listening, waiting, and trusting a sense that has no words.</string>
+    <string name="card_m02_rev_keys">Surface, secrets, intuition ignored</string>
+    <string name="card_m02_rev">The inner voice is drowned out by noise, or set aside in favour of what is easier to explain. Something may be kept back that would be better known. A pause to listen is worth taking.</string>
+    <!-- The Empress -->
+    <string name="card_m03_name">The Empress</string>
+    <string name="card_m03_up_keys">Abundance, care, growth</string>
+    <string name="card_m03_up">Things growing in their own time: a garden, a body, a piece of work. The card is about nurture and the pleasure of the senses. It asks what is being tended and what tends you.</string>
+    <string name="card_m03_rev_keys">Neglect, dependence, a stalled season</string>
+    <string name="card_m03_rev">Care has gone out of balance, either withheld or given until nothing is left. Growth may feel stuck. It can point to the need to look after oneself as well as others.</string>
+    <!-- The Emperor -->
+    <string name="card_m04_name">The Emperor</string>
+    <string name="card_m04_up_keys">Structure, steadiness, authority</string>
+    <string name="card_m04_up">Order, boundaries and a firm hand. The card speaks of building something that holds and taking responsibility for it. Steadiness here is a gift to everyone who depends on it.</string>
+    <string name="card_m04_rev_keys">Rigidity, control, a shaky footing</string>
+    <string name="card_m04_rev">Structure has hardened into control, or the ground underneath has gone soft. Rules may be followed for their own sake. It asks where firmness helps and where it only holds on.</string>
+    <!-- The Hierophant -->
+    <string name="card_m05_name">The Hierophant</string>
+    <string name="card_m05_up_keys">Tradition, teaching, belonging</string>
+    <string name="card_m05_up">Shared ways, rituals and the people who keep them. The card is about learning from what has come before and finding a place in a group. A teacher, or the role of one, may matter now.</string>
+    <string name="card_m05_rev_keys">Questioning, one’s own path, empty form</string>
+    <string name="card_m05_rev">Old forms no longer fit, or are kept up without meaning. There may be a pull to find one’s own way rather than the expected one. It asks which customs still carry something real.</string>
+    <!-- The Lovers -->
+    <string name="card_m06_name">The Lovers</string>
+    <string name="card_m06_up_keys">Choice, union, shared values</string>
+    <string name="card_m06_up">Two things drawn together, and the choice that comes with it. The card is about relationship in the widest sense, and about choosing in line with what one values. Honesty with oneself is part of it.</string>
+    <string name="card_m06_rev_keys">Disharmony, imbalance, a choice avoided</string>
+    <string name="card_m06_rev">Something is out of alignment between people, or between what one says and does. A decision may be put off in the hope it makes itself. It asks what is really wanted.</string>
+    <!-- The Chariot -->
+    <string name="card_m07_name">The Chariot</string>
+    <string name="card_m07_up_keys">Direction, resolve, holding together</string>
+    <string name="card_m07_up">Pulling opposite forces into one direction. The card is about determination and self-command, moving forward without letting either horse run off. Progress comes from steering, not from speed.</string>
+    <string name="card_m07_rev_keys">Drift, force without aim</string>
+    <string name="card_m07_rev">Effort is pulling against itself, or pushing hard toward nowhere in particular. Control may have slipped. It may help to stop and choose a direction before going on.</string>
+    <!-- Strength -->
+    <string name="card_m08_name">Strength</string>
+    <string name="card_m08_up_keys">Patience, gentle courage, compassion</string>
+    <string name="card_m08_up">Strength that does not need to win by force. The figure closes the lion’s jaws with a calm hand. The card is about steady courage, kindness to what is wild, and quiet confidence.</string>
+    <string name="card_m08_rev_keys">Self-doubt, impatience, force</string>
+    <string name="card_m08_rev">Confidence has thinned, or patience has given way to force. Something wild inside or outside may feel out of hand. It asks for gentleness, first of all toward oneself.</string>
+    <!-- The Hermit -->
+    <string name="card_m09_name">The Hermit</string>
+    <string name="card_m09_up_keys">Solitude, reflection, a lamp held up</string>
+    <string name="card_m09_up">Stepping away to see more clearly. The card is about time alone, inner searching and the guidance that comes from experience. The lamp lights only the next few steps, and that is enough.</string>
+    <string name="card_m09_rev_keys">Isolation, withdrawal, a lamp put away</string>
+    <string name="card_m09_rev">Solitude has turned into isolation, or reflection has been avoided altogether. It may be time to come back to people, or to finally take the quiet that has been put off.</string>
+    <!-- Wheel of Fortune -->
+    <string name="card_m10_name">Wheel of Fortune</string>
+    <string name="card_m10_up_keys">Cycles, change, a turning point</string>
+    <string name="card_m10_up">Things turn, and what was down comes up. The card is about the larger rhythms that no one controls, and about meeting a change rather than fighting it. A turn of the wheel is under way.</string>
+    <string name="card_m10_rev_keys">Resistance, a downturn, holding on</string>
+    <string name="card_m10_rev">The wheel is turning in an unwelcome direction, or change is being resisted. Plans may stall. It asks what can be let go of, since the wheel will keep moving either way.</string>
+    <!-- Justice -->
+    <string name="card_m11_name">Justice</string>
+    <string name="card_m11_up_keys">Fairness, truth, consequence</string>
+    <string name="card_m11_up">Things weighed honestly. The card is about cause and effect, accountability, and decisions made with a clear head. It asks for fairness to others and to oneself.</string>
+    <string name="card_m11_rev_keys">Unfairness, avoidance, imbalance</string>
+    <string name="card_m11_rev">Something has been weighed wrongly, or a truth is being avoided. It may point to an imbalance that needs setting right, or to a choice whose consequences are not being faced.</string>
+    <!-- The Hanged Man -->
+    <string name="card_m12_name">The Hanged Man</string>
+    <string name="card_m12_up_keys">Pause, surrender, another view</string>
+    <string name="card_m12_up">Hanging still and seeing the world upside down. The card is about a willing pause, letting go of control, and the understanding that comes when one stops struggling. The face is calm.</string>
+    <string name="card_m12_rev_keys">Stalling, delay, resistance</string>
+    <string name="card_m12_rev">The pause has gone on too long, or is being fought instead of used. Something may be held in suspension out of reluctance to decide. It asks what new view is being missed.</string>
+    <!-- Death -->
+    <string name="card_m13_name">Death</string>
+    <string name="card_m13_up_keys">Endings, transition, clearing</string>
+    <string name="card_m13_up">Something comes to an end so that something else can begin. This card is rarely about a literal death. It speaks of a natural close, the shedding of what is finished, and the space that follows.</string>
+    <string name="card_m13_rev_keys">Clinging, stagnation, fear of change</string>
+    <string name="card_m13_rev">An ending is being resisted, and what is finished lingers. Change may be slowed but not stopped. It asks what is being kept alive past its time.</string>
+    <!-- Temperance -->
+    <string name="card_m14_name">Temperance</string>
+    <string name="card_m14_up_keys">Balance, moderation, blending</string>
+    <string name="card_m14_up">Pouring between two cups without spilling. The card is about patience, the middle way, and mixing different things into something whole. Healing and good timing belong to it.</string>
+    <string name="card_m14_rev_keys">Excess, haste, imbalance</string>
+    <string name="card_m14_rev">Something is overdone or rushed, and the mixture is off. Moderation has slipped in one direction. It asks for a slower hand and a return to balance.</string>
+    <!-- The Devil -->
+    <string name="card_m15_name">The Devil</string>
+    <string name="card_m15_up_keys">Attachment, habit, restriction</string>
+    <string name="card_m15_up">Chains that are looser than they look. The card points to habits, compulsions or bonds that hold one in place. The figures could lift the chains off, if they noticed.</string>
+    <string name="card_m15_rev_keys">Release, seeing the chain</string>
+    <string name="card_m15_rev">The hold of a habit or bond is loosening, or is finally being seen for what it is. It can mark the first step toward freedom. It may also warn of a pattern slipping back.</string>
+    <!-- The Tower -->
+    <string name="card_m16_name">The Tower</string>
+    <string name="card_m16_up_keys">Upheaval, sudden change, revelation</string>
+    <string name="card_m16_up">A structure built on a false footing comes down. The card is about sudden change and truths that cannot be ignored. It is uncomfortable, and it clears the ground for something sounder.</string>
+    <string name="card_m16_rev_keys">Averted, delayed, fear of collapse</string>
+    <string name="card_m16_rev">A change that needs to happen is being held off, or a fall is narrowly avoided. The pressure may still be there. It asks whether bracing against it is worth the cost.</string>
+    <!-- The Star -->
+    <string name="card_m17_name">The Star</string>
+    <string name="card_m17_up_keys">Hope, renewal, calm</string>
+    <string name="card_m17_up">After the storm, a clear night. The card is about quiet hope, healing and the sense of being guided. Water is poured out freely, and there is enough of it.</string>
+    <string name="card_m17_rev_keys">Discouragement, lost faith</string>
+    <string name="card_m17_rev">Hope has dimmed for a while, or seems out of reach. It may be hard to see the stars. It suggests looking for small sources of renewal rather than waiting for a large one.</string>
+    <!-- The Moon -->
+    <string name="card_m18_name">The Moon</string>
+    <string name="card_m18_up_keys">Uncertainty, dreams, the unclear</string>
+    <string name="card_m18_up">Moonlight that shows shapes but not details. The card is about uncertainty, imagination and fears that grow in the dark. Not everything is as it seems, and some of it is only seeming.</string>
+    <string name="card_m18_rev_keys">Confusion lifting, fear eased</string>
+    <string name="card_m18_rev">What was unclear begins to clear, or a fear loses its hold. It can also mean that a deception or self-deception is coming to light. Daylight is not far off.</string>
+    <!-- The Sun -->
+    <string name="card_m19_name">The Sun</string>
+    <string name="card_m19_up_keys">Joy, clarity, warmth</string>
+    <string name="card_m19_up">Plain daylight and a child on a horse. The card is about simple happiness, vitality and things seen clearly. It is one of the most open and warm cards in the deck.</string>
+    <string name="card_m19_rev_keys">Joy dimmed, passing clouds</string>
+    <string name="card_m19_rev">The warmth is there but muted, or expected too soon. Something may get in the way of enjoying what is good. It is a cloud passing over the sun, not night.</string>
+    <!-- Judgement -->
+    <string name="card_m20_name">Judgement</string>
+    <string name="card_m20_up_keys">Awakening, reckoning, a call</string>
+    <string name="card_m20_up">A trumpet sounds and the figures rise. The card is about waking up to something, taking stock of the past, and answering a call to change. It asks what has been heard.</string>
+    <string name="card_m20_rev_keys">Self-doubt, a call ignored</string>
+    <string name="card_m20_rev">The call is heard but not answered, or judgement turns harsh toward oneself. Old things may be weighed without being let go. It asks for honesty without condemnation.</string>
+    <!-- The World -->
+    <string name="card_m21_name">The World</string>
+    <string name="card_m21_up_keys">Completion, wholeness, arrival</string>
+    <string name="card_m21_up">A cycle closes and things come together. The card is about fulfilment, integration and the satisfaction of a thing done. The dancer moves freely within the wreath.</string>
+    <string name="card_m21_rev_keys">Unfinished, loose ends</string>
+    <string name="card_m21_rev">Something is nearly complete but not quite. A last step may be missing, or the ending is being put off. It asks what is needed to close the circle.</string>
+    <!-- Ace of Wands -->
+    <string name="card_wands01_name">Ace of Wands</string>
+    <string name="card_wands01_up_keys">Spark, inspiration, a new start</string>
+    <string name="card_wands01_up">A hand from a cloud offers a living branch. The card marks the first spark of energy or an idea, a beginning full of drive. It asks where that energy wants to go.</string>
+    <string name="card_wands01_rev_keys">Delay, a spark that will not catch</string>
+    <string name="card_wands01_rev">Energy is there but not catching, or a start keeps being put off. Enthusiasm may fade before it is used. It asks what is in the way.</string>
+    <!-- Two of Wands -->
+    <string name="card_wands02_name">Two of Wands</string>
+    <string name="card_wands02_up_keys">Planning, the wider view, a decision to come</string>
+    <string name="card_wands02_up">Standing on the battlements with the world in hand. The card is about looking ahead, weighing options and planning a next move. The ground already held is secure.</string>
+    <string name="card_wands02_rev_keys">Hesitation, fear of the unknown</string>
+    <string name="card_wands02_rev">Plans stay on paper, or the familiar is chosen out of caution. The wider world may feel too large. It asks what one small step would look like.</string>
+    <!-- Three of Wands -->
+    <string name="card_wands03_name">Three of Wands</string>
+    <string name="card_wands03_up_keys">Foresight, expansion, ships on the way</string>
+    <string name="card_wands03_up">Watching ships go out over the water. The card is about efforts already set in motion and looking further ahead. Patience and vision belong to it.</string>
+    <string name="card_wands03_rev_keys">Delays, a narrow view</string>
+    <string name="card_wands03_rev">Things set in motion are slow to come back, or the view has shrunk. Plans may need adjusting. It asks for patience without giving up.</string>
+    <!-- Four of Wands -->
+    <string name="card_wands04_name">Four of Wands</string>
+    <string name="card_wands04_up_keys">Celebration, home, a stable joy</string>
+    <string name="card_wands04_up">A garland between four staffs and people dancing beneath it. The card is about a happy settled time, homecoming and shared celebration. It is a moment worth marking.</string>
+    <string name="card_wands04_rev_keys">Unsettled, a celebration missed</string>
+    <string name="card_wands04_rev">Something feels unsettled at home or among others, or a good moment passes without being noticed. The joy is still there, perhaps quieter.</string>
+    <!-- Five of Wands -->
+    <string name="card_wands05_name">Five of Wands</string>
+    <string name="card_wands05_up_keys">Struggle, competition, clashing views</string>
+    <string name="card_wands05_up">Five figures waving staffs at each other. The card is about friction, rivalry and many voices at once. Not all of it is serious, and some of it is play.</string>
+    <string name="card_wands05_rev_keys">Avoiding conflict, tension easing</string>
+    <string name="card_wands05_rev">A conflict is avoided rather than settled, or the struggle is winding down. It may be a relief. It may also leave something unsaid.</string>
+    <!-- Six of Wands -->
+    <string name="card_wands06_name">Six of Wands</string>
+    <string name="card_wands06_up_keys">Recognition, progress, a return in good standing</string>
+    <string name="card_wands06_up">A rider crowned with laurel, cheered by the crowd. The card is about success acknowledged and confidence earned. It asks how to carry it well.</string>
+    <string name="card_wands06_rev_keys">Doubt, recognition withheld</string>
+    <string name="card_wands06_rev">Success feels hollow, or the recognition does not come. Confidence may wobble. It asks what success would mean without the crowd.</string>
+    <!-- Seven of Wands -->
+    <string name="card_wands07_name">Seven of Wands</string>
+    <string name="card_wands07_up_keys">Standing firm, defence, conviction</string>
+    <string name="card_wands07_up">Holding high ground against many. The card is about defending a position and keeping courage when outnumbered. It asks what is worth standing up for.</string>
+    <string name="card_wands07_rev_keys">Overwhelm, giving ground</string>
+    <string name="card_wands07_rev">The pressure is too much, or a position is given up too easily. It may be time to rest, or to choose a smaller ground to hold.</string>
+    <!-- Eight of Wands -->
+    <string name="card_wands08_name">Eight of Wands</string>
+    <string name="card_wands08_up_keys">Speed, movement, news</string>
+    <string name="card_wands08_up">Eight staffs flying through open air. The card is about things moving quickly, messages, and momentum. Matters that were stuck begin to move.</string>
+    <string name="card_wands08_rev_keys">Delay, scattered haste</string>
+    <string name="card_wands08_rev">Movement stalls, or things move fast in too many directions. Messages may cross. It asks for timing rather than speed.</string>
+    <!-- Nine of Wands -->
+    <string name="card_wands09_name">Nine of Wands</string>
+    <string name="card_wands09_up_keys">Resilience, wariness, the last stretch</string>
+    <string name="card_wands09_up">A bandaged figure keeps watch with one more staff. The card is about persistence when tired, and the guardedness that comes from having been hurt. The end may be closer than it feels.</string>
+    <string name="card_wands09_rev_keys">Exhaustion, defensiveness</string>
+    <string name="card_wands09_rev">Weariness has worn the guard down, or the guard has become a wall. It asks whether the watch still needs keeping.</string>
+    <!-- Ten of Wands -->
+    <string name="card_wands10_name">Ten of Wands</string>
+    <string name="card_wands10_up_keys">Burden, responsibility, carrying too much</string>
+    <string name="card_wands10_up">A figure bent under ten staffs, still walking. The card is about taking on too much and pushing on regardless. The destination is in sight.</string>
+    <string name="card_wands10_rev_keys">Setting down, a load shared</string>
+    <string name="card_wands10_rev">The burden is being put down, or needs to be. Some of what is carried may belong to others. It asks what can be let go.</string>
+    <!-- Page of Wands -->
+    <string name="card_wands11_name">Page of Wands</string>
+    <string name="card_wands11_up_keys">Curiosity, enthusiasm, a message</string>
+    <string name="card_wands11_up">A young figure looks up at a sprouting staff. The card is about eager beginnings, exploration and news that sparks interest. It favours trying things.</string>
+    <string name="card_wands11_rev_keys">Restlessness, ideas without follow-through</string>
+    <string name="card_wands11_rev">Enthusiasm burns quickly and moves on. Plans may stay half-made. It asks which idea is worth staying with.</string>
+    <!-- Knight of Wands -->
+    <string name="card_wands12_name">Knight of Wands</string>
+    <string name="card_wands12_up_keys">Energy, adventure, boldness</string>
+    <string name="card_wands12_up">A rider on a rearing horse, ready to go. The card is about passion, action and setting off on impulse. It carries charm and heat.</string>
+    <string name="card_wands12_rev_keys">Haste, impatience, scattered energy</string>
+    <string name="card_wands12_rev">Energy runs ahead of sense, and something is started without thought. Frustration may flare. It asks for a breath before the charge.</string>
+    <!-- Queen of Wands -->
+    <string name="card_wands13_name">Queen of Wands</string>
+    <string name="card_wands13_up_keys">Warmth, confidence, vitality</string>
+    <string name="card_wands13_up">A queen holding a sunflower, a black cat at her feet. The card is about warmth, self-assurance and a lively, generous presence. She is at home in herself.</string>
+    <string name="card_wands13_rev_keys">Self-doubt, temper, overreach</string>
+    <string name="card_wands13_rev">Confidence falters, or warmth turns sharp. It may point to spreading oneself too thin. It asks for the same generosity toward oneself.</string>
+    <!-- King of Wands -->
+    <string name="card_wands14_name">King of Wands</string>
+    <string name="card_wands14_up_keys">Vision, leadership, initiative</string>
+    <string name="card_wands14_up">A king leaning forward on his throne, lion and salamanders about him. The card is about bold leadership and the ability to inspire others toward a vision.</string>
+    <string name="card_wands14_rev_keys">Impulsiveness, high expectations</string>
+    <string name="card_wands14_rev">Leadership turns overbearing, or vision runs ahead of what is possible. Expectations of others may be too high. It asks for patience as well as drive.</string>
+    <!-- Ace of Cups -->
+    <string name="card_cups01_name">Ace of Cups</string>
+    <string name="card_cups01_up_keys">Feeling, love, an overflowing heart</string>
+    <string name="card_cups01_up">A cup overflowing, a dove above it. The card marks a new opening of feeling: love, compassion, or a deep contentment. Something is offered freely.</string>
+    <string name="card_cups01_rev_keys">Blocked feeling, emptiness</string>
+    <string name="card_cups01_rev">Feelings are held back, or the cup feels empty. Love may be offered and not received, or not offered at all. It asks what keeps the cup from filling.</string>
+    <!-- Two of Cups -->
+    <string name="card_cups02_name">Two of Cups</string>
+    <string name="card_cups02_up_keys">Partnership, mutual respect, connection</string>
+    <string name="card_cups02_up">Two people pledging cups to each other. The card is about a meeting of equals, in love, friendship or work. Something is shared and returned.</string>
+    <string name="card_cups02_rev_keys">Imbalance, a rift</string>
+    <string name="card_cups02_rev">A connection is out of balance or strained. Something given is not returned. It asks for honest conversation.</string>
+    <!-- Three of Cups -->
+    <string name="card_cups03_name">Three of Cups</string>
+    <string name="card_cups03_up_keys">Friendship, celebration, community</string>
+    <string name="card_cups03_up">Three figures dancing with raised cups. The card is about good company, shared happiness and the support of friends. It is a card of gathering.</string>
+    <string name="card_cups03_rev_keys">Isolation, excess, a group strained</string>
+    <string name="card_cups03_rev">Company turns into excess, or one feels left out of the circle. It asks for the kind of gathering that actually feeds.</string>
+    <!-- Four of Cups -->
+    <string name="card_cups04_name">Four of Cups</string>
+    <string name="card_cups04_up_keys">Apathy, contemplation, an offer unseen</string>
+    <string name="card_cups04_up">A figure sits under a tree, ignoring a cup offered from a cloud. The card is about boredom, withdrawal and missing what is held out. It can also be a needed pause.</string>
+    <string name="card_cups04_rev_keys">Re-engaging, noticing the offer</string>
+    <string name="card_cups04_rev">Interest returns, and the offered cup is seen. A period of withdrawal may be ending. It asks what has changed.</string>
+    <!-- Five of Cups -->
+    <string name="card_cups05_name">Five of Cups</string>
+    <string name="card_cups05_up_keys">Loss, grief, regret</string>
+    <string name="card_cups05_up">A cloaked figure mourns three spilled cups, two still standing behind. The card is about sorrow and the focus on what is gone. What remains has not been seen yet.</string>
+    <string name="card_cups05_rev_keys">Acceptance, moving on</string>
+    <string name="card_cups05_rev">Grief begins to ease and the standing cups come into view. It is a turning toward what is left, without forgetting.</string>
+    <!-- Six of Cups -->
+    <string name="card_cups06_name">Six of Cups</string>
+    <string name="card_cups06_up_keys">Memory, childhood, kindness</string>
+    <string name="card_cups06_up">A child offers a cup of flowers to another. The card is about the past, simple pleasures and innocent goodwill. Old memories may return.</string>
+    <string name="card_cups06_rev_keys">Living in the past, letting go of it</string>
+    <string name="card_cups06_rev">Nostalgia holds too tightly, or the past is finally set down. It asks which memories nourish and which only hold back.</string>
+    <!-- Seven of Cups -->
+    <string name="card_cups07_name">Seven of Cups</string>
+    <string name="card_cups07_up_keys">Choices, imagination, illusion</string>
+    <string name="card_cups07_up">Seven cups rise from a cloud, each holding a vision. The card is about many options, daydreams and wishful thinking. Not every cup holds what it shows.</string>
+    <string name="card_cups07_rev_keys">Clarity, a choice made</string>
+    <string name="card_cups07_rev">The fog lifts and the real options show. A decision becomes possible. It asks which vision is worth acting on.</string>
+    <!-- Eight of Cups -->
+    <string name="card_cups08_name">Eight of Cups</string>
+    <string name="card_cups08_up_keys">Walking away, seeking more, a quiet leaving</string>
+    <string name="card_cups08_up">A figure walks off from eight stacked cups toward the hills. The card is about leaving something that no longer satisfies, to look for something deeper.</string>
+    <string name="card_cups08_rev_keys">Fear of leaving, drifting back</string>
+    <string name="card_cups08_rev">Something unsatisfying is kept out of fear, or one keeps returning to it. It asks what the leaving would be toward.</string>
+    <!-- Nine of Cups -->
+    <string name="card_cups09_name">Nine of Cups</string>
+    <string name="card_cups09_up_keys">Contentment, satisfaction, a wish granted</string>
+    <string name="card_cups09_up">A well-fed figure sits before nine cups. The card is about comfort, pleasure and things turning out as hoped. It is often called the wish card.</string>
+    <string name="card_cups09_rev_keys">Complacency, wanting more</string>
+    <string name="card_cups09_rev">Satisfaction feels thin, or comfort becomes complacency. It asks what would truly content.</string>
+    <!-- Ten of Cups -->
+    <string name="card_cups10_name">Ten of Cups</string>
+    <string name="card_cups10_up_keys">Harmony, family, lasting happiness</string>
+    <string name="card_cups10_up">A family under a rainbow of cups. The card is about emotional fulfilment, home and a peace shared with others. It is a picture of things going well together.</string>
+    <string name="card_cups10_rev_keys">Disconnection, a strained home</string>
+    <string name="card_cups10_rev">Harmony at home is out of tune, or the picture does not match the feeling. It asks what would bring people back together.</string>
+    <!-- Page of Cups -->
+    <string name="card_cups11_name">Page of Cups</string>
+    <string name="card_cups11_up_keys">Sensitivity, a gentle message, imagination</string>
+    <string name="card_cups11_up">A young figure looks at a fish rising from a cup. The card is about curiosity of the heart, intuitive messages and playful creativity. Something surprising may appear.</string>
+    <string name="card_cups11_rev_keys">Moodiness, emotional immaturity</string>
+    <string name="card_cups11_rev">Feelings run ahead of sense, or are hidden behind daydreams. It asks for an open heart with steady feet.</string>
+    <!-- Knight of Cups -->
+    <string name="card_cups12_name">Knight of Cups</string>
+    <string name="card_cups12_up_keys">Romance, charm, following the heart</string>
+    <string name="card_cups12_up">A rider moving slowly, cup held out. The card is about invitations, idealism and acting from feeling. It carries a gentle grace.</string>
+    <string name="card_cups12_rev_keys">Moodiness, unrealistic hopes</string>
+    <string name="card_cups12_rev">Idealism outruns reality, or promises are not kept. It asks for feeling joined to follow-through.</string>
+    <!-- Queen of Cups -->
+    <string name="card_cups13_name">Queen of Cups</string>
+    <string name="card_cups13_up_keys">Compassion, intuition, emotional depth</string>
+    <string name="card_cups13_up">A queen gazing into an ornate closed cup at the water’s edge. The card is about care, empathy and a deep inner life. She feels without being swept away.</string>
+    <string name="card_cups13_rev_keys">Overwhelm, self-neglect</string>
+    <string name="card_cups13_rev">Feeling for others crowds out feeling for oneself, or emotions run unchecked. It asks for boundaries and rest.</string>
+    <!-- King of Cups -->
+    <string name="card_cups14_name">King of Cups</string>
+    <string name="card_cups14_up_keys">Emotional balance, calm, diplomacy</string>
+    <string name="card_cups14_up">A king on a throne floating on the sea, at ease. The card is about steadiness in feeling and wise counsel. He holds strong emotions without being ruled by them.</string>
+    <string name="card_cups14_rev_keys">Suppressed feeling, moodiness</string>
+    <string name="card_cups14_rev">Calm on the surface hides turbulence below, or feelings are used to control. It asks for honest steadiness.</string>
+    <!-- Ace of Swords -->
+    <string name="card_swords01_name">Ace of Swords</string>
+    <string name="card_swords01_up_keys">Clarity, truth, a breakthrough</string>
+    <string name="card_swords01_up">A hand from a cloud holds a crowned sword. The card marks a clear thought, a decision, or a truth that cuts through confusion. It favours honesty.</string>
+    <string name="card_swords01_rev_keys">Confusion, harsh words</string>
+    <string name="card_swords01_rev">The thought is muddled, or the sword cuts carelessly. Words may wound. It asks for clarity that is also kind.</string>
+    <!-- Two of Swords -->
+    <string name="card_swords02_name">Two of Swords</string>
+    <string name="card_swords02_up_keys">Stalemate, a difficult choice, holding back</string>
+    <string name="card_swords02_up">A blindfolded figure balances two crossed swords. The card is about indecision, avoidance and keeping feelings at bay. The water behind is calm for now.</string>
+    <string name="card_swords02_rev_keys">Overload, a decision forced</string>
+    <string name="card_swords02_rev">The balance can no longer hold, and information pours in. A choice may have to be made. It asks what the blindfold has been protecting.</string>
+    <!-- Three of Swords -->
+    <string name="card_swords03_name">Three of Swords</string>
+    <string name="card_swords03_up_keys">Heartbreak, sorrow, grief</string>
+    <string name="card_swords03_up">A heart pierced by three swords under a rain cloud. The card is about painful truth and the hurt that comes with it. The pain is real, and so is the passing of the storm.</string>
+    <string name="card_swords03_rev_keys">Healing, releasing pain</string>
+    <string name="card_swords03_rev">The worst of the hurt eases and recovery begins. Old grief may be let go. It asks for patience with healing.</string>
+    <!-- Four of Swords -->
+    <string name="card_swords04_name">Four of Swords</string>
+    <string name="card_swords04_up_keys">Rest, recovery, a pause</string>
+    <string name="card_swords04_up">A figure lying still in a church, hands together. The card is about rest, retreat and gathering strength. Stillness here is part of the work.</string>
+    <string name="card_swords04_rev_keys">Restlessness, burnout</string>
+    <string name="card_swords04_rev">Rest is refused, or comes only after exhaustion. It asks for a pause before one is forced.</string>
+    <!-- Five of Swords -->
+    <string name="card_swords05_name">Five of Swords</string>
+    <string name="card_swords05_up_keys">Conflict, a hollow win, tension</string>
+    <string name="card_swords05_up">A figure gathers swords while others walk away. The card is about conflict where winning costs something, and pride that leaves people apart.</string>
+    <string name="card_swords05_rev_keys">Making peace, regret</string>
+    <string name="card_swords05_rev">The quarrel ends, or its cost is felt. It is a chance to make amends. It asks what really matters more than winning.</string>
+    <!-- Six of Swords -->
+    <string name="card_swords06_name">Six of Swords</string>
+    <string name="card_swords06_up_keys">Transition, passage, moving on</string>
+    <string name="card_swords06_up">A boat carrying passengers toward calmer water. The card is about leaving difficulty behind and moving to something steadier. The journey is quiet and necessary.</string>
+    <string name="card_swords06_rev_keys">Resistance, unfinished business</string>
+    <string name="card_swords06_rev">The crossing is delayed, or something unresolved comes along. It asks what still needs to be faced before moving on.</string>
+    <!-- Seven of Swords -->
+    <string name="card_swords07_name">Seven of Swords</string>
+    <string name="card_swords07_up_keys">Stealth, strategy, getting away with something</string>
+    <string name="card_swords07_up">A figure tiptoes off with five swords. The card is about cunning, acting alone, and perhaps not being fully honest. It asks who is being deceived.</string>
+    <string name="card_swords07_rev_keys">Coming clean, being found out</string>
+    <string name="card_swords07_rev">Secrets come into the open, or one decides to stop hiding. It is a chance to act more openly.</string>
+    <!-- Eight of Swords -->
+    <string name="card_swords08_name">Eight of Swords</string>
+    <string name="card_swords08_up_keys">Feeling trapped, restriction, self-limiting</string>
+    <string name="card_swords08_up">A bound, blindfolded figure among swords, the way out open behind her. The card is about feeling stuck when the trap is partly in the mind.</string>
+    <string name="card_swords08_rev_keys">Release, new perspective</string>
+    <string name="card_swords08_rev">The bonds loosen and a way out appears. It is a card of taking back one’s own power.</string>
+    <!-- Nine of Swords -->
+    <string name="card_swords09_name">Nine of Swords</string>
+    <string name="card_swords09_up_keys">Anxiety, worry, sleepless nights</string>
+    <string name="card_swords09_up">A figure sits up in bed, face in hands. The card is about fear and worry, often larger in the dark than in the day. The swords hang on the wall, not in the body.</string>
+    <string name="card_swords09_rev_keys">Easing worry, reaching out</string>
+    <string name="card_swords09_rev">Anxiety begins to lift, or help is sought. It asks to bring the worry into the light and speak it.</string>
+    <!-- Ten of Swords -->
+    <string name="card_swords10_name">Ten of Swords</string>
+    <string name="card_swords10_up_keys">An ending, hitting bottom, release</string>
+    <string name="card_swords10_up">A figure lies with ten swords in the back, dawn on the horizon. The card is about a painful end and the relief that it can go no further down. The sky is beginning to clear.</string>
+    <string name="card_swords10_rev_keys">Recovery, resisting an end</string>
+    <string name="card_swords10_rev">Slowly getting up again, or refusing to let something finish. It asks to let the end be an end.</string>
+    <!-- Page of Swords -->
+    <string name="card_swords11_name">Page of Swords</string>
+    <string name="card_swords11_up_keys">Curiosity, alertness, new ideas</string>
+    <string name="card_swords11_up">A young figure holds a sword up against the wind. The card is about a sharp mind, questions and eagerness to learn. Watchfulness belongs to it.</string>
+    <string name="card_swords11_rev_keys">Gossip, all talk</string>
+    <string name="card_swords11_rev">Ideas without follow-through, or words used carelessly. It asks for thought before speech.</string>
+    <!-- Knight of Swords -->
+    <string name="card_swords12_name">Knight of Swords</string>
+    <string name="card_swords12_up_keys">Ambition, drive, speed</string>
+    <string name="card_swords12_up">A rider charging into the wind, sword raised. The card is about decisive action and fierce focus. It moves fast and sees one target.</string>
+    <string name="card_swords12_rev_keys">Recklessness, rushing in</string>
+    <string name="card_swords12_rev">The charge is impulsive, and others may be run down. It asks to look before riding.</string>
+    <!-- Queen of Swords -->
+    <string name="card_swords13_name">Queen of Swords</string>
+    <string name="card_swords13_up_keys">Clear thinking, independence, honesty</string>
+    <string name="card_swords13_up">A queen with a raised sword, hand held out. The card is about directness, sharp perception and judgement learned through experience. She sees clearly and says so.</string>
+    <string name="card_swords13_rev_keys">Coldness, harshness</string>
+    <string name="card_swords13_rev">Clarity turns cold or cutting. It asks for directness with care.</string>
+    <!-- King of Swords -->
+    <string name="card_swords14_name">King of Swords</string>
+    <string name="card_swords14_up_keys">Intellect, authority, truth</string>
+    <string name="card_swords14_up">A king seated facing forward, sword upright. The card is about fair judgement, reason and clear authority. Decisions are made by thought, not mood.</string>
+    <string name="card_swords14_rev_keys">Misused authority, cruelty</string>
+    <string name="card_swords14_rev">Reason is used to control or hurt. It asks for fairness that remembers the person.</string>
+    <!-- Ace of Pentacles -->
+    <string name="card_pentacles01_name">Ace of Pentacles</string>
+    <string name="card_pentacles01_up_keys">Opportunity, prosperity, a new start in the world</string>
+    <string name="card_pentacles01_up">A hand from a cloud offers a coin above a garden. The card marks a practical beginning: work, money, health or home. Something solid can be built.</string>
+    <string name="card_pentacles01_rev_keys">Missed chance, poor planning</string>
+    <string name="card_pentacles01_rev">An opportunity slips by or is not prepared for. It asks for a firmer footing first.</string>
+    <!-- Two of Pentacles -->
+    <string name="card_pentacles02_name">Two of Pentacles</string>
+    <string name="card_pentacles02_up_keys">Balance, adaptability, juggling</string>
+    <string name="card_pentacles02_up">A figure dances with two coins in a looping band, ships on the waves behind. The card is about handling many things at once and staying light on one’s feet.</string>
+    <string name="card_pentacles02_rev_keys">Overwhelm, dropping things</string>
+    <string name="card_pentacles02_rev">Too much is being juggled and something falls. It asks what to put down.</string>
+    <!-- Three of Pentacles -->
+    <string name="card_pentacles03_name">Three of Pentacles</string>
+    <string name="card_pentacles03_up_keys">Teamwork, craft, learning</string>
+    <string name="card_pentacles03_up">A craftsman works in a church while two others look over the plans. The card is about skilled work, collaboration and building something well together.</string>
+    <string name="card_pentacles03_rev_keys">Poor teamwork, sloppiness</string>
+    <string name="card_pentacles03_rev">Work done without care, or people pulling apart. It asks for shared standards.</string>
+    <!-- Four of Pentacles -->
+    <string name="card_pentacles04_name">Four of Pentacles</string>
+    <string name="card_pentacles04_up_keys">Holding on, security, control</string>
+    <string name="card_pentacles04_up">A figure grips a coin, two under his feet, one on his crown. The card is about saving, security and holding tight. A little is wise; too much closes the hand.</string>
+    <string name="card_pentacles04_rev_keys">Letting go, generosity, or greed</string>
+    <string name="card_pentacles04_rev">The grip loosens, or tightens further. It asks what security is really for.</string>
+    <!-- Five of Pentacles -->
+    <string name="card_pentacles05_name">Five of Pentacles</string>
+    <string name="card_pentacles05_up_keys">Hardship, exclusion, worry</string>
+    <string name="card_pentacles05_up">Two figures walk through snow past a lit window. The card is about lean times, poor health or feeling left out in the cold. Help may be closer than it looks.</string>
+    <string name="card_pentacles05_rev_keys">Recovery, help found</string>
+    <string name="card_pentacles05_rev">Hard times begin to ease, or help is accepted. It is a door noticed and opened.</string>
+    <!-- Six of Pentacles -->
+    <string name="card_pentacles06_name">Six of Pentacles</string>
+    <string name="card_pentacles06_up_keys">Generosity, giving and receiving, fairness</string>
+    <string name="card_pentacles06_up">A man with scales gives coins to those in need. The card is about sharing resources and the balance between giving and receiving.</string>
+    <string name="card_pentacles06_rev_keys">Strings attached, imbalance</string>
+    <string name="card_pentacles06_rev">Giving comes with conditions, or the balance between giver and receiver is off. It asks for fairness on both sides.</string>
+    <!-- Seven of Pentacles -->
+    <string name="card_pentacles07_name">Seven of Pentacles</string>
+    <string name="card_pentacles07_up_keys">Patience, assessment, slow growth</string>
+    <string name="card_pentacles07_up">A figure leans on his hoe, looking at coins growing on a bush. The card is about taking stock, patience and long effort. The harvest is not yet.</string>
+    <string name="card_pentacles07_rev_keys">Impatience, wasted effort</string>
+    <string name="card_pentacles07_rev">The waiting chafes, or the effort is going into the wrong ground. It asks whether to keep tending or to change field.</string>
+    <!-- Eight of Pentacles -->
+    <string name="card_pentacles08_name">Eight of Pentacles</string>
+    <string name="card_pentacles08_up_keys">Diligence, practice, mastery</string>
+    <string name="card_pentacles08_up">A craftsman carving coins one by one. The card is about steady work, learning a skill and taking pride in doing it well.</string>
+    <string name="card_pentacles08_rev_keys">Perfectionism, dull routine</string>
+    <string name="card_pentacles08_rev">Work turns to drudgery or obsession with detail. It asks for care without strain.</string>
+    <!-- Nine of Pentacles -->
+    <string name="card_pentacles09_name">Nine of Pentacles</string>
+    <string name="card_pentacles09_up_keys">Self-reliance, comfort, enjoyment</string>
+    <string name="card_pentacles09_up">A woman in a vineyard with a bird on her glove. The card is about independence, comfort earned and the pleasure of a well-kept life.</string>
+    <string name="card_pentacles09_rev_keys">Overwork, dependence</string>
+    <string name="card_pentacles09_rev">Comfort rests on too much work, or on someone else. It asks for balance between effort and enjoyment.</string>
+    <!-- Ten of Pentacles -->
+    <string name="card_pentacles10_name">Ten of Pentacles</string>
+    <string name="card_pentacles10_up_keys">Legacy, family, lasting wealth</string>
+    <string name="card_pentacles10_up">An old man with dogs, a family under an arch. The card is about things that last across generations: home, tradition, inheritance in every sense.</string>
+    <string name="card_pentacles10_rev_keys">Family strain, loss of stability</string>
+    <string name="card_pentacles10_rev">The family or the foundation is unsettled. It asks what is worth passing on.</string>
+    <!-- Page of Pentacles -->
+    <string name="card_pentacles11_name">Page of Pentacles</string>
+    <string name="card_pentacles11_up_keys">Study, ambition, a practical start</string>
+    <string name="card_pentacles11_up">A young figure gazes at a coin held up in the hands. The card is about learning, setting goals and the first steps of a practical plan.</string>
+    <string name="card_pentacles11_rev_keys">Procrastination, lack of focus</string>
+    <string name="card_pentacles11_rev">The plan stays a plan, or attention drifts. It asks for one small practical step.</string>
+    <!-- Knight of Pentacles -->
+    <string name="card_pentacles12_name">Knight of Pentacles</string>
+    <string name="card_pentacles12_up_keys">Reliability, routine, hard work</string>
+    <string name="card_pentacles12_up">A rider on a heavy horse, standing still in a ploughed field. The card is about patience, method and seeing things through, steadily.</string>
+    <string name="card_pentacles12_rev_keys">Stagnation, stubbornness</string>
+    <string name="card_pentacles12_rev">Steadiness has become a rut. It asks whether the routine still serves.</string>
+    <!-- Queen of Pentacles -->
+    <string name="card_pentacles13_name">Queen of Pentacles</string>
+    <string name="card_pentacles13_up_keys">Nurture, practicality, a warm home</string>
+    <string name="card_pentacles13_up">A queen in a garden holding a coin in her lap. The card is about practical care, resourcefulness and making a home welcoming.</string>
+    <string name="card_pentacles13_rev_keys">Self-care neglected, smothering</string>
+    <string name="card_pentacles13_rev">Care for others leaves nothing for oneself, or becomes too much. It asks for balance.</string>
+    <!-- King of Pentacles -->
+    <string name="card_pentacles14_name">King of Pentacles</string>
+    <string name="card_pentacles14_up_keys">Abundance, security, steady success</string>
+    <string name="card_pentacles14_up">A king among vines and coins, at ease. The card is about prosperity, reliability and building something solid that provides for others.</string>
+    <string name="card_pentacles14_rev_keys">Materialism, stubbornness</string>
+    <string name="card_pentacles14_rev">Security turns into possessiveness, or success into rigidity. It asks what wealth is for.</string>
+
+    <string-array name="card_names" translatable="false">
+        <item>@string/card_m00_name</item>
+        <item>@string/card_m01_name</item>
+        <item>@string/card_m02_name</item>
+        <item>@string/card_m03_name</item>
+        <item>@string/card_m04_name</item>
+        <item>@string/card_m05_name</item>
+        <item>@string/card_m06_name</item>
+        <item>@string/card_m07_name</item>
+        <item>@string/card_m08_name</item>
+        <item>@string/card_m09_name</item>
+        <item>@string/card_m10_name</item>
+        <item>@string/card_m11_name</item>
+        <item>@string/card_m12_name</item>
+        <item>@string/card_m13_name</item>
+        <item>@string/card_m14_name</item>
+        <item>@string/card_m15_name</item>
+        <item>@string/card_m16_name</item>
+        <item>@string/card_m17_name</item>
+        <item>@string/card_m18_name</item>
+        <item>@string/card_m19_name</item>
+        <item>@string/card_m20_name</item>
+        <item>@string/card_m21_name</item>
+        <item>@string/card_wands01_name</item>
+        <item>@string/card_wands02_name</item>
+        <item>@string/card_wands03_name</item>
+        <item>@string/card_wands04_name</item>
+        <item>@string/card_wands05_name</item>
+        <item>@string/card_wands06_name</item>
+        <item>@string/card_wands07_name</item>
+        <item>@string/card_wands08_name</item>
+        <item>@string/card_wands09_name</item>
+        <item>@string/card_wands10_name</item>
+        <item>@string/card_wands11_name</item>
+        <item>@string/card_wands12_name</item>
+        <item>@string/card_wands13_name</item>
+        <item>@string/card_wands14_name</item>
+        <item>@string/card_cups01_name</item>
+        <item>@string/card_cups02_name</item>
+        <item>@string/card_cups03_name</item>
+        <item>@string/card_cups04_name</item>
+        <item>@string/card_cups05_name</item>
+        <item>@string/card_cups06_name</item>
+        <item>@string/card_cups07_name</item>
+        <item>@string/card_cups08_name</item>
+        <item>@string/card_cups09_name</item>
+        <item>@string/card_cups10_name</item>
+        <item>@string/card_cups11_name</item>
+        <item>@string/card_cups12_name</item>
+        <item>@string/card_cups13_name</item>
+        <item>@string/card_cups14_name</item>
+        <item>@string/card_swords01_name</item>
+        <item>@string/card_swords02_name</item>
+        <item>@string/card_swords03_name</item>
+        <item>@string/card_swords04_name</item>
+        <item>@string/card_swords05_name</item>
+        <item>@string/card_swords06_name</item>
+        <item>@string/card_swords07_name</item>
+        <item>@string/card_swords08_name</item>
+        <item>@string/card_swords09_name</item>
+        <item>@string/card_swords10_name</item>
+        <item>@string/card_swords11_name</item>
+        <item>@string/card_swords12_name</item>
+        <item>@string/card_swords13_name</item>
+        <item>@string/card_swords14_name</item>
+        <item>@string/card_pentacles01_name</item>
+        <item>@string/card_pentacles02_name</item>
+        <item>@string/card_pentacles03_name</item>
+        <item>@string/card_pentacles04_name</item>
+        <item>@string/card_pentacles05_name</item>
+        <item>@string/card_pentacles06_name</item>
+        <item>@string/card_pentacles07_name</item>
+        <item>@string/card_pentacles08_name</item>
+        <item>@string/card_pentacles09_name</item>
+        <item>@string/card_pentacles10_name</item>
+        <item>@string/card_pentacles11_name</item>
+        <item>@string/card_pentacles12_name</item>
+        <item>@string/card_pentacles13_name</item>
+        <item>@string/card_pentacles14_name</item>
+    </string-array>
+
+    <string-array name="card_up_keys" translatable="false">
+        <item>@string/card_m00_up_keys</item>
+        <item>@string/card_m01_up_keys</item>
+        <item>@string/card_m02_up_keys</item>
+        <item>@string/card_m03_up_keys</item>
+        <item>@string/card_m04_up_keys</item>
+        <item>@string/card_m05_up_keys</item>
+        <item>@string/card_m06_up_keys</item>
+        <item>@string/card_m07_up_keys</item>
+        <item>@string/card_m08_up_keys</item>
+        <item>@string/card_m09_up_keys</item>
+        <item>@string/card_m10_up_keys</item>
+        <item>@string/card_m11_up_keys</item>
+        <item>@string/card_m12_up_keys</item>
+        <item>@string/card_m13_up_keys</item>
+        <item>@string/card_m14_up_keys</item>
+        <item>@string/card_m15_up_keys</item>
+        <item>@string/card_m16_up_keys</item>
+        <item>@string/card_m17_up_keys</item>
+        <item>@string/card_m18_up_keys</item>
+        <item>@string/card_m19_up_keys</item>
+        <item>@string/card_m20_up_keys</item>
+        <item>@string/card_m21_up_keys</item>
+        <item>@string/card_wands01_up_keys</item>
+        <item>@string/card_wands02_up_keys</item>
+        <item>@string/card_wands03_up_keys</item>
+        <item>@string/card_wands04_up_keys</item>
+        <item>@string/card_wands05_up_keys</item>
+        <item>@string/card_wands06_up_keys</item>
+        <item>@string/card_wands07_up_keys</item>
+        <item>@string/card_wands08_up_keys</item>
+        <item>@string/card_wands09_up_keys</item>
+        <item>@string/card_wands10_up_keys</item>
+        <item>@string/card_wands11_up_keys</item>
+        <item>@string/card_wands12_up_keys</item>
+        <item>@string/card_wands13_up_keys</item>
+        <item>@string/card_wands14_up_keys</item>
+        <item>@string/card_cups01_up_keys</item>
+        <item>@string/card_cups02_up_keys</item>
+        <item>@string/card_cups03_up_keys</item>
+        <item>@string/card_cups04_up_keys</item>
+        <item>@string/card_cups05_up_keys</item>
+        <item>@string/card_cups06_up_keys</item>
+        <item>@string/card_cups07_up_keys</item>
+        <item>@string/card_cups08_up_keys</item>
+        <item>@string/card_cups09_up_keys</item>
+        <item>@string/card_cups10_up_keys</item>
+        <item>@string/card_cups11_up_keys</item>
+        <item>@string/card_cups12_up_keys</item>
+        <item>@string/card_cups13_up_keys</item>
+        <item>@string/card_cups14_up_keys</item>
+        <item>@string/card_swords01_up_keys</item>
+        <item>@string/card_swords02_up_keys</item>
+        <item>@string/card_swords03_up_keys</item>
+        <item>@string/card_swords04_up_keys</item>
+        <item>@string/card_swords05_up_keys</item>
+        <item>@string/card_swords06_up_keys</item>
+        <item>@string/card_swords07_up_keys</item>
+        <item>@string/card_swords08_up_keys</item>
+        <item>@string/card_swords09_up_keys</item>
+        <item>@string/card_swords10_up_keys</item>
+        <item>@string/card_swords11_up_keys</item>
+        <item>@string/card_swords12_up_keys</item>
+        <item>@string/card_swords13_up_keys</item>
+        <item>@string/card_swords14_up_keys</item>
+        <item>@string/card_pentacles01_up_keys</item>
+        <item>@string/card_pentacles02_up_keys</item>
+        <item>@string/card_pentacles03_up_keys</item>
+        <item>@string/card_pentacles04_up_keys</item>
+        <item>@string/card_pentacles05_up_keys</item>
+        <item>@string/card_pentacles06_up_keys</item>
+        <item>@string/card_pentacles07_up_keys</item>
+        <item>@string/card_pentacles08_up_keys</item>
+        <item>@string/card_pentacles09_up_keys</item>
+        <item>@string/card_pentacles10_up_keys</item>
+        <item>@string/card_pentacles11_up_keys</item>
+        <item>@string/card_pentacles12_up_keys</item>
+        <item>@string/card_pentacles13_up_keys</item>
+        <item>@string/card_pentacles14_up_keys</item>
+    </string-array>
+
+    <string-array name="card_up" translatable="false">
+        <item>@string/card_m00_up</item>
+        <item>@string/card_m01_up</item>
+        <item>@string/card_m02_up</item>
+        <item>@string/card_m03_up</item>
+        <item>@string/card_m04_up</item>
+        <item>@string/card_m05_up</item>
+        <item>@string/card_m06_up</item>
+        <item>@string/card_m07_up</item>
+        <item>@string/card_m08_up</item>
+        <item>@string/card_m09_up</item>
+        <item>@string/card_m10_up</item>
+        <item>@string/card_m11_up</item>
+        <item>@string/card_m12_up</item>
+        <item>@string/card_m13_up</item>
+        <item>@string/card_m14_up</item>
+        <item>@string/card_m15_up</item>
+        <item>@string/card_m16_up</item>
+        <item>@string/card_m17_up</item>
+        <item>@string/card_m18_up</item>
+        <item>@string/card_m19_up</item>
+        <item>@string/card_m20_up</item>
+        <item>@string/card_m21_up</item>
+        <item>@string/card_wands01_up</item>
+        <item>@string/card_wands02_up</item>
+        <item>@string/card_wands03_up</item>
+        <item>@string/card_wands04_up</item>
+        <item>@string/card_wands05_up</item>
+        <item>@string/card_wands06_up</item>
+        <item>@string/card_wands07_up</item>
+        <item>@string/card_wands08_up</item>
+        <item>@string/card_wands09_up</item>
+        <item>@string/card_wands10_up</item>
+        <item>@string/card_wands11_up</item>
+        <item>@string/card_wands12_up</item>
+        <item>@string/card_wands13_up</item>
+        <item>@string/card_wands14_up</item>
+        <item>@string/card_cups01_up</item>
+        <item>@string/card_cups02_up</item>
+        <item>@string/card_cups03_up</item>
+        <item>@string/card_cups04_up</item>
+        <item>@string/card_cups05_up</item>
+        <item>@string/card_cups06_up</item>
+        <item>@string/card_cups07_up</item>
+        <item>@string/card_cups08_up</item>
+        <item>@string/card_cups09_up</item>
+        <item>@string/card_cups10_up</item>
+        <item>@string/card_cups11_up</item>
+        <item>@string/card_cups12_up</item>
+        <item>@string/card_cups13_up</item>
+        <item>@string/card_cups14_up</item>
+        <item>@string/card_swords01_up</item>
+        <item>@string/card_swords02_up</item>
+        <item>@string/card_swords03_up</item>
+        <item>@string/card_swords04_up</item>
+        <item>@string/card_swords05_up</item>
+        <item>@string/card_swords06_up</item>
+        <item>@string/card_swords07_up</item>
+        <item>@string/card_swords08_up</item>
+        <item>@string/card_swords09_up</item>
+        <item>@string/card_swords10_up</item>
+        <item>@string/card_swords11_up</item>
+        <item>@string/card_swords12_up</item>
+        <item>@string/card_swords13_up</item>
+        <item>@string/card_swords14_up</item>
+        <item>@string/card_pentacles01_up</item>
+        <item>@string/card_pentacles02_up</item>
+        <item>@string/card_pentacles03_up</item>
+        <item>@string/card_pentacles04_up</item>
+        <item>@string/card_pentacles05_up</item>
+        <item>@string/card_pentacles06_up</item>
+        <item>@string/card_pentacles07_up</item>
+        <item>@string/card_pentacles08_up</item>
+        <item>@string/card_pentacles09_up</item>
+        <item>@string/card_pentacles10_up</item>
+        <item>@string/card_pentacles11_up</item>
+        <item>@string/card_pentacles12_up</item>
+        <item>@string/card_pentacles13_up</item>
+        <item>@string/card_pentacles14_up</item>
+    </string-array>
+
+    <string-array name="card_rev_keys" translatable="false">
+        <item>@string/card_m00_rev_keys</item>
+        <item>@string/card_m01_rev_keys</item>
+        <item>@string/card_m02_rev_keys</item>
+        <item>@string/card_m03_rev_keys</item>
+        <item>@string/card_m04_rev_keys</item>
+        <item>@string/card_m05_rev_keys</item>
+        <item>@string/card_m06_rev_keys</item>
+        <item>@string/card_m07_rev_keys</item>
+        <item>@string/card_m08_rev_keys</item>
+        <item>@string/card_m09_rev_keys</item>
+        <item>@string/card_m10_rev_keys</item>
+        <item>@string/card_m11_rev_keys</item>
+        <item>@string/card_m12_rev_keys</item>
+        <item>@string/card_m13_rev_keys</item>
+        <item>@string/card_m14_rev_keys</item>
+        <item>@string/card_m15_rev_keys</item>
+        <item>@string/card_m16_rev_keys</item>
+        <item>@string/card_m17_rev_keys</item>
+        <item>@string/card_m18_rev_keys</item>
+        <item>@string/card_m19_rev_keys</item>
+        <item>@string/card_m20_rev_keys</item>
+        <item>@string/card_m21_rev_keys</item>
+        <item>@string/card_wands01_rev_keys</item>
+        <item>@string/card_wands02_rev_keys</item>
+        <item>@string/card_wands03_rev_keys</item>
+        <item>@string/card_wands04_rev_keys</item>
+        <item>@string/card_wands05_rev_keys</item>
+        <item>@string/card_wands06_rev_keys</item>
+        <item>@string/card_wands07_rev_keys</item>
+        <item>@string/card_wands08_rev_keys</item>
+        <item>@string/card_wands09_rev_keys</item>
+        <item>@string/card_wands10_rev_keys</item>
+        <item>@string/card_wands11_rev_keys</item>
+        <item>@string/card_wands12_rev_keys</item>
+        <item>@string/card_wands13_rev_keys</item>
+        <item>@string/card_wands14_rev_keys</item>
+        <item>@string/card_cups01_rev_keys</item>
+        <item>@string/card_cups02_rev_keys</item>
+        <item>@string/card_cups03_rev_keys</item>
+        <item>@string/card_cups04_rev_keys</item>
+        <item>@string/card_cups05_rev_keys</item>
+        <item>@string/card_cups06_rev_keys</item>
+        <item>@string/card_cups07_rev_keys</item>
+        <item>@string/card_cups08_rev_keys</item>
+        <item>@string/card_cups09_rev_keys</item>
+        <item>@string/card_cups10_rev_keys</item>
+        <item>@string/card_cups11_rev_keys</item>
+        <item>@string/card_cups12_rev_keys</item>
+        <item>@string/card_cups13_rev_keys</item>
+        <item>@string/card_cups14_rev_keys</item>
+        <item>@string/card_swords01_rev_keys</item>
+        <item>@string/card_swords02_rev_keys</item>
+        <item>@string/card_swords03_rev_keys</item>
+        <item>@string/card_swords04_rev_keys</item>
+        <item>@string/card_swords05_rev_keys</item>
+        <item>@string/card_swords06_rev_keys</item>
+        <item>@string/card_swords07_rev_keys</item>
+        <item>@string/card_swords08_rev_keys</item>
+        <item>@string/card_swords09_rev_keys</item>
+        <item>@string/card_swords10_rev_keys</item>
+        <item>@string/card_swords11_rev_keys</item>
+        <item>@string/card_swords12_rev_keys</item>
+        <item>@string/card_swords13_rev_keys</item>
+        <item>@string/card_swords14_rev_keys</item>
+        <item>@string/card_pentacles01_rev_keys</item>
+        <item>@string/card_pentacles02_rev_keys</item>
+        <item>@string/card_pentacles03_rev_keys</item>
+        <item>@string/card_pentacles04_rev_keys</item>
+        <item>@string/card_pentacles05_rev_keys</item>
+        <item>@string/card_pentacles06_rev_keys</item>
+        <item>@string/card_pentacles07_rev_keys</item>
+        <item>@string/card_pentacles08_rev_keys</item>
+        <item>@string/card_pentacles09_rev_keys</item>
+        <item>@string/card_pentacles10_rev_keys</item>
+        <item>@string/card_pentacles11_rev_keys</item>
+        <item>@string/card_pentacles12_rev_keys</item>
+        <item>@string/card_pentacles13_rev_keys</item>
+        <item>@string/card_pentacles14_rev_keys</item>
+    </string-array>
+
+    <string-array name="card_rev" translatable="false">
+        <item>@string/card_m00_rev</item>
+        <item>@string/card_m01_rev</item>
+        <item>@string/card_m02_rev</item>
+        <item>@string/card_m03_rev</item>
+        <item>@string/card_m04_rev</item>
+        <item>@string/card_m05_rev</item>
+        <item>@string/card_m06_rev</item>
+        <item>@string/card_m07_rev</item>
+        <item>@string/card_m08_rev</item>
+        <item>@string/card_m09_rev</item>
+        <item>@string/card_m10_rev</item>
+        <item>@string/card_m11_rev</item>
+        <item>@string/card_m12_rev</item>
+        <item>@string/card_m13_rev</item>
+        <item>@string/card_m14_rev</item>
+        <item>@string/card_m15_rev</item>
+        <item>@string/card_m16_rev</item>
+        <item>@string/card_m17_rev</item>
+        <item>@string/card_m18_rev</item>
+        <item>@string/card_m19_rev</item>
+        <item>@string/card_m20_rev</item>
+        <item>@string/card_m21_rev</item>
+        <item>@string/card_wands01_rev</item>
+        <item>@string/card_wands02_rev</item>
+        <item>@string/card_wands03_rev</item>
+        <item>@string/card_wands04_rev</item>
+        <item>@string/card_wands05_rev</item>
+        <item>@string/card_wands06_rev</item>
+        <item>@string/card_wands07_rev</item>
+        <item>@string/card_wands08_rev</item>
+        <item>@string/card_wands09_rev</item>
+        <item>@string/card_wands10_rev</item>
+        <item>@string/card_wands11_rev</item>
+        <item>@string/card_wands12_rev</item>
+        <item>@string/card_wands13_rev</item>
+        <item>@string/card_wands14_rev</item>
+        <item>@string/card_cups01_rev</item>
+        <item>@string/card_cups02_rev</item>
+        <item>@string/card_cups03_rev</item>
+        <item>@string/card_cups04_rev</item>
+        <item>@string/card_cups05_rev</item>
+        <item>@string/card_cups06_rev</item>
+        <item>@string/card_cups07_rev</item>
+        <item>@string/card_cups08_rev</item>
+        <item>@string/card_cups09_rev</item>
+        <item>@string/card_cups10_rev</item>
+        <item>@string/card_cups11_rev</item>
+        <item>@string/card_cups12_rev</item>
+        <item>@string/card_cups13_rev</item>
+        <item>@string/card_cups14_rev</item>
+        <item>@string/card_swords01_rev</item>
+        <item>@string/card_swords02_rev</item>
+        <item>@string/card_swords03_rev</item>
+        <item>@string/card_swords04_rev</item>
+        <item>@string/card_swords05_rev</item>
+        <item>@string/card_swords06_rev</item>
+        <item>@string/card_swords07_rev</item>
+        <item>@string/card_swords08_rev</item>
+        <item>@string/card_swords09_rev</item>
+        <item>@string/card_swords10_rev</item>
+        <item>@string/card_swords11_rev</item>
+        <item>@string/card_swords12_rev</item>
+        <item>@string/card_swords13_rev</item>
+        <item>@string/card_swords14_rev</item>
+        <item>@string/card_pentacles01_rev</item>
+        <item>@string/card_pentacles02_rev</item>
+        <item>@string/card_pentacles03_rev</item>
+        <item>@string/card_pentacles04_rev</item>
+        <item>@string/card_pentacles05_rev</item>
+        <item>@string/card_pentacles06_rev</item>
+        <item>@string/card_pentacles07_rev</item>
+        <item>@string/card_pentacles08_rev</item>
+        <item>@string/card_pentacles09_rev</item>
+        <item>@string/card_pentacles10_rev</item>
+        <item>@string/card_pentacles11_rev</item>
+        <item>@string/card_pentacles12_rev</item>
+        <item>@string/card_pentacles13_rev</item>
+        <item>@string/card_pentacles14_rev</item>
+    </string-array>
+</resources>

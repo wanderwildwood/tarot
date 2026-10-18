@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tarot: launcher icon in the Mudita Kompakt stock style (81 grid, ring r=19.25 x 2.5,
+     glyph stroke 2.5, black on transparent). One tall card with the Star's eight-pointed star (candidate A, approved 2026-10-17).
+     Built by ~/Desktop/icons/tarot/make.py. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="81dp"
+    android:height="81dp"
+    android:viewportWidth="81"
+    android:viewportHeight="81">
+    <path
+        android:pathData="M19.25,2.5C9.999,2.5 2.5,9.999 2.5,19.25V61.75C2.5,71.001 9.999,78.5 19.25,78.5H61.75C71.001,78.5 78.5,71.001 78.5,61.75V19.25C78.5,9.999 71.001,2.5 61.75,2.5H19.25ZM0,19.25C0,8.619 8.619,0 19.25,0H61.75C72.382,0 81,8.619 81,19.25V61.75C81,72.382 72.382,81 61.75,81H19.25C8.619,81 0,72.382 0,61.75V19.25Z"
+        android:fillColor="#FF000000"
+        android:fillType="evenOdd"/>
+    <path android:pathData="M50.000,19.500 L50.906,19.619 L51.750,19.969 L52.475,20.525 L53.031,21.250 L53.381,22.094 L53.500,23.000 L53.500,58.000 L53.381,58.906 L53.031,59.750 L52.475,60.475 L51.750,61.031 L50.906,61.381 L50.000,61.500 L31.000,61.500 L30.094,61.381 L29.250,61.031 L28.525,60.475 L27.969,59.750 L27.619,58.906 L27.500,58.000 L27.500,23.000 L27.619,22.094 L27.969,21.250 L28.525,20.525 L29.250,19.969 L30.094,19.619 L31.000,19.500 Z" android:fillColor="#FFFFFFFF" android:strokeColor="#FF000000" android:strokeWidth="2.5" android:strokeLineCap="round" android:strokeLineJoin="round"/>
+    <path android:pathData="M40.500,30.500 L42.107,36.620 L47.571,33.429 L44.380,38.893 L50.500,40.500 L44.380,42.107 L47.571,47.571 L42.107,44.380 L40.500,50.500 L38.893,44.380 L33.429,47.571 L36.620,42.107 L30.500,40.500 L36.620,38.893 L33.429,33.429 L38.893,36.620 Z" android:fillColor="#FF000000"/>
+</vector>
