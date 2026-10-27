@@ -15,6 +15,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import com.mudita.mmd.components.text.TextMMD
 import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
@@ -47,7 +49,17 @@ class AppState(val store: Store) {
         set(v) { store.reversals = v; version++ }
 
     fun put(e: Entry) { store.put(e); version++ }
-    fun delete(id: Long) { store.delete(id); version++ }
+    /** The reading just deleted, kept until the next thing is done so it can be put back. */
+    var deleted by mutableStateOf<Entry?>(null)
+        private set
+
+    fun delete(id: Long) {
+        deleted = store.entries().firstOrNull { it.id == id }
+        store.delete(id)
+        version++
+    }
+    fun undelete() { deleted?.let { put(it) }; deleted = null }
+    fun forgetDeleted() { deleted = null }
 
     /** Draws [spread] afresh and keeps it in the journal straight away. */
     fun draw(spread: Spread): Entry {
@@ -69,7 +81,7 @@ fun TarotApp(store: Store) {
     var tab by remember { mutableIntStateOf(0) }
     var about by remember { mutableStateOf(false) }
 
-    fun go(s: Screen) { stack.add(s) }
+    fun go(s: Screen) { state.forgetDeleted(); stack.add(s) }
     fun back() { if (stack.size > 1) stack.removeAt(stack.lastIndex) }
 
     if (stack.size > 1) BackHandler { back() }
@@ -106,14 +118,24 @@ private fun Tabs(state: AppState, tab: Int, onTab: (Int) -> Unit, go: (Screen) -
                     stringResource(R.string.tab_cards),
                 ),
                 selected = tab,
-                onSelect = onTab,
+                onSelect = { state.forgetDeleted(); onTab(it) },
             )
+            state.deleted?.let { UndoBar(onUndo = state::undelete) }
             when (tab) {
                 0 -> TodayTab(state, go)
                 1 -> SpreadTab(state, go)
-                2 -> JournalTab(state, go)
+                2 -> JournalTab(state, go, onTab)
                 else -> CardsTab(go)
             }
         }
+    }
+}
+
+/** Under the tabs after a reading is deleted, whichever tab is open: the way to put it back. */
+@Composable
+private fun UndoBar(onUndo: () -> Unit) {
+    Column(Modifier.padding(horizontal = 20.dp, vertical = 6.dp).testTag("undo_bar")) {
+        TextMMD(text = stringResource(R.string.deleted_done), style = MaterialTheme.typography.bodyMedium)
+        WideButton(stringResource(R.string.deleted_undo), onClick = onUndo)
     }
 }

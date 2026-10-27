@@ -49,15 +49,29 @@ fun BarButton(icon: ImageVector, description: String, onClick: () -> Unit) {
 /** A row that says what it is and what it is set to, and does something when pressed. */
 @Composable
 fun SettingRow(title: String, value: String?, onClick: (() -> Unit)?) {
-    Column(
+    Row(
         modifier = Modifier
             .fillMaxWidth()
             .let { if (onClick != null) it.clickable(onClick = onClick) else it }
             .padding(vertical = 14.dp),
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        TextMMD(text = title, style = MaterialTheme.typography.bodyMedium)
-        if (value != null) TextMMD(text = value, style = MaterialTheme.typography.labelSmall)
+        Column(Modifier.weight(1f)) {
+            TextMMD(text = title, style = MaterialTheme.typography.bodyMedium)
+            if (value != null) TextMMD(text = value, style = MaterialTheme.typography.labelSmall)
+        }
+        if (onClick != null) Chevron()
     }
+}
+
+/** The mark at the end of a row that opens something. */
+@Composable
+fun Chevron() {
+    TextMMD(
+        text = "›",
+        style = MaterialTheme.typography.titleLarge,
+        modifier = Modifier.padding(start = 12.dp),
+    )
 }
 
 @Composable
@@ -79,8 +93,8 @@ fun SwitchRow(title: String, checked: Boolean, note: String? = null, onChange: (
 }
 
 /**
- * A row that asks once, in its own face: the first press arms it and changes what it says,
- * the second does it. It disarms itself after four seconds, so a stray press does not leave
+ * A button that asks once, in its own face: the first press arms it and changes what it says,
+ * the second does it. It disarms itself after six seconds, so a stray press does not leave
  * a live trigger for whoever picks the phone up next.
  */
 @Composable
@@ -88,27 +102,16 @@ fun ArmedRow(label: String, armedLabel: String, onConfirmed: () -> Unit) {
     var armed by remember { mutableStateOf(false) }
     LaunchedEffect(armed) {
         if (!armed) return@LaunchedEffect
-        delay(4000)
+        delay(6000)
         armed = false
     }
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable {
-                if (armed) {
-                    armed = false
-                    onConfirmed()
-                } else {
-                    armed = true
-                }
-            }
-            .padding(vertical = 14.dp),
-    ) {
-        TextMMD(
-            text = if (armed) armedLabel else label,
-            style = MaterialTheme.typography.bodyMedium,
-            fontWeight = if (armed) FontWeight.Bold else FontWeight.Normal,
-        )
+    WideButton(text = if (armed) armedLabel else label, filled = armed) {
+        if (armed) {
+            armed = false
+            onConfirmed()
+        } else {
+            armed = true
+        }
     }
 }
 

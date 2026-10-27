@@ -2,7 +2,8 @@ package com.wanderwildwood.tarot.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -22,6 +23,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.min
 import com.mudita.mmd.components.text.TextMMD
 import com.wanderwildwood.tarot.R
 import com.wanderwildwood.tarot.deck.Deck
@@ -43,22 +45,31 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val position = stringResource(R.string.pos_daily)
 
     PagedColumn(Modifier.fillMaxSize().testTag("today")) {
+        // The first page is the card itself, as large as the room under the tabs allows; what it
+        // means comes on the next page.
         item {
-            TextMMD(
-                text = longDate(today),
-                style = MaterialTheme.typography.labelSmall,
-                modifier = Modifier.padding(horizontal = SIDE, vertical = 10.dp),
-            )
-        }
-        item {
-            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-                CardArt(
-                    drawn.card, drawn.reversed, small = false,
-                    description = drawnName(words, drawn),
-                    modifier = Modifier
-                        .size(width = 168.dp, height = 168.dp * Spread.ASPECT)
-                        .clickable { go(Screen.Card(drawn, position)) }
-                        .testTag("today_card"),
+            Column(Modifier.fillParentMaxHeight().fillMaxWidth()) {
+                TextMMD(
+                    text = longDate(today),
+                    style = MaterialTheme.typography.labelSmall,
+                    modifier = Modifier.padding(horizontal = SIDE, vertical = 10.dp),
+                )
+                BoxWithConstraints(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                    val w = min(maxWidth - SIDE * 2, (maxHeight - 8.dp) / Spread.ASPECT)
+                    CardArt(
+                        drawn.card, drawn.reversed, small = false,
+                        description = drawnName(words, drawn),
+                        modifier = Modifier
+                            .size(width = w, height = w * Spread.ASPECT)
+                            .clickable { go(Screen.Card(drawn, position)) }
+                            .testTag("today_card"),
+                    )
+                }
+                TextMMD(
+                    text = drawnName(words, drawn),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(horizontal = SIDE, vertical = 8.dp),
                 )
             }
         }
@@ -85,13 +96,13 @@ fun Meaning(words: CardWords, d: Drawn, modifier: Modifier = Modifier) {
         Spacer(Modifier.height(4.dp))
         TextMMD(
             text = if (d.reversed) words.revKeys[d.card] else words.upKeys[d.card],
-            style = MaterialTheme.typography.bodySmall,
+            style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
         )
         Spacer(Modifier.height(6.dp))
         TextMMD(
             text = if (d.reversed) words.rev[d.card] else words.up[d.card],
-            style = MaterialTheme.typography.bodySmall,
+            style = MaterialTheme.typography.bodyMedium,
         )
     }
 }
@@ -103,7 +114,7 @@ fun SpreadTab(state: AppState, go: (Screen) -> Unit) {
         item {
             TextMMD(
                 text = stringResource(R.string.spread_choose),
-                style = MaterialTheme.typography.bodySmall,
+                style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(horizontal = SIDE, vertical = 14.dp),
             )
             Rule()
@@ -117,11 +128,16 @@ fun SpreadTab(state: AppState, go: (Screen) -> Unit) {
                         .testTag("spread_${s.key}")
                         .padding(horizontal = SIDE, vertical = 16.dp),
                 ) {
-                    TextMMD(text = spreadName(s), style = MaterialTheme.typography.titleMedium)
-                    TextMMD(
-                        text = pluralStringResource(R.plurals.cards_count, s.size, s.size.toString()),
-                        style = MaterialTheme.typography.labelSmall,
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f)) {
+                            TextMMD(text = spreadName(s), style = MaterialTheme.typography.titleMedium)
+                            TextMMD(
+                                text = pluralStringResource(R.plurals.cards_count, s.size, s.size.toString()),
+                                style = MaterialTheme.typography.labelSmall,
+                            )
+                        }
+                        Chevron()
+                    }
                 }
                 Rule()
             }
@@ -131,32 +147,34 @@ fun SpreadTab(state: AppState, go: (Screen) -> Unit) {
 
 /** Every reading, newest first. */
 @Composable
-fun JournalTab(state: AppState, go: (Screen) -> Unit) {
+fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
     val words = rememberCardWords()
     val entries = state.entries
     if (entries.isEmpty()) {
-        TextMMD(
-            text = stringResource(R.string.journal_empty),
-            style = MaterialTheme.typography.bodySmall,
-            modifier = Modifier.padding(horizontal = SIDE, vertical = 16.dp),
-        )
+        Column(Modifier.padding(horizontal = SIDE, vertical = 16.dp).testTag("journal_empty")) {
+            TextMMD(text = stringResource(R.string.journal_empty), style = MaterialTheme.typography.bodyMedium)
+            Spacer(Modifier.height(12.dp))
+            WideButton(stringResource(R.string.journal_empty_today)) { onTab(0) }
+            WideButton(stringResource(R.string.journal_empty_spread)) { onTab(1) }
+        }
         return
     }
     val list = rememberLazyListState()
-    ListJumpBox(list, ListJump.Pages) {
+    run {
         PagedColumn(state = list, modifier = Modifier.fillMaxSize().testTag("journal")) {
             for (e in entries) {
                 item(key = e.id) {
                     val cards = e.cards.map { d ->
                         if (d.reversed) stringResource(R.string.reversed_short, words.names[d.card]) else words.names[d.card]
                     }.joinToString(", ")
-                    Column(
+                    Row(
                         Modifier
                             .fillMaxWidth()
                             .clickable { go(Screen.Reading(e.id)) }
                             .padding(horizontal = SIDE, vertical = 12.dp),
-                        verticalArrangement = Arrangement.spacedBy(2.dp),
+                        verticalAlignment = Alignment.CenterVertically,
                     ) {
+                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                         TextMMD(
                             text = stringResource(R.string.journal_row, shortDate(e.epochDay), spreadName(e.spread)),
                             style = MaterialTheme.typography.bodyMedium,
@@ -166,6 +184,8 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit) {
                         if (e.note.isNotBlank()) {
                             TextMMD(text = e.note, style = MaterialTheme.typography.labelSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)
                         }
+                    }
+                    Chevron()
                     }
                     Rule()
                 }
@@ -179,18 +199,22 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit) {
 fun CardsTab(go: (Screen) -> Unit) {
     val words = rememberCardWords()
     val list = rememberLazyListState()
-    ListJumpBox(list, ListJump.Pages) {
+    run {
         PagedColumn(state = list, modifier = Modifier.fillMaxSize().testTag("cards")) {
             for (card in 0 until Deck.SIZE) {
                 item(key = card) {
-                    Column(
+                    Row(
                         Modifier
                             .fillMaxWidth()
                             .clickable { go(Screen.Card(Drawn(card, false), null)) }
                             .padding(horizontal = SIDE, vertical = 10.dp),
+                        verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        TextMMD(text = words.names[card], style = MaterialTheme.typography.bodyMedium)
-                        TextMMD(text = words.upKeys[card], style = MaterialTheme.typography.labelSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                        Column(Modifier.weight(1f)) {
+                            TextMMD(text = words.names[card], style = MaterialTheme.typography.bodyMedium)
+                            TextMMD(text = words.upKeys[card], style = MaterialTheme.typography.labelSmall, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                        }
+                        Chevron()
                     }
                     Rule()
                 }

@@ -106,7 +106,7 @@ fun CardScreen(drawn: Drawn, position: String?, onBack: () -> Unit, onZoom: () -
                                 fontWeight = FontWeight.Bold,
                             )
                             Spacer(Modifier.height(6.dp))
-                            TextMMD(text = if (rev) words.rev[card] else words.up[card], style = MaterialTheme.typography.bodySmall)
+                            TextMMD(text = if (rev) words.rev[card] else words.up[card], style = MaterialTheme.typography.bodyMedium)
                         }
                         Rule()
                     }

@@ -13,7 +13,6 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -65,10 +64,6 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
                     note = stringResource(R.string.settings_reversals_note),
                 ) { state.reversals = it }
             }
-            item(key = "listjump") {
-                val jumpShown by rememberListJumpShown()
-                SwitchRow(stringResource(R.string.list_jump_setting), jumpShown) { ListJumpPrefs.setShown(context, it) }
-            }
             item(key = "guide") { SettingRow(stringResource(R.string.settings_guide), null, onGuide) }
             item(key = "export") {
                 SettingRow(stringResource(R.string.settings_export), stringResource(R.string.settings_export_note)) {
@@ -107,8 +102,8 @@ fun GuideScreen(onBack: () -> Unit) {
             )
         },
     ) { padding ->
-        ListJumpBox(list, ListJump.Pages, Modifier.padding(padding)) {
-            PagedColumn(state = list, modifier = Modifier.fillMaxSize().testTag("guide")) {
+        run {
+            PagedColumn(state = list, modifier = Modifier.padding(padding).fillMaxSize().testTag("guide")) {
                 for ((heading, paras) in GUIDE) {
                     item(key = "h$heading") {
                         TextMMD(
@@ -122,8 +117,8 @@ fun GuideScreen(onBack: () -> Unit) {
                         item(key = "p$p") {
                             TextMMD(
                                 text = stringResource(p),
-                                style = MaterialTheme.typography.bodySmall,
-                                modifier = Modifier.padding(start = 20.dp, end = 12.dp, top = 4.dp, bottom = 6.dp),
+                                style = MaterialTheme.typography.bodyMedium,
+                                modifier = Modifier.padding(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 6.dp),
                             )
                         }
                     }

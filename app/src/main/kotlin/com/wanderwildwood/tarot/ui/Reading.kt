@@ -4,6 +4,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -81,17 +82,21 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
             entry.cards.forEachIndexed { i, d ->
                 item(key = "pos$i") {
                     val position = positionName(entry.spread, i)
-                    Column(
+                    Row(
                         Modifier
                             .fillMaxWidth()
                             .clickable { go(Screen.Card(d, position)) }
                             .padding(horizontal = SIDE, vertical = 12.dp),
+                        verticalAlignment = Alignment.CenterVertically,
                     ) {
-                        TextMMD(
-                            text = if (entry.size > 1) stringResource(R.string.position_numbered, (i + 1).toString(), position) else position,
-                            style = MaterialTheme.typography.labelSmall,
-                        )
-                        Meaning(words, d)
+                        Column(Modifier.weight(1f)) {
+                            TextMMD(
+                                text = if (entry.size > 1) stringResource(R.string.position_numbered, (i + 1).toString(), position) else position,
+                                style = MaterialTheme.typography.labelSmall,
+                            )
+                            Meaning(words, d)
+                        }
+                        Chevron()
                     }
                     Rule()
                 }
@@ -100,14 +105,12 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
                 Column(Modifier.padding(horizontal = SIDE)) {
                     if (entry.note.isNotBlank()) {
                         Heading(stringResource(R.string.note))
-                        TextMMD(text = entry.note, style = MaterialTheme.typography.bodySmall)
+                        TextMMD(text = entry.note, style = MaterialTheme.typography.bodyMedium)
                     }
-                    SettingRow(
-                        stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit),
-                        null,
-                    ) { editing = true }
+                    Spacer(Modifier.height(8.dp))
+                    WideButton(stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit)) { editing = true }
                     if (entry.spread != Spread.DAILY) {
-                        SettingRow(stringResource(R.string.draw_again), null) {
+                        WideButton(stringResource(R.string.draw_again)) {
                             replace(Screen.Reading(state.draw(entry.spread).id))
                         }
                     }
@@ -189,7 +192,7 @@ fun NoteDialog(start: String, onDismiss: () -> Unit, onSave: (String) -> Unit) {
         TextFieldMMD(
             value = text,
             onValueChange = { text = it },
-            placeholder = { TextMMD(text = stringResource(R.string.note_hint), style = MaterialTheme.typography.bodySmall) },
+            placeholder = { TextMMD(text = stringResource(R.string.note_hint), style = MaterialTheme.typography.bodyMedium) },
             minLines = 3,
             maxLines = 6,
             modifier = Modifier.fillMaxWidth().testTag("note_field"),

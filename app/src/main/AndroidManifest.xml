@@ -3,6 +3,15 @@
 
     <!-- No permissions at all. -->
 
+    <!-- To see whether anything can open a web address, so the About links can say so. -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher_mudita"
