@@ -67,10 +67,11 @@ fun SettingRow(title: String, value: String?, onClick: (() -> Unit)?) {
 /** The mark at the end of a row that opens something. */
 @Composable
 fun Chevron() {
-    TextMMD(
-        text = "›",
-        style = MaterialTheme.typography.titleLarge,
-        modifier = Modifier.padding(start = 12.dp),
+    Icon(
+        imageVector = Icons.ChevronRight,
+        contentDescription = null,
+        tint = MaterialTheme.colorScheme.onSurface,
+        modifier = Modifier.padding(start = 12.dp).size(28.dp),
     )
 }
 
