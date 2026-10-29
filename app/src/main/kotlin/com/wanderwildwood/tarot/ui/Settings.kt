@@ -122,7 +122,7 @@ fun GuideScreen(onBack: () -> Unit) {
                             )
                         }
                     }
-                    item(key = "r$heading") { Spacer(Modifier.height(8.dp)); Rule() }
+                    item(key = "r$heading") { Spacer(Modifier.height(12.dp)) }
                 }
             }
         }

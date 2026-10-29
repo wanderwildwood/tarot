@@ -88,7 +88,6 @@ fun CardScreen(drawn: Drawn, position: String?, onBack: () -> Unit, onZoom: () -
                         TextMMD(text = drawnName(words, drawn), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                         TextMMD(text = stringResource(R.string.zoom_hint), style = MaterialTheme.typography.labelSmall)
                     }
-                    Rule()
                 }
                 val order = if (drawn.reversed) listOf(true, false) else listOf(false, true)
                 for (rev in order) {
@@ -108,7 +107,6 @@ fun CardScreen(drawn: Drawn, position: String?, onBack: () -> Unit, onZoom: () -
                             Spacer(Modifier.height(6.dp))
                             TextMMD(text = if (rev) words.rev[card] else words.up[card], style = MaterialTheme.typography.bodyMedium)
                         }
-                        Rule()
                     }
                 }
             }
