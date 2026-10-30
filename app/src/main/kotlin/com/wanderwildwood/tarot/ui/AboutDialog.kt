@@ -40,7 +40,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
     var licences by rememberSaveable { mutableStateOf(false) }
     EInkDialog(onDismiss = onDismiss) {
         if (licences) {
-            LicencesPage(onBack = { licences = false }, room = (screen * 0.7f).dp)
+            LicencesScreen(rememberLicencesData(), rememberLicencesLabels(), onBack = { licences = false }, modifier = Modifier.fillMaxWidth().height((screen * 0.7f).dp))
             return@EInkDialog
         }
         TextMMD(
