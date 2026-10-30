@@ -106,14 +106,14 @@ fun ArmedRow(label: String, armedLabel: String, onConfirmed: () -> Unit) {
         delay(6000)
         armed = false
     }
-    WideButton(text = if (armed) armedLabel else label, filled = armed) {
+    HouseButton(if (armed) armedLabel else label, on = armed, modifier = WideRow, onClick = {
         if (armed) {
             armed = false
             onConfirmed()
         } else {
             armed = true
         }
-    }
+    })
 }
 
 /** A small heading over a group of rows. */
@@ -131,13 +131,5 @@ fun Heading(text: String, modifier: Modifier = Modifier) {
 @Composable
 fun Rule() = HorizontalDividerMMD(thickness = 1.dp)
 
-/** A full-width button. */
-@Composable
-fun WideButton(text: String, filled: Boolean = false, modifier: Modifier = Modifier, onClick: () -> Unit) {
-    val m = modifier.fillMaxWidth().padding(vertical = 4.dp).height(48.dp)
-    if (filled) {
-        ButtonMMD(onClick = onClick, modifier = m) { TextMMD(text = text, style = MaterialTheme.typography.bodyMedium) }
-    } else {
-        OutlinedButtonMMD(onClick = onClick, modifier = m) { TextMMD(text = text, style = MaterialTheme.typography.bodyMedium) }
-    }
-}
+/** A [HouseButton] the width of the page, with a little air above and below. */
+internal val WideRow: Modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)

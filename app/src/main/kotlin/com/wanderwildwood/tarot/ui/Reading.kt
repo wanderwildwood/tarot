@@ -108,11 +108,11 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
                         TextMMD(text = entry.note, style = MaterialTheme.typography.bodyMedium)
                     }
                     Spacer(Modifier.height(8.dp))
-                    WideButton(stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit)) { editing = true }
+                    HouseButton(stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit), onClick = { editing = true }, modifier = WideRow)
                     if (entry.spread != Spread.DAILY) {
-                        WideButton(stringResource(R.string.draw_again)) {
+                        HouseButton(stringResource(R.string.draw_again), modifier = WideRow, onClick = {
                             replace(Screen.Reading(state.draw(entry.spread).id))
-                        }
+                        })
                     }
                     ArmedRow(stringResource(R.string.delete_reading), stringResource(R.string.delete_reading_armed)) {
                         state.delete(entry.id)
@@ -198,10 +198,10 @@ fun NoteDialog(start: String, onDismiss: () -> Unit, onSave: (String) -> Unit) {
             modifier = Modifier.fillMaxWidth().testTag("note_field"),
         )
         Spacer(Modifier.height(12.dp))
-        WideButton(stringResource(R.string.save), filled = true) {
+        HouseButton(stringResource(R.string.save), on = true, modifier = WideRow, onClick = {
             onSave(text)
             onDismiss()
-        }
-        WideButton(stringResource(R.string.cancel), onClick = onDismiss)
+        })
+        HouseButton(stringResource(R.string.cancel), onClick = onDismiss, modifier = WideRow)
     }
 }

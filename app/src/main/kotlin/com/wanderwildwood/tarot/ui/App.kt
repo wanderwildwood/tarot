@@ -136,6 +136,6 @@ private fun Tabs(state: AppState, tab: Int, onTab: (Int) -> Unit, go: (Screen) -
 private fun UndoBar(onUndo: () -> Unit) {
     Column(Modifier.padding(horizontal = 20.dp, vertical = 6.dp).testTag("undo_bar")) {
         TextMMD(text = stringResource(R.string.deleted_done), style = MaterialTheme.typography.bodyMedium)
-        WideButton(stringResource(R.string.deleted_undo), onClick = onUndo)
+        HouseButton(stringResource(R.string.deleted_undo), onClick = onUndo, modifier = WideRow)
     }
 }

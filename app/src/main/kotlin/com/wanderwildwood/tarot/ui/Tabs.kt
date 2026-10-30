@@ -77,11 +77,11 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
         item {
             Column(Modifier.padding(horizontal = SIDE, vertical = 12.dp)) {
                 if (kept == null) {
-                    WideButton(stringResource(R.string.today_keep)) {
+                    HouseButton(stringResource(R.string.today_keep), modifier = WideRow, onClick = {
                         state.put(Entry(System.currentTimeMillis(), today, Spread.DAILY, listOf(drawn)))
-                    }
+                    })
                 } else {
-                    WideButton(stringResource(R.string.today_kept)) { go(Screen.Reading(kept.id)) }
+                    HouseButton(stringResource(R.string.today_kept), onClick = { go(Screen.Reading(kept.id)) }, modifier = WideRow)
                 }
             }
         }
@@ -154,8 +154,8 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
         Column(Modifier.padding(horizontal = SIDE, vertical = 16.dp).testTag("journal_empty")) {
             TextMMD(text = stringResource(R.string.journal_empty), style = MaterialTheme.typography.bodyMedium)
             Spacer(Modifier.height(12.dp))
-            WideButton(stringResource(R.string.journal_empty_today)) { onTab(0) }
-            WideButton(stringResource(R.string.journal_empty_spread)) { onTab(1) }
+            HouseButton(stringResource(R.string.journal_empty_today), onClick = { onTab(0) }, modifier = WideRow)
+            HouseButton(stringResource(R.string.journal_empty_spread), onClick = { onTab(1) }, modifier = WideRow)
         }
         return
     }

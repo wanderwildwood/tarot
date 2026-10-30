@@ -65,10 +65,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
             item { Llama() }
         }
         Spacer(Modifier.height(12.dp))
-        OutlinedButtonMMD(
-            onClick = onDismiss,
-            modifier = Modifier.fillMaxWidth().height(48.dp),
-        ) { TextMMD(text = stringResource(R.string.about_close), style = MaterialTheme.typography.bodyMedium) }
+        HouseButton(stringResource(R.string.about_close), onClick = onDismiss, modifier = Modifier.fillMaxWidth())
     }
 }
 
