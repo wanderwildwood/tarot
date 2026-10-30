@@ -1,9 +1,5 @@
 package com.wanderwildwood.tarot.ui
 
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -16,6 +12,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
@@ -37,7 +37,12 @@ import com.wanderwildwood.tarot.R
 @Composable
 fun AboutDialog(onDismiss: () -> Unit) {
     val screen = LocalConfiguration.current.screenHeightDp
+    var licences by rememberSaveable { mutableStateOf(false) }
     EInkDialog(onDismiss = onDismiss) {
+        if (licences) {
+            LicencesPage(onBack = { licences = false }, room = (screen * 0.7f).dp)
+            return@EInkDialog
+        }
         TextMMD(
             text = stringResource(R.string.about_title, BuildConfig.VERSION_NAME),
             style = MaterialTheme.typography.bodyLarge,
@@ -49,10 +54,7 @@ fun AboutDialog(onDismiss: () -> Unit) {
             item { Section(R.string.about_privacy_title, R.string.about_privacy) }
             item { Section(R.string.about_terms_title, R.string.about_terms) }
             item { Heading(stringResource(R.string.about_open_title)) }
-            for (line in listOf(
-                R.string.about_licence, R.string.about_art, R.string.about_meanings,
-                R.string.about_components, R.string.about_icons,
-            )) {
+            for (line in listOf(R.string.about_licence, R.string.about_art, R.string.about_meanings)) {
                 item(key = line) {
                     TextMMD(
                         text = stringResource(line),
@@ -60,6 +62,12 @@ fun AboutDialog(onDismiss: () -> Unit) {
                         modifier = Modifier.padding(bottom = 6.dp),
                     )
                 }
+            }
+            item(key = "licences") {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).clickable { licences = true },
+                ) { TextMMD(text = stringResource(R.string.about_licences), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold) }
             }
             item { LinkRow(stringResource(R.string.about_source), "https://github.com/wanderwildwood/tarot") }
             item { Llama() }
@@ -75,26 +83,9 @@ private fun Section(title: Int, body: Int) {
     TextMMD(text = stringResource(body), style = MaterialTheme.typography.bodyMedium)
 }
 
-/**
- * Opens [url] in a browser, and says so in plain words when there is none. Only a real browser
- * is asked: the system's bare WebView shell answers a web address on some phones and then
- * crashes, so it counts as no browser, and the address is shown instead. Never a WebView here.
- */
-fun openLink(context: android.content.Context, url: String) {
-    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).addCategory(Intent.CATEGORY_BROWSABLE)
-    val handler = context.packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
-    val pkg = handler?.activityInfo?.packageName
-    val shown = url.removePrefix("https://")
-    if (pkg == null || pkg == "android" || pkg.contains("webview_shell")) {
-        Toast.makeText(context, context.getString(R.string.about_no_browser_address, shown), Toast.LENGTH_LONG).show()
-        return
-    }
-    try {
-        context.startActivity(intent)
-    } catch (_: android.content.ActivityNotFoundException) {
-        Toast.makeText(context, context.getString(R.string.about_no_browser_address, shown), Toast.LENGTH_LONG).show()
-    }
-}
+/** Opens [url] in a real browser (the shared guarded opener), or shows the address when there is none. */
+fun openLink(context: android.content.Context, url: String) =
+    openLink(context, url, context.getString(R.string.about_no_browser_address, url.removePrefix("https://")))
 
 /** A line that is an address and opens it, with a target a thumb can find. */
 @Composable

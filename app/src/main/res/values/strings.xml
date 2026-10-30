@@ -156,11 +156,9 @@
     <string name="about_terms_title">Terms</string>
     <string name="about_terms">This app is free software under the GNU General Public License v3. It comes with no warranty: use it at your own risk. Tarot is for reflection and entertainment. The cards describe; they do not predict, and they are no substitute for medical, legal or financial advice.</string>
     <string name="about_open_title">Open source</string>
-    <string name="about_licence">Tarot: GNU General Public License v3</string>
-    <string name="about_art">Card pictures: Pamela Colman Smith, 1909, public domain; scans of a Roses &amp; Lilies printing by Saskia Jansen, on Wikimedia Commons</string>
+    <string name="about_licence">Tarot: GNU General Public License v3 only, copyright wander wildwood</string>
+    <string name="about_art">Card pictures: Pamela Colman Smith, 1909. Scans of an original Roses &amp; Lilies printing by Saskia Jansen, on Wikimedia Commons, where every file is tagged Public domain (PD-old-70-expired)</string>
     <string name="about_meanings">Meanings: written for this app, drawing on A. E. Waite’s The Pictorial Key to the Tarot (1910), public domain</string>
-    <string name="about_components">Made with Mudita Mobile Design (MMD) components, Apache 2.0; Android Jetpack and Jetpack Compose, Apache 2.0; Kotlin, Apache 2.0</string>
-    <string name="about_icons">Icons from Material Symbols, Apache 2.0</string>
     <string name="about_source">github.com/wanderwildwood/tarot</string>
     <!-- %1$s is a web address -->
     <string name="about_no_browser_address">There is no browser on this phone to open that with. The address is %1$s.</string>
@@ -172,4 +170,15 @@
     <string name="folio_page">Page %1$d of %2$d</string>
     <string name="folio_go">Go</string>
     <string name="folio_cancel">Cancel</string>
+    <string name="about_licences">Licences</string>
+    <string name="licences_title">Licences</string>
+    <string name="licences_source_head">Source code</string>
+    <string name="licences_licence_head">Licence</string>
+    <string name="licences_licence">Tarot is free software under the GNU General Public License, version 3 only (GPL-3.0-only), copyright wander wildwood, for what is written here. The work it is built on keeps its own licence and its authors keep their copyright, as listed under Built with. The full text of each licence is at the end of this page.</string>
+    <string name="licences_built_head">Built with</string>
+    <string name="licences_back">Back</string>
+    <string name="licences_gpl">GNU General Public License, version 3</string>
+    <string name="licences_apache">Apache License, version 2.0</string>
+    <string name="licences_mit">MIT License</string>
+    <string name="licences_ofl">SIL Open Font License, version 1.1</string>
 </resources>
