@@ -25,7 +25,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.mudita.mmd.components.buttons.ButtonMMD
 import com.mudita.mmd.components.buttons.OutlinedButtonMMD
-import com.mudita.mmd.components.divider.HorizontalDividerMMD
 import com.mudita.mmd.components.switcher.SwitchMMD
 import com.mudita.mmd.components.text.TextMMD
 import kotlinx.coroutines.delay
@@ -126,10 +125,6 @@ fun Heading(text: String, modifier: Modifier = Modifier) {
         modifier = modifier.padding(top = 18.dp, bottom = 4.dp),
     )
 }
-
-/** A thin rule between rows, as under a top bar. */
-@Composable
-fun Rule() = HorizontalDividerMMD(thickness = 1.dp)
 
 /** A [HouseButton] the width of the page, with a little air above and below. */
 internal val WideRow: Modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)

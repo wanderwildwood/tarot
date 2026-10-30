@@ -98,7 +98,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
                         }
                         Chevron()
                     }
-                    Rule()
+                    Spacer(Modifier.height(12.dp))
                 }
             }
             item(key = "note") {

@@ -117,7 +117,6 @@ fun SpreadTab(state: AppState, go: (Screen) -> Unit) {
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(horizontal = SIDE, vertical = 14.dp),
             )
-            Rule()
         }
         for (s in listOf(Spread.ONE, Spread.THREE, Spread.CELTIC)) {
             item(key = s.key) {
@@ -139,7 +138,7 @@ fun SpreadTab(state: AppState, go: (Screen) -> Unit) {
                         Chevron()
                     }
                 }
-                Rule()
+                Spacer(Modifier.height(12.dp))
             }
         }
     }
@@ -187,7 +186,7 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
                     }
                     Chevron()
                     }
-                    Rule()
+                    Spacer(Modifier.height(12.dp))
                 }
             }
         }
@@ -216,7 +215,7 @@ fun CardsTab(go: (Screen) -> Unit) {
                         }
                         Chevron()
                     }
-                    Rule()
+                    Spacer(Modifier.height(12.dp))
                 }
             }
         }
