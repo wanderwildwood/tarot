@@ -6,8 +6,8 @@ It will install on any Android 12 device.
 
 | | |
 |---|---|
-| ![Today's card](screenshots/1-today.png) | ![A Celtic Cross](screenshots/2-celtic.png) |
-| ![A card on its own page](screenshots/3-card.png) | ![The journal](screenshots/4-journal.png) |
+| ![The three spreads](screenshots/1-spread.png) | ![The deck, card by card](screenshots/2-cards.png) |
+| ![A card on its own page](screenshots/3-card.png) | ![Settings: reversed cards, the guide, the journal export](screenshots/4-settings.png) |
 
 ## Using it
 
