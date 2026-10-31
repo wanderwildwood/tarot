@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The 78 cards: name, then upright keywords and meaning, then reversed keywords and meaning.
+  Written for this app in plain words, drawing on A. E. Waite's "The Pictorial Key to the
+  Tarot" (1910), which is in the public domain. They describe; they do not predict.
+  The arrays at the foot of values/cards.xml list them in deck order and are how the app
+  finds them; they hold the same @string references here and need no German copy.
+-->
+<resources>
+    <!-- The Fool -->
+    <string name="card_m00_name">Der Narr</string>
+    <string name="card_m00_up_keys">Anfänge, Vertrauen, ein offener Weg</string>
+    <string name="card_m00_up">Ein Schritt, getan, bevor der Weg bekannt ist. Diese Karte steht fürs Aufbrechen mit frischem Blick und für das Vertrauen, dass der Boden trägt. Unschuld ist hier eine Stärke, solange sie hinsieht, wohin sie geht.</string>
+    <string name="card_m00_rev_keys">Leichtsinn, Zögern, ein Sprung ohne Hinsehen</string>
+    <string name="card_m00_rev">Derselbe Schritt, zu leichtfertig getan oder gar nicht. Etwas wird vielleicht ohne Nachdenken überstürzt oder aus Angst, sich lächerlich zu machen, zurückgehalten. Sie fragt, welches von beidem gerade geschieht.</string>
+    <!-- The Magician -->
+    <string name="card_m01_name">Der Magier</string>
+    <string name="card_m01_up_keys">Können, Wille, was zur Hand ist</string>
+    <string name="card_m01_up">Alles Nötige liegt schon auf dem Tisch. Die Karte zeigt auf Sammlung und die Fähigkeit, aus einer Idee etwas Wirkliches zu machen. Sie fragt, was du mit den Werkzeugen schaffen würdest, die du schon hast.</string>
+    <string name="card_m01_rev_keys">Zersplitterte Kraft, Täuschung, ungenutztes Können</string>
+    <string name="card_m01_rev">Ein Können, das nicht genutzt wird oder nur dazu dient, zu beeindrucken statt zu schaffen. Die Aufmerksamkeit ist vielleicht zu sehr geteilt. Sie kann auch auf jemanden deuten, vielleicht auf einen selbst, der mehr sagt, als wahr ist.</string>
+    <!-- The High Priestess -->
+    <string name="card_m02_name">Die Hohepriesterin</string>
+    <string name="card_m02_up_keys">Inneres Wissen, Stille, das Verborgene</string>
+    <string name="card_m02_up">Eine stille Karte über das, was gewusst wird, ohne gesagt zu sein. Unter der Oberfläche der Dinge steckt vielleicht mehr, als sich schon zeigt. Sie legt nahe, zuzuhören, zu warten und einem Gefühl zu trauen, das keine Worte hat.</string>
+    <string name="card_m02_rev_keys">Oberfläche, Geheimnisse, übergangene Intuition</string>
+    <string name="card_m02_rev">Die innere Stimme geht im Lärm unter oder wird beiseitegeschoben, weil das Leichtere zu erklären ist. Etwas wird vielleicht zurückgehalten, das besser bekannt wäre. Eine Pause zum Hinhören lohnt sich.</string>
+    <!-- The Empress -->
+    <string name="card_m03_name">Die Herrscherin</string>
+    <string name="card_m03_up_keys">Fülle, Fürsorge, Wachstum</string>
+    <string name="card_m03_up">Dinge, die in ihrer eigenen Zeit wachsen: ein Garten, ein Körper, ein Stück Arbeit. Die Karte steht für Pflege und sinnliche Freude. Sie fragt, was gepflegt wird und was dich pflegt.</string>
+    <string name="card_m03_rev_keys">Vernachlässigung, Abhängigkeit, eine stockende Zeit</string>
+    <string name="card_m03_rev">Die Fürsorge ist aus dem Gleichgewicht geraten: zurückgehalten oder gegeben, bis nichts mehr bleibt. Das Wachstum fühlt sich vielleicht festgefahren an. Sie kann auf die Notwendigkeit deuten, ebenso gut auf sich selbst zu achten wie auf andere.</string>
+    <!-- The Emperor -->
+    <string name="card_m04_name">Der Herrscher</string>
+    <string name="card_m04_up_keys">Struktur, Beständigkeit, Autorität</string>
+    <string name="card_m04_up">Ordnung, Grenzen und eine feste Hand. Die Karte spricht vom Aufbau von etwas, das trägt, und von der Verantwortung dafür. Beständigkeit ist hier ein Geschenk an alle, die auf sie zählen.</string>
+    <string name="card_m04_rev_keys">Starre, Kontrolle, ein wackeliger Stand</string>
+    <string name="card_m04_rev">Die Struktur ist zur Kontrolle erstarrt, oder der Grund darunter ist weich geworden. Regeln werden vielleicht um ihrer selbst willen befolgt. Sie fragt, wo Festigkeit hilft und wo sie nur festhält.</string>
+    <!-- The Hierophant -->
+    <string name="card_m05_name">Der Hierophant</string>
+    <string name="card_m05_up_keys">Tradition, Lehre, Zugehörigkeit</string>
+    <string name="card_m05_up">Gemeinsame Wege, Rituale und die Menschen, die sie weitertragen. Die Karte steht fürs Lernen aus dem, was vorher war, und fürs Finden eines Platzes in einer Gemeinschaft. Ein Lehrer oder die Rolle eines Lehrers ist jetzt vielleicht wichtig.</string>
+    <string name="card_m05_rev_keys">Hinterfragen, der eigene Weg, leere Form</string>
+    <string name="card_m05_rev">Alte Formen passen nicht mehr oder werden ohne Bedeutung aufrechterhalten. Vielleicht zieht es dich zum eigenen Weg statt zum erwarteten. Sie fragt, welche Bräuche noch etwas Echtes tragen.</string>
+    <!-- The Lovers -->
+    <string name="card_m06_name">Die Liebenden</string>
+    <string name="card_m06_up_keys">Entscheidung, Verbindung, gemeinsame Werte</string>
+    <string name="card_m06_up">Zwei Dinge, die zueinander gezogen werden, und die Entscheidung, die damit kommt. Die Karte steht für Beziehung im weitesten Sinn und fürs Wählen nach dem, was einem wichtig ist. Ehrlichkeit sich selbst gegenüber gehört dazu.</string>
+    <string name="card_m06_rev_keys">Unstimmigkeit, Ungleichgewicht, eine vermiedene Entscheidung</string>
+    <string name="card_m06_rev">Zwischen Menschen stimmt etwas nicht mehr überein, oder zwischen dem, was einer sagt, und dem, was er tut. Eine Entscheidung wird vielleicht aufgeschoben in der Hoffnung, sie treffe sich von selbst. Sie fragt, was wirklich gewollt ist.</string>
+    <!-- The Chariot -->
+    <string name="card_m07_name">Der Wagen</string>
+    <string name="card_m07_up_keys">Richtung, Entschlossenheit, Zusammenhalten</string>
+    <string name="card_m07_up">Gegensätzliche Kräfte in eine Richtung ziehen. Die Karte steht für Entschlossenheit und Selbstbeherrschung, fürs Vorwärtskommen, ohne dass eines der Pferde durchgeht. Fortschritt kommt vom Lenken, nicht vom Tempo.</string>
+    <string name="card_m07_rev_keys">Treiben, Kraft ohne Ziel</string>
+    <string name="card_m07_rev">Die Anstrengung arbeitet gegen sich selbst oder drückt hart in keine bestimmte Richtung. Die Kontrolle ist vielleicht entglitten. Es hilft womöglich, innezuhalten und eine Richtung zu wählen, bevor es weitergeht.</string>
+    <!-- Strength -->
+    <string name="card_m08_name">Die Kraft</string>
+    <string name="card_m08_up_keys">Geduld, sanfter Mut, Mitgefühl</string>
+    <string name="card_m08_up">Eine Kraft, die nicht mit Gewalt siegen muss. Die Gestalt schließt dem Löwen mit ruhiger Hand die Kiefer. Die Karte steht für beständigen Mut, Freundlichkeit gegenüber dem Wilden und stille Zuversicht.</string>
+    <string name="card_m08_rev_keys">Selbstzweifel, Ungeduld, Gewalt</string>
+    <string name="card_m08_rev">Die Zuversicht ist dünn geworden, oder die Geduld hat der Gewalt Platz gemacht. Etwas Wildes innen oder außen ist vielleicht außer Kontrolle. Sie bittet um Sanftheit, zuerst sich selbst gegenüber.</string>
+    <!-- The Hermit -->
+    <string name="card_m09_name">Der Eremit</string>
+    <string name="card_m09_up_keys">Alleinsein, Einkehr, eine erhobene Lampe</string>
+    <string name="card_m09_up">Wegtreten, um klarer zu sehen. Die Karte steht für Zeit allein, innere Suche und die Führung, die aus Erfahrung kommt. Die Lampe beleuchtet nur die nächsten paar Schritte, und das genügt.</string>
+    <string name="card_m09_rev_keys">Isolation, Rückzug, eine weggelegte Lampe</string>
+    <string name="card_m09_rev">Das Alleinsein ist zur Isolation geworden, oder die Einkehr wurde ganz vermieden. Vielleicht ist es Zeit, zu den Menschen zurückzukehren, oder endlich die Ruhe zu nehmen, die aufgeschoben wurde.</string>
+    <!-- Wheel of Fortune -->
+    <string name="card_m10_name">Das Rad des Schicksals</string>
+    <string name="card_m10_up_keys">Zyklen, Wandel, eine Wende</string>
+    <string name="card_m10_up">Die Dinge drehen sich, und was unten war, kommt herauf. Die Karte steht für die größeren Rhythmen, die niemand steuert, und dafür, einem Wandel zu begegnen statt gegen ihn zu kämpfen. Eine Drehung des Rades ist im Gang.</string>
+    <string name="card_m10_rev_keys">Widerstand, ein Abschwung, Festhalten</string>
+    <string name="card_m10_rev">Das Rad dreht sich in eine unerwünschte Richtung, oder der Wandel wird abgewehrt. Pläne geraten ins Stocken. Sie fragt, was losgelassen werden kann, denn das Rad dreht sich so oder so weiter.</string>
+    <!-- Justice -->
+    <string name="card_m11_name">Die Gerechtigkeit</string>
+    <string name="card_m11_up_keys">Fairness, Wahrheit, Folge</string>
+    <string name="card_m11_up">Dinge ehrlich abgewogen. Die Karte steht für Ursache und Wirkung, Verantwortlichkeit und Entscheidungen mit klarem Kopf. Sie bittet um Fairness gegenüber anderen und sich selbst.</string>
+    <string name="card_m11_rev_keys">Ungerechtigkeit, Ausweichen, Ungleichgewicht</string>
+    <string name="card_m11_rev">Etwas wurde falsch gewogen, oder einer Wahrheit wird ausgewichen. Sie kann auf ein Ungleichgewicht deuten, das ins Lot gebracht werden muss, oder auf eine Entscheidung, deren Folgen nicht angeschaut werden.</string>
+    <!-- The Hanged Man -->
+    <string name="card_m12_name">Der Gehängte</string>
+    <string name="card_m12_up_keys">Pause, Hingabe, ein anderer Blick</string>
+    <string name="card_m12_up">Still hängen und die Welt auf dem Kopf sehen. Die Karte steht für eine freiwillige Pause, das Loslassen von Kontrolle und die Einsicht, die kommt, wenn das Ringen aufhört. Das Gesicht ist ruhig.</string>
+    <string name="card_m12_rev_keys">Stocken, Verzögerung, Widerstand</string>
+    <string name="card_m12_rev">Die Pause dauert zu lange, oder es wird gegen sie angekämpft statt sie zu nutzen. Etwas hängt vielleicht in der Schwebe, weil eine Entscheidung gescheut wird. Sie fragt, welcher neue Blick verpasst wird.</string>
+    <!-- Death -->
+    <string name="card_m13_name">Der Tod</string>
+    <string name="card_m13_up_keys">Enden, Übergang, Klärung</string>
+    <string name="card_m13_up">Etwas endet, damit etwas anderes beginnen kann. Diese Karte meint selten einen wörtlichen Tod. Sie spricht von einem natürlichen Abschluss, vom Abstreifen dessen, was vollendet ist, und von dem Raum, der danach kommt.</string>
+    <string name="card_m13_rev_keys">Festhalten, Stagnation, Angst vor dem Wandel</string>
+    <string name="card_m13_rev">Ein Ende wird abgewehrt, und das Vollendete bleibt liegen. Der Wandel wird vielleicht gebremst, aber nicht aufgehalten. Sie fragt, was über seine Zeit hinaus am Leben gehalten wird.</string>
+    <!-- Temperance -->
+    <string name="card_m14_name">Die Mäßigkeit</string>
+    <string name="card_m14_up_keys">Gleichgewicht, Maß, Mischung</string>
+    <string name="card_m14_up">Zwischen zwei Kelchen gießen, ohne zu verschütten. Die Karte steht für Geduld, den Mittelweg und dafür, Verschiedenes zu einem Ganzen zu mischen. Heilung und gutes Timing gehören dazu.</string>
+    <string name="card_m14_rev_keys">Übermaß, Eile, Ungleichgewicht</string>
+    <string name="card_m14_rev">Etwas ist zu viel oder zu eilig, und die Mischung stimmt nicht. Das Maß ist in eine Richtung gekippt. Sie bittet um eine ruhigere Hand und die Rückkehr zum Gleichgewicht.</string>
+    <!-- The Devil -->
+    <string name="card_m15_name">Der Teufel</string>
+    <string name="card_m15_up_keys">Anhaftung, Gewohnheit, Einschränkung</string>
+    <string name="card_m15_up">Ketten, die lockerer sind, als sie aussehen. Die Karte deutet auf Gewohnheiten, Zwänge oder Bindungen, die einen festhalten. Die Gestalten könnten die Ketten abnehmen, wenn sie es bemerkten.</string>
+    <string name="card_m15_rev_keys">Befreiung, die Kette sehen</string>
+    <string name="card_m15_rev">Der Griff einer Gewohnheit oder Bindung lockert sich oder wird endlich als das gesehen, was er ist. Das kann der erste Schritt in die Freiheit sein. Sie kann auch davor warnen, dass ein Muster zurückrutscht.</string>
+    <!-- The Tower -->
+    <string name="card_m16_name">Der Turm</string>
+    <string name="card_m16_up_keys">Umbruch, plötzlicher Wandel, Offenbarung</string>
+    <string name="card_m16_up">Ein Bau auf falschem Grund stürzt ein. Die Karte steht für plötzlichen Wandel und Wahrheiten, die sich nicht übergehen lassen. Es ist unbequem, und es räumt den Grund für etwas Solideres.</string>
+    <string name="card_m16_rev_keys">Abgewendet, verzögert, Angst vor dem Einsturz</string>
+    <string name="card_m16_rev">Ein nötiger Wandel wird hinausgezögert, oder ein Sturz wurde knapp vermieden. Der Druck ist vielleicht noch da. Sie fragt, ob das Stemmen dagegen seinen Preis wert ist.</string>
+    <!-- The Star -->
+    <string name="card_m17_name">Der Stern</string>
+    <string name="card_m17_up_keys">Hoffnung, Erneuerung, Ruhe</string>
+    <string name="card_m17_up">Nach dem Sturm eine klare Nacht. Die Karte steht für stille Hoffnung, Heilung und das Gefühl, geführt zu sein. Wasser wird frei ausgegossen, und es ist genug davon da.</string>
+    <string name="card_m17_rev_keys">Mutlosigkeit, verlorener Glaube</string>
+    <string name="card_m17_rev">Die Hoffnung ist eine Zeit lang gedämpft oder scheint außer Reichweite. Die Sterne sind vielleicht schwer zu sehen. Sie legt nahe, nach kleinen Quellen der Erneuerung zu suchen, statt auf eine große zu warten.</string>
+    <!-- The Moon -->
+    <string name="card_m18_name">Der Mond</string>
+    <string name="card_m18_up_keys">Ungewissheit, Träume, das Unklare</string>
+    <string name="card_m18_up">Mondlicht, das Umrisse zeigt, aber keine Einzelheiten. Die Karte steht für Ungewissheit, Fantasie und Ängste, die im Dunkeln wachsen. Nicht alles ist, wie es scheint, und manches ist nur Schein.</string>
+    <string name="card_m18_rev_keys">Sich lösende Verwirrung, nachlassende Angst</string>
+    <string name="card_m18_rev">Was unklar war, beginnt sich zu klären, oder eine Angst verliert ihren Griff. Sie kann auch bedeuten, dass eine Täuschung oder Selbsttäuschung ans Licht kommt. Das Tageslicht ist nicht weit.</string>
+    <!-- The Sun -->
+    <string name="card_m19_name">Die Sonne</string>
+    <string name="card_m19_up_keys">Freude, Klarheit, Wärme</string>
+    <string name="card_m19_up">Helles Tageslicht und ein Kind auf einem Pferd. Die Karte steht für schlichtes Glück, Lebenskraft und klar gesehene Dinge. Sie ist eine der offensten und wärmsten Karten im Deck.</string>
+    <string name="card_m19_rev_keys">Gedämpfte Freude, vorüberziehende Wolken</string>
+    <string name="card_m19_rev">Die Wärme ist da, aber gedämpft, oder wird zu früh erwartet. Etwas steht vielleicht dem Genuss des Guten im Weg. Es ist eine Wolke vor der Sonne, nicht die Nacht.</string>
+    <!-- Judgement -->
+    <string name="card_m20_name">Das Gericht</string>
+    <string name="card_m20_up_keys">Erwachen, Abrechnung, ein Ruf</string>
+    <string name="card_m20_up">Eine Trompete erklingt, und die Gestalten erheben sich. Die Karte steht fürs Erwachen für etwas, fürs Bilanzieren der Vergangenheit und fürs Antworten auf einen Ruf zur Veränderung. Sie fragt, was gehört wurde.</string>
+    <string name="card_m20_rev_keys">Selbstzweifel, ein überhörter Ruf</string>
+    <string name="card_m20_rev">Der Ruf wird gehört, aber nicht beantwortet, oder das Urteil wendet sich hart gegen einen selbst. Altes wird vielleicht gewogen, ohne losgelassen zu werden. Sie bittet um Ehrlichkeit ohne Verurteilung.</string>
+    <!-- The World -->
+    <string name="card_m21_name">Die Welt</string>
+    <string name="card_m21_up_keys">Vollendung, Ganzheit, Ankunft</string>
+    <string name="card_m21_up">Ein Zyklus schließt sich, und die Dinge fügen sich zusammen. Die Karte steht für Erfüllung, Ganzwerden und die Zufriedenheit über ein getanes Werk. Die Tänzerin bewegt sich frei im Kranz.</string>
+    <string name="card_m21_rev_keys">Unvollendet, offene Enden</string>
+    <string name="card_m21_rev">Etwas ist fast vollendet, aber nicht ganz. Ein letzter Schritt fehlt vielleicht, oder das Ende wird aufgeschoben. Sie fragt, was nötig ist, um den Kreis zu schließen.</string>
+    <!-- Ace of Wands -->
+    <string name="card_wands01_name">Ass der Stäbe</string>
+    <string name="card_wands01_up_keys">Funke, Eingebung, ein Neuanfang</string>
+    <string name="card_wands01_up">Eine Hand aus einer Wolke reicht einen lebendigen Zweig. Die Karte markiert den ersten Funken von Kraft oder einer Idee, einen Anfang voller Antrieb. Sie fragt, wohin diese Kraft will.</string>
+    <string name="card_wands01_rev_keys">Verzögerung, ein Funke, der nicht zündet</string>
+    <string name="card_wands01_rev">Die Kraft ist da, zündet aber nicht, oder ein Anfang wird immer wieder verschoben. Die Begeisterung verblasst vielleicht, bevor sie genutzt wird. Sie fragt, was im Weg steht.</string>
+    <!-- Two of Wands -->
+    <string name="card_wands02_name">Zwei der Stäbe</string>
+    <string name="card_wands02_up_keys">Planen, der weitere Blick, eine kommende Entscheidung</string>
+    <string name="card_wands02_up">Auf der Zinne stehen, die Welt in der Hand. Die Karte steht fürs Vorausschauen, Abwägen von Möglichkeiten und Planen des nächsten Schritts. Der schon gehaltene Boden ist sicher.</string>
+    <string name="card_wands02_rev_keys">Zögern, Angst vor dem Unbekannten</string>
+    <string name="card_wands02_rev">Pläne bleiben auf dem Papier, oder aus Vorsicht wird das Vertraute gewählt. Die weitere Welt ist vielleicht zu groß. Sie fragt, wie ein kleiner Schritt aussähe.</string>
+    <!-- Three of Wands -->
+    <string name="card_wands03_name">Drei der Stäbe</string>
+    <string name="card_wands03_up_keys">Weitblick, Ausbreitung, Schiffe unterwegs</string>
+    <string name="card_wands03_up">Schiffen nachsehen, die über das Wasser hinausfahren. Die Karte steht für Anstrengungen, die schon in Gang sind, und fürs Weiter-voraus-Schauen. Geduld und Weitblick gehören dazu.</string>
+    <string name="card_wands03_rev_keys">Verzögerungen, ein enger Blick</string>
+    <string name="card_wands03_rev">Was in Gang gesetzt wurde, kommt langsam zurück, oder der Blick ist eng geworden. Pläne brauchen vielleicht eine Anpassung. Sie bittet um Geduld, ohne aufzugeben.</string>
+    <!-- Four of Wands -->
+    <string name="card_wands04_name">Vier der Stäbe</string>
+    <string name="card_wands04_up_keys">Feier, Zuhause, eine stabile Freude</string>
+    <string name="card_wands04_up">Eine Girlande zwischen vier Stäben, darunter tanzende Menschen. Die Karte steht für eine glückliche, sesshafte Zeit, Heimkehr und gemeinsames Feiern. Es ist ein Moment, der es wert ist, festgehalten zu werden.</string>
+    <string name="card_wands04_rev_keys">Unruhig, ein verpasstes Fest</string>
+    <string name="card_wands04_rev">Zu Hause oder unter anderen fühlt sich etwas unruhig an, oder ein guter Moment geht unbemerkt vorbei. Die Freude ist noch da, vielleicht leiser.</string>
+    <!-- Five of Wands -->
+    <string name="card_wands05_name">Fünf der Stäbe</string>
+    <string name="card_wands05_up_keys">Ringen, Wettstreit, aufeinanderprallende Ansichten</string>
+    <string name="card_wands05_up">Fünf Gestalten, die einander mit Stäben zuwinken. Die Karte steht für Reibung, Rivalität und viele Stimmen auf einmal. Nicht alles davon ist ernst, und manches ist Spiel.</string>
+    <string name="card_wands05_rev_keys">Konfliktvermeidung, nachlassende Spannung</string>
+    <string name="card_wands05_rev">Ein Konflikt wird vermieden statt geklärt, oder das Ringen ebbt ab. Das kann eine Erleichterung sein. Es kann aber auch etwas ungesagt lassen.</string>
+    <!-- Six of Wands -->
+    <string name="card_wands06_name">Sechs der Stäbe</string>
+    <string name="card_wands06_up_keys">Anerkennung, Fortschritt, eine Rückkehr in gutem Ansehen</string>
+    <string name="card_wands06_up">Ein Reiter mit Lorbeerkranz, vom Volk bejubelt. Die Karte steht für anerkannten Erfolg und verdientes Selbstvertrauen. Sie fragt, wie man ihn gut trägt.</string>
+    <string name="card_wands06_rev_keys">Zweifel, verweigerte Anerkennung</string>
+    <string name="card_wands06_rev">Der Erfolg fühlt sich hohl an, oder die Anerkennung bleibt aus. Das Selbstvertrauen wankt vielleicht. Sie fragt, was Erfolg ohne die Menge bedeuten würde.</string>
+    <!-- Seven of Wands -->
+    <string name="card_wands07_name">Sieben der Stäbe</string>
+    <string name="card_wands07_up_keys">Standhalten, Verteidigung, Überzeugung</string>
+    <string name="card_wands07_up">Eine Anhöhe gegen viele halten. Die Karte steht fürs Verteidigen einer Position und für Mut in der Unterzahl. Sie fragt, wofür es sich lohnt, einzustehen.</string>
+    <string name="card_wands07_rev_keys">Überforderung, Boden aufgeben</string>
+    <string name="card_wands07_rev">Der Druck ist zu groß, oder eine Position wird zu leicht aufgegeben. Vielleicht ist es Zeit zu ruhen oder einen kleineren Boden zu wählen, der zu halten ist.</string>
+    <!-- Eight of Wands -->
+    <string name="card_wands08_name">Acht der Stäbe</string>
+    <string name="card_wands08_up_keys">Tempo, Bewegung, Nachrichten</string>
+    <string name="card_wands08_up">Acht Stäbe, die durch offene Luft fliegen. Die Karte steht für Dinge, die sich schnell bewegen, für Botschaften und Schwung. Was feststeckte, kommt in Bewegung.</string>
+    <string name="card_wands08_rev_keys">Verzögerung, zerstreute Eile</string>
+    <string name="card_wands08_rev">Die Bewegung stockt, oder es geht schnell in zu viele Richtungen. Botschaften kreuzen sich vielleicht. Sie fragt nach dem richtigen Zeitpunkt statt nach Tempo.</string>
+    <!-- Nine of Wands -->
+    <string name="card_wands09_name">Neun der Stäbe</string>
+    <string name="card_wands09_up_keys">Widerstandskraft, Wachsamkeit, das letzte Stück</string>
+    <string name="card_wands09_up">Eine verbundene Gestalt hält Wache, einen weiteren Stab in der Hand. Die Karte steht fürs Durchhalten in der Müdigkeit und für die Vorsicht, die aus Verletzungen kommt. Das Ende ist vielleicht näher, als es sich anfühlt.</string>
+    <string name="card_wands09_rev_keys">Erschöpfung, Abwehrhaltung</string>
+    <string name="card_wands09_rev">Die Müdigkeit hat die Wache zermürbt, oder die Wache ist zur Mauer geworden. Sie fragt, ob die Wache noch nötig ist.</string>
+    <!-- Ten of Wands -->
+    <string name="card_wands10_name">Zehn der Stäbe</string>
+    <string name="card_wands10_up_keys">Last, Verantwortung, zu viel tragen</string>
+    <string name="card_wands10_up">Eine Gestalt, gebeugt unter zehn Stäben, geht weiter. Die Karte steht fürs Übernehmen von zu viel und fürs Weitermachen trotz allem. Das Ziel ist in Sicht.</string>
+    <string name="card_wands10_rev_keys">Ablegen, eine geteilte Last</string>
+    <string name="card_wands10_rev">Die Last wird abgelegt oder muss es werden. Manches, was getragen wird, gehört vielleicht anderen. Sie fragt, was losgelassen werden kann.</string>
+    <!-- Page of Wands -->
+    <string name="card_wands11_name">Bube der Stäbe</string>
+    <string name="card_wands11_up_keys">Neugier, Begeisterung, eine Botschaft</string>
+    <string name="card_wands11_up">Eine junge Gestalt blickt zu einem sprießenden Stab auf. Die Karte steht für eifrige Anfänge, Erkundung und Nachrichten, die Interesse wecken. Sie begünstigt das Ausprobieren.</string>
+    <string name="card_wands11_rev_keys">Rastlosigkeit, Ideen ohne Folgen</string>
+    <string name="card_wands11_rev">Die Begeisterung brennt schnell und zieht weiter. Pläne bleiben vielleicht halbfertig. Sie fragt, bei welcher Idee es sich lohnt zu bleiben.</string>
+    <!-- Knight of Wands -->
+    <string name="card_wands12_name">Ritter der Stäbe</string>
+    <string name="card_wands12_up_keys">Energie, Abenteuer, Kühnheit</string>
+    <string name="card_wands12_up">Ein Reiter auf einem sich aufbäumenden Pferd, bereit zum Aufbruch. Die Karte steht für Leidenschaft, Tat und Aufbruch aus dem Impuls. Sie trägt Charme und Hitze.</string>
+    <string name="card_wands12_rev_keys">Hast, Ungeduld, zerstreute Energie</string>
+    <string name="card_wands12_rev">Die Energie läuft dem Verstand davon, und etwas wird ohne Nachdenken begonnen. Frust flammt vielleicht auf. Sie bittet um einen Atemzug vor dem Ansturm.</string>
+    <!-- Queen of Wands -->
+    <string name="card_wands13_name">Königin der Stäbe</string>
+    <string name="card_wands13_up_keys">Wärme, Zuversicht, Lebenskraft</string>
+    <string name="card_wands13_up">Eine Königin mit einer Sonnenblume, eine schwarze Katze zu ihren Füßen. Die Karte steht für Wärme, Selbstsicherheit und eine lebendige, großzügige Gegenwart. Sie ist bei sich zu Hause.</string>
+    <string name="card_wands13_rev_keys">Selbstzweifel, Jähzorn, Überschätzung</string>
+    <string name="card_wands13_rev">Die Zuversicht wankt, oder die Wärme wird scharf. Sie kann auf ein Zuviel an Aufgaben deuten. Sie bittet um dieselbe Großzügigkeit sich selbst gegenüber.</string>
+    <!-- King of Wands -->
+    <string name="card_wands14_name">König der Stäbe</string>
+    <string name="card_wands14_up_keys">Weitblick, Führung, Tatkraft</string>
+    <string name="card_wands14_up">Ein König, der sich auf seinem Thron vorbeugt, Löwe und Salamander um ihn. Die Karte steht für kühne Führung und die Fähigkeit, andere für eine Vision zu gewinnen.</string>
+    <string name="card_wands14_rev_keys">Impulsivität, hohe Erwartungen</string>
+    <string name="card_wands14_rev">Führung wird übergriffig, oder der Weitblick läuft dem Möglichen voraus. Die Erwartungen an andere sind vielleicht zu hoch. Sie bittet um Geduld ebenso wie um Antrieb.</string>
+    <!-- Ace of Cups -->
+    <string name="card_cups01_name">Ass der Kelche</string>
+    <string name="card_cups01_up_keys">Gefühl, Liebe, ein übervolles Herz</string>
+    <string name="card_cups01_up">Ein überlaufender Kelch, darüber eine Taube. Die Karte markiert ein neues Aufgehen des Gefühls: Liebe, Mitgefühl oder tiefe Zufriedenheit. Etwas wird frei geschenkt.</string>
+    <string name="card_cups01_rev_keys">Blockiertes Gefühl, Leere</string>
+    <string name="card_cups01_rev">Gefühle werden zurückgehalten, oder der Kelch fühlt sich leer an. Liebe wird vielleicht angeboten und nicht angenommen oder gar nicht angeboten. Sie fragt, was den Kelch leer bleiben lässt.</string>
+    <!-- Two of Cups -->
+    <string name="card_cups02_name">Zwei der Kelche</string>
+    <string name="card_cups02_up_keys">Partnerschaft, gegenseitiger Respekt, Verbindung</string>
+    <string name="card_cups02_up">Zwei Menschen reichen einander Kelche. Die Karte steht für die Begegnung Gleichgestellter, in Liebe, Freundschaft oder Arbeit. Etwas wird geteilt und erwidert.</string>
+    <string name="card_cups02_rev_keys">Ungleichgewicht, ein Bruch</string>
+    <string name="card_cups02_rev">Eine Verbindung ist aus dem Gleichgewicht oder angespannt. Etwas Gegebenes wird nicht erwidert. Sie bittet um ein ehrliches Gespräch.</string>
+    <!-- Three of Cups -->
+    <string name="card_cups03_name">Drei der Kelche</string>
+    <string name="card_cups03_up_keys">Freundschaft, Feier, Gemeinschaft</string>
+    <string name="card_cups03_up">Drei Gestalten tanzen mit erhobenen Kelchen. Die Karte steht für gute Gesellschaft, geteiltes Glück und die Unterstützung von Freunden. Es ist eine Karte des Zusammenkommens.</string>
+    <string name="card_cups03_rev_keys">Isolation, Übermaß, eine belastete Gruppe</string>
+    <string name="card_cups03_rev">Geselligkeit wird zum Übermaß, oder jemand fühlt sich aus dem Kreis ausgeschlossen. Sie fragt nach der Art von Zusammenkunft, die wirklich nährt.</string>
+    <!-- Four of Cups -->
+    <string name="card_cups04_name">Vier der Kelche</string>
+    <string name="card_cups04_up_keys">Gleichgültigkeit, Nachsinnen, ein ungesehenes Angebot</string>
+    <string name="card_cups04_up">Eine Gestalt sitzt unter einem Baum und übersieht einen Kelch, der aus einer Wolke gereicht wird. Die Karte steht für Überdruss, Rückzug und das Übersehen dessen, was hingehalten wird. Sie kann auch eine nötige Pause sein.</string>
+    <string name="card_cups04_rev_keys">Wieder Anteil nehmen, das Angebot bemerken</string>
+    <string name="card_cups04_rev">Das Interesse kehrt zurück, und der gereichte Kelch wird gesehen. Eine Zeit des Rückzugs endet vielleicht. Sie fragt, was sich verändert hat.</string>
+    <!-- Five of Cups -->
+    <string name="card_cups05_name">Fünf der Kelche</string>
+    <string name="card_cups05_up_keys">Verlust, Trauer, Reue</string>
+    <string name="card_cups05_up">Eine vermummte Gestalt trauert um drei verschüttete Kelche, zwei stehen noch dahinter. Die Karte steht für Kummer und den Blick auf das Verlorene. Was bleibt, ist noch nicht gesehen.</string>
+    <string name="card_cups05_rev_keys">Annehmen, weitergehen</string>
+    <string name="card_cups05_rev">Die Trauer lässt nach, und die stehenden Kelche kommen in den Blick. Es ist eine Zuwendung zu dem, was bleibt, ohne zu vergessen.</string>
+    <!-- Six of Cups -->
+    <string name="card_cups06_name">Sechs der Kelche</string>
+    <string name="card_cups06_up_keys">Erinnerung, Kindheit, Freundlichkeit</string>
+    <string name="card_cups06_up">Ein Kind reicht einem anderen einen Kelch voller Blumen. Die Karte steht für die Vergangenheit, einfache Freuden und arglose Zuwendung. Alte Erinnerungen kehren vielleicht zurück.</string>
+    <string name="card_cups06_rev_keys">In der Vergangenheit leben, sie loslassen</string>
+    <string name="card_cups06_rev">Die Nostalgie hält zu fest, oder die Vergangenheit wird endlich abgelegt. Sie fragt, welche Erinnerungen nähren und welche nur zurückhalten.</string>
+    <!-- Seven of Cups -->
+    <string name="card_cups07_name">Sieben der Kelche</string>
+    <string name="card_cups07_up_keys">Entscheidungen, Fantasie, Täuschung</string>
+    <string name="card_cups07_up">Sieben Kelche steigen aus einer Wolke, jeder birgt ein Bild. Die Karte steht für viele Möglichkeiten, Tagträume und Wunschdenken. Nicht jeder Kelch enthält, was er zeigt.</string>
+    <string name="card_cups07_rev_keys">Klarheit, eine getroffene Entscheidung</string>
+    <string name="card_cups07_rev">Der Nebel hebt sich, und die wirklichen Möglichkeiten zeigen sich. Eine Entscheidung wird möglich. Sie fragt, welches Bild es wert ist, in die Tat umgesetzt zu werden.</string>
+    <!-- Eight of Cups -->
+    <string name="card_cups08_name">Acht der Kelche</string>
+    <string name="card_cups08_up_keys">Weggehen, mehr suchen, ein leiser Abschied</string>
+    <string name="card_cups08_up">Eine Gestalt geht von acht gestapelten Kelchen fort, den Hügeln entgegen. Die Karte steht fürs Verlassen dessen, was nicht mehr genügt, um Tieferes zu suchen.</string>
+    <string name="card_cups08_rev_keys">Angst vor dem Abschied, Zurücktreiben</string>
+    <string name="card_cups08_rev">Etwas Unbefriedigendes wird aus Angst festgehalten, oder man kehrt immer wieder dorthin zurück. Sie fragt, woraufhin das Weggehen wäre.</string>
+    <!-- Nine of Cups -->
+    <string name="card_cups09_name">Neun der Kelche</string>
+    <string name="card_cups09_up_keys">Zufriedenheit, Erfüllung, ein erfüllter Wunsch</string>
+    <string name="card_cups09_up">Eine wohlgenährte Gestalt sitzt vor neun Kelchen. Die Karte steht für Behagen, Genuss und Dinge, die so ausgehen, wie erhofft. Man nennt sie oft die Wunschkarte.</string>
+    <string name="card_cups09_rev_keys">Selbstzufriedenheit, mehr wollen</string>
+    <string name="card_cups09_rev">Die Zufriedenheit fühlt sich dünn an, oder das Behagen wird zur Selbstzufriedenheit. Sie fragt, was wirklich zufrieden machen würde.</string>
+    <!-- Ten of Cups -->
+    <string name="card_cups10_name">Zehn der Kelche</string>
+    <string name="card_cups10_up_keys">Harmonie, Familie, dauerhaftes Glück</string>
+    <string name="card_cups10_up">Eine Familie unter einem Regenbogen aus Kelchen. Die Karte steht für seelische Erfüllung, Zuhause und einen Frieden, der mit anderen geteilt wird. Es ist ein Bild davon, dass die Dinge zusammen gut gehen.</string>
+    <string name="card_cups10_rev_keys">Entfremdung, ein belastetes Zuhause</string>
+    <string name="card_cups10_rev">Die Harmonie zu Hause ist verstimmt, oder das Bild passt nicht zum Gefühl. Sie fragt, was Menschen wieder zusammenbringen würde.</string>
+    <!-- Page of Cups -->
+    <string name="card_cups11_name">Bube der Kelche</string>
+    <string name="card_cups11_up_keys">Feinfühligkeit, eine sanfte Botschaft, Fantasie</string>
+    <string name="card_cups11_up">Eine junge Gestalt betrachtet einen Fisch, der aus einem Kelch steigt. Die Karte steht für die Neugier des Herzens, intuitive Botschaften und spielerische Kreativität. Etwas Überraschendes kann auftauchen.</string>
+    <string name="card_cups11_rev_keys">Launenhaftigkeit, seelische Unreife</string>
+    <string name="card_cups11_rev">Die Gefühle laufen dem Verstand davon oder verstecken sich hinter Tagträumen. Sie bittet um ein offenes Herz auf festen Füßen.</string>
+    <!-- Knight of Cups -->
+    <string name="card_cups12_name">Ritter der Kelche</string>
+    <string name="card_cups12_up_keys">Romantik, Charme, dem Herzen folgen</string>
+    <string name="card_cups12_up">Ein Reiter, der langsam zieht, den Kelch hingehalten. Die Karte steht für Einladungen, Idealismus und Handeln aus dem Gefühl. Sie trägt eine sanfte Anmut.</string>
+    <string name="card_cups12_rev_keys">Launenhaftigkeit, unrealistische Hoffnungen</string>
+    <string name="card_cups12_rev">Der Idealismus läuft der Wirklichkeit davon, oder Versprechen werden nicht gehalten. Sie bittet um Gefühl, das mit Taten verbunden ist.</string>
+    <!-- Queen of Cups -->
+    <string name="card_cups13_name">Königin der Kelche</string>
+    <string name="card_cups13_up_keys">Mitgefühl, Intuition, seelische Tiefe</string>
+    <string name="card_cups13_up">Eine Königin, die am Wasser in einen verzierten, geschlossenen Kelch blickt. Die Karte steht für Fürsorge, Einfühlung und ein tiefes Innenleben. Sie fühlt, ohne weggespült zu werden.</string>
+    <string name="card_cups13_rev_keys">Überforderung, Selbstvernachlässigung</string>
+    <string name="card_cups13_rev">Das Fühlen für andere verdrängt das Fühlen für sich selbst, oder die Gefühle laufen ungebremst. Sie bittet um Grenzen und Ruhe.</string>
+    <!-- King of Cups -->
+    <string name="card_cups14_name">König der Kelche</string>
+    <string name="card_cups14_up_keys">Gefühlsgleichgewicht, Ruhe, Diplomatie</string>
+    <string name="card_cups14_up">Ein König auf einem Thron, der auf dem Meer treibt, gelassen. Die Karte steht für Beständigkeit im Fühlen und weisen Rat. Er hält starke Gefühle, ohne von ihnen beherrscht zu werden.</string>
+    <string name="card_cups14_rev_keys">Unterdrücktes Gefühl, Launenhaftigkeit</string>
+    <string name="card_cups14_rev">Ruhe an der Oberfläche verbirgt Turbulenz darunter, oder Gefühle werden zur Kontrolle eingesetzt. Sie bittet um ehrliche Beständigkeit.</string>
+    <!-- Ace of Swords -->
+    <string name="card_swords01_name">Ass der Schwerter</string>
+    <string name="card_swords01_up_keys">Klarheit, Wahrheit, ein Durchbruch</string>
+    <string name="card_swords01_up">Eine Hand aus einer Wolke hält ein gekröntes Schwert. Die Karte markiert einen klaren Gedanken, eine Entscheidung oder eine Wahrheit, die durch die Verwirrung schneidet. Sie begünstigt Ehrlichkeit.</string>
+    <string name="card_swords01_rev_keys">Verwirrung, harte Worte</string>
+    <string name="card_swords01_rev">Der Gedanke ist wirr, oder das Schwert schneidet sorglos. Worte verletzen vielleicht. Sie bittet um Klarheit, die auch freundlich ist.</string>
+    <!-- Two of Swords -->
+    <string name="card_swords02_name">Zwei der Schwerter</string>
+    <string name="card_swords02_up_keys">Pattsituation, eine schwere Entscheidung, Zurückhaltung</string>
+    <string name="card_swords02_up">Eine verbundene Gestalt hält zwei gekreuzte Schwerter im Gleichgewicht. Die Karte steht für Unentschiedenheit, Ausweichen und das Fernhalten von Gefühlen. Das Wasser dahinter ist vorerst ruhig.</string>
+    <string name="card_swords02_rev_keys">Überlastung, eine erzwungene Entscheidung</string>
+    <string name="card_swords02_rev">Das Gleichgewicht hält nicht mehr, und Informationen strömen herein. Eine Wahl muss vielleicht getroffen werden. Sie fragt, wovor die Augenbinde geschützt hat.</string>
+    <!-- Three of Swords -->
+    <string name="card_swords03_name">Drei der Schwerter</string>
+    <string name="card_swords03_up_keys">Herzensbruch, Kummer, Trauer</string>
+    <string name="card_swords03_up">Ein Herz, von drei Schwertern durchbohrt, unter einer Regenwolke. Die Karte steht für eine schmerzhafte Wahrheit und den Schmerz, der mit ihr kommt. Der Schmerz ist wirklich, und das Vorüberziehen des Sturms auch.</string>
+    <string name="card_swords03_rev_keys">Heilung, Schmerz loslassen</string>
+    <string name="card_swords03_rev">Das Schlimmste des Schmerzes lässt nach, und die Erholung beginnt. Alte Trauer darf gehen. Sie bittet um Geduld mit der Heilung.</string>
+    <!-- Four of Swords -->
+    <string name="card_swords04_name">Vier der Schwerter</string>
+    <string name="card_swords04_up_keys">Ruhe, Erholung, eine Pause</string>
+    <string name="card_swords04_up">Eine Gestalt liegt still in einer Kirche, die Hände gefaltet. Die Karte steht für Ruhe, Rückzug und das Sammeln von Kraft. Die Stille ist hier Teil der Arbeit.</string>
+    <string name="card_swords04_rev_keys">Rastlosigkeit, Erschöpfung</string>
+    <string name="card_swords04_rev">Die Ruhe wird verweigert oder kommt erst nach der Erschöpfung. Sie bittet um eine Pause, bevor eine erzwungen wird.</string>
+    <!-- Five of Swords -->
+    <string name="card_swords05_name">Fünf der Schwerter</string>
+    <string name="card_swords05_up_keys">Konflikt, ein hohler Sieg, Spannung</string>
+    <string name="card_swords05_up">Eine Gestalt sammelt Schwerter, während andere fortgehen. Die Karte steht für einen Konflikt, in dem der Sieg etwas kostet, und für Stolz, der Menschen trennt.</string>
+    <string name="card_swords05_rev_keys">Frieden schließen, Reue</string>
+    <string name="card_swords05_rev">Der Streit endet, oder sein Preis wird gespürt. Es ist eine Gelegenheit, wiedergutzumachen. Sie fragt, was wirklich mehr zählt als zu gewinnen.</string>
+    <!-- Six of Swords -->
+    <string name="card_swords06_name">Sechs der Schwerter</string>
+    <string name="card_swords06_up_keys">Übergang, Passage, Weiterziehen</string>
+    <string name="card_swords06_up">Ein Boot bringt Menschen zu ruhigerem Wasser. Die Karte steht fürs Zurücklassen von Schwierigkeiten und fürs Hinübergehen zu etwas Beständigerem. Die Reise ist still und nötig.</string>
+    <string name="card_swords06_rev_keys">Widerstand, Unerledigtes</string>
+    <string name="card_swords06_rev">Die Überfahrt verzögert sich, oder Ungeklärtes kommt mit. Sie fragt, was noch angeschaut werden muss, bevor es weitergeht.</string>
+    <!-- Seven of Swords -->
+    <string name="card_swords07_name">Sieben der Schwerter</string>
+    <string name="card_swords07_up_keys">List, Strategie, ungestraft davonkommen</string>
+    <string name="card_swords07_up">Eine Gestalt schleicht mit fünf Schwertern davon. Die Karte steht für Gerissenheit, Alleingänge und vielleicht für fehlende Ehrlichkeit. Sie fragt, wer getäuscht wird.</string>
+    <string name="card_swords07_rev_keys">Reinen Tisch machen, entdeckt werden</string>
+    <string name="card_swords07_rev">Geheimnisse kommen ans Licht, oder jemand beschließt, sich nicht länger zu verstecken. Es ist eine Gelegenheit, offener zu handeln.</string>
+    <!-- Eight of Swords -->
+    <string name="card_swords08_name">Acht der Schwerter</string>
+    <string name="card_swords08_up_keys">Sich gefangen fühlen, Einschränkung, Selbstbegrenzung</string>
+    <string name="card_swords08_up">Eine gefesselte, verbundene Gestalt zwischen Schwertern, der Ausweg offen hinter ihr. Die Karte steht fürs Feststecken, wenn die Falle zum Teil im Kopf liegt.</string>
+    <string name="card_swords08_rev_keys">Befreiung, neue Sicht</string>
+    <string name="card_swords08_rev">Die Fesseln lockern sich, und ein Ausweg zeigt sich. Es ist eine Karte davon, die eigene Kraft zurückzugewinnen.</string>
+    <!-- Nine of Swords -->
+    <string name="card_swords09_name">Neun der Schwerter</string>
+    <string name="card_swords09_up_keys">Angst, Sorge, schlaflose Nächte</string>
+    <string name="card_swords09_up">Eine Gestalt sitzt im Bett auf, das Gesicht in den Händen. Die Karte steht für Furcht und Sorge, die im Dunkeln oft größer sind als am Tag. Die Schwerter hängen an der Wand, nicht im Körper.</string>
+    <string name="card_swords09_rev_keys">Nachlassende Sorge, auf andere zugehen</string>
+    <string name="card_swords09_rev">Die Angst beginnt zu weichen, oder es wird Hilfe gesucht. Sie bittet darum, die Sorge ins Licht zu holen und auszusprechen.</string>
+    <!-- Ten of Swords -->
+    <string name="card_swords10_name">Zehn der Schwerter</string>
+    <string name="card_swords10_up_keys">Ein Ende, der tiefste Punkt, Erlösung</string>
+    <string name="card_swords10_up">Eine Gestalt liegt mit zehn Schwertern im Rücken, die Dämmerung am Horizont. Die Karte steht für ein schmerzhaftes Ende und die Erleichterung, dass es nicht tiefer gehen kann. Der Himmel beginnt sich zu klären.</string>
+    <string name="card_swords10_rev_keys">Erholung, Widerstand gegen ein Ende</string>
+    <string name="card_swords10_rev">Langsam wieder aufstehen, oder sich weigern, etwas enden zu lassen. Sie bittet darum, das Ende ein Ende sein zu lassen.</string>
+    <!-- Page of Swords -->
+    <string name="card_swords11_name">Bube der Schwerter</string>
+    <string name="card_swords11_up_keys">Neugier, Wachheit, neue Ideen</string>
+    <string name="card_swords11_up">Eine junge Gestalt hält ein Schwert gegen den Wind. Die Karte steht für einen scharfen Verstand, Fragen und Lernbegier. Wachsamkeit gehört dazu.</string>
+    <string name="card_swords11_rev_keys">Gerede, nur Worte</string>
+    <string name="card_swords11_rev">Ideen ohne Folgen, oder sorglos gebrauchte Worte. Sie bittet um Nachdenken vor dem Sprechen.</string>
+    <!-- Knight of Swords -->
+    <string name="card_swords12_name">Ritter der Schwerter</string>
+    <string name="card_swords12_up_keys">Ehrgeiz, Antrieb, Tempo</string>
+    <string name="card_swords12_up">Ein Reiter prescht gegen den Wind, das Schwert erhoben. Die Karte steht für entschiedenes Handeln und scharfen Fokus. Sie ist schnell und sieht ein Ziel.</string>
+    <string name="card_swords12_rev_keys">Rücksichtslosigkeit, Hineinstürmen</string>
+    <string name="card_swords12_rev">Der Ansturm ist impulsiv, und andere werden vielleicht überrannt. Sie bittet darum, erst zu schauen und dann zu reiten.</string>
+    <!-- Queen of Swords -->
+    <string name="card_swords13_name">Königin der Schwerter</string>
+    <string name="card_swords13_up_keys">Klares Denken, Unabhängigkeit, Ehrlichkeit</string>
+    <string name="card_swords13_up">Eine Königin mit erhobenem Schwert, die Hand ausgestreckt. Die Karte steht für Direktheit, scharfe Wahrnehmung und Urteilskraft aus Erfahrung. Sie sieht klar und sagt es.</string>
+    <string name="card_swords13_rev_keys">Kälte, Härte</string>
+    <string name="card_swords13_rev">Klarheit wird kalt oder verletzend. Sie bittet um Direktheit mit Anteilnahme.</string>
+    <!-- King of Swords -->
+    <string name="card_swords14_name">König der Schwerter</string>
+    <string name="card_swords14_up_keys">Verstand, Autorität, Wahrheit</string>
+    <string name="card_swords14_up">Ein König sitzt nach vorn gewandt, das Schwert aufrecht. Die Karte steht für gerechtes Urteil, Vernunft und klare Autorität. Entschieden wird aus dem Denken, nicht aus der Laune.</string>
+    <string name="card_swords14_rev_keys">Missbrauchte Autorität, Grausamkeit</string>
+    <string name="card_swords14_rev">Die Vernunft wird zur Kontrolle oder zum Verletzen benutzt. Sie bittet um Gerechtigkeit, die den Menschen nicht vergisst.</string>
+    <!-- Ace of Pentacles -->
+    <string name="card_pentacles01_name">Ass der Münzen</string>
+    <string name="card_pentacles01_up_keys">Gelegenheit, Wohlstand, ein neuer Anfang in der Welt</string>
+    <string name="card_pentacles01_up">Eine Hand aus einer Wolke reicht eine Münze über einem Garten. Die Karte markiert einen praktischen Anfang: Arbeit, Geld, Gesundheit oder Zuhause. Etwas Solides lässt sich bauen.</string>
+    <string name="card_pentacles01_rev_keys">Verpasste Gelegenheit, schlechte Planung</string>
+    <string name="card_pentacles01_rev">Eine Gelegenheit entgleitet oder wird nicht vorbereitet. Sie bittet zuerst um einen festeren Stand.</string>
+    <!-- Two of Pentacles -->
+    <string name="card_pentacles02_name">Zwei der Münzen</string>
+    <string name="card_pentacles02_up_keys">Gleichgewicht, Anpassungsfähigkeit, Jonglieren</string>
+    <string name="card_pentacles02_up">Eine Gestalt tanzt mit zwei Münzen in einem geschwungenen Band, dahinter Schiffe auf den Wellen. Die Karte steht dafür, vieles zugleich zu handhaben und dabei leicht auf den Füßen zu bleiben.</string>
+    <string name="card_pentacles02_rev_keys">Überforderung, Dinge fallen lassen</string>
+    <string name="card_pentacles02_rev">Es wird zu viel jongliert, und etwas fällt. Sie fragt, was abgelegt werden kann.</string>
+    <!-- Three of Pentacles -->
+    <string name="card_pentacles03_name">Drei der Münzen</string>
+    <string name="card_pentacles03_up_keys">Zusammenarbeit, Handwerk, Lernen</string>
+    <string name="card_pentacles03_up">Ein Handwerker arbeitet in einer Kirche, zwei andere sehen über die Pläne. Die Karte steht für Können, Zusammenarbeit und gemeinsames gutes Bauen.</string>
+    <string name="card_pentacles03_rev_keys">Schlechte Zusammenarbeit, Schludrigkeit</string>
+    <string name="card_pentacles03_rev">Arbeit ohne Sorgfalt, oder Menschen ziehen auseinander. Sie bittet um gemeinsame Maßstäbe.</string>
+    <!-- Four of Pentacles -->
+    <string name="card_pentacles04_name">Vier der Münzen</string>
+    <string name="card_pentacles04_up_keys">Festhalten, Sicherheit, Kontrolle</string>
+    <string name="card_pentacles04_up">Eine Gestalt hält eine Münze umklammert, zwei unter den Füßen, eine auf der Krone. Die Karte steht für Sparen, Sicherheit und Festhalten. Ein wenig ist klug; zu viel schließt die Hand.</string>
+    <string name="card_pentacles04_rev_keys">Loslassen, Großzügigkeit oder Habgier</string>
+    <string name="card_pentacles04_rev">Der Griff lockert sich oder wird noch fester. Sie fragt, wofür Sicherheit eigentlich gut ist.</string>
+    <!-- Five of Pentacles -->
+    <string name="card_pentacles05_name">Fünf der Münzen</string>
+    <string name="card_pentacles05_up_keys">Not, Ausgrenzung, Sorge</string>
+    <string name="card_pentacles05_up">Zwei Gestalten gehen durch Schnee an einem erleuchteten Fenster vorbei. Die Karte steht für magere Zeiten, schlechte Gesundheit oder das Gefühl, draußen in der Kälte zu stehen. Hilfe ist vielleicht näher, als es aussieht.</string>
+    <string name="card_pentacles05_rev_keys">Erholung, gefundene Hilfe</string>
+    <string name="card_pentacles05_rev">Die harte Zeit beginnt sich zu lindern, oder Hilfe wird angenommen. Es ist eine Tür, die bemerkt und geöffnet wird.</string>
+    <!-- Six of Pentacles -->
+    <string name="card_pentacles06_name">Sechs der Münzen</string>
+    <string name="card_pentacles06_up_keys">Großzügigkeit, Geben und Nehmen, Fairness</string>
+    <string name="card_pentacles06_up">Ein Mann mit einer Waage gibt Münzen an Bedürftige. Die Karte steht fürs Teilen von Mitteln und für das Gleichgewicht zwischen Geben und Nehmen.</string>
+    <string name="card_pentacles06_rev_keys">Bedingungen, Ungleichgewicht</string>
+    <string name="card_pentacles06_rev">Das Geben ist an Bedingungen geknüpft, oder das Gleichgewicht zwischen Gebendem und Nehmendem stimmt nicht. Sie bittet um Fairness auf beiden Seiten.</string>
+    <!-- Seven of Pentacles -->
+    <string name="card_pentacles07_name">Sieben der Münzen</string>
+    <string name="card_pentacles07_up_keys">Geduld, Bilanz, langsames Wachstum</string>
+    <string name="card_pentacles07_up">Eine Gestalt lehnt auf ihrer Hacke und sieht Münzen an einem Strauch wachsen. Die Karte steht fürs Bilanzieren, für Geduld und lange Mühe. Die Ernte ist noch nicht da.</string>
+    <string name="card_pentacles07_rev_keys">Ungeduld, vergeudete Mühe</string>
+    <string name="card_pentacles07_rev">Das Warten reibt, oder die Mühe geht in den falschen Boden. Sie fragt, ob weiter gepflegt oder das Feld gewechselt werden soll.</string>
+    <!-- Eight of Pentacles -->
+    <string name="card_pentacles08_name">Acht der Münzen</string>
+    <string name="card_pentacles08_up_keys">Fleiß, Übung, Meisterschaft</string>
+    <string name="card_pentacles08_up">Ein Handwerker schnitzt Münzen, eine nach der anderen. Die Karte steht für stetige Arbeit, das Erlernen eines Könnens und den Stolz, es gut zu tun.</string>
+    <string name="card_pentacles08_rev_keys">Perfektionismus, stumpfe Routine</string>
+    <string name="card_pentacles08_rev">Die Arbeit wird zur Plackerei oder zur Besessenheit im Detail. Sie bittet um Sorgfalt ohne Verkrampfung.</string>
+    <!-- Nine of Pentacles -->
+    <string name="card_pentacles09_name">Neun der Münzen</string>
+    <string name="card_pentacles09_up_keys">Selbstständigkeit, Behagen, Genuss</string>
+    <string name="card_pentacles09_up">Eine Frau im Weinberg, einen Vogel auf dem Handschuh. Die Karte steht für Unabhängigkeit, verdientes Behagen und die Freude an einem gut gepflegten Leben.</string>
+    <string name="card_pentacles09_rev_keys">Überarbeit, Abhängigkeit</string>
+    <string name="card_pentacles09_rev">Das Behagen ruht auf zu viel Arbeit oder auf jemand anderem. Sie bittet um ein Gleichgewicht zwischen Mühe und Genuss.</string>
+    <!-- Ten of Pentacles -->
+    <string name="card_pentacles10_name">Zehn der Münzen</string>
+    <string name="card_pentacles10_up_keys">Vermächtnis, Familie, dauerhafter Wohlstand</string>
+    <string name="card_pentacles10_up">Ein alter Mann mit Hunden, eine Familie unter einem Bogen. Die Karte steht für Dinge, die über Generationen bleiben: Zuhause, Tradition, Erbe in jedem Sinn.</string>
+    <string name="card_pentacles10_rev_keys">Familiäre Belastung, Verlust der Stabilität</string>
+    <string name="card_pentacles10_rev">Die Familie oder das Fundament ist in Unruhe. Sie fragt, was es wert ist, weitergegeben zu werden.</string>
+    <!-- Page of Pentacles -->
+    <string name="card_pentacles11_name">Bube der Münzen</string>
+    <string name="card_pentacles11_up_keys">Studium, Ehrgeiz, ein praktischer Anfang</string>
+    <string name="card_pentacles11_up">Eine junge Gestalt betrachtet eine Münze, die sie in den Händen hält. Die Karte steht fürs Lernen, fürs Setzen von Zielen und für die ersten Schritte eines praktischen Plans.</string>
+    <string name="card_pentacles11_rev_keys">Aufschieben, fehlender Fokus</string>
+    <string name="card_pentacles11_rev">Der Plan bleibt ein Plan, oder die Aufmerksamkeit wandert. Sie bittet um einen kleinen praktischen Schritt.</string>
+    <!-- Knight of Pentacles -->
+    <string name="card_pentacles12_name">Ritter der Münzen</string>
+    <string name="card_pentacles12_up_keys">Verlässlichkeit, Routine, harte Arbeit</string>
+    <string name="card_pentacles12_up">Ein Reiter auf einem schweren Pferd, still auf einem gepflügten Acker. Die Karte steht für Geduld, Methode und stetes Zu-Ende-Bringen.</string>
+    <string name="card_pentacles12_rev_keys">Stagnation, Sturheit</string>
+    <string name="card_pentacles12_rev">Die Beständigkeit ist zur Fahrspur geworden. Sie fragt, ob die Routine noch dient.</string>
+    <!-- Queen of Pentacles -->
+    <string name="card_pentacles13_name">Königin der Münzen</string>
+    <string name="card_pentacles13_up_keys">Fürsorge, praktischer Sinn, ein warmes Zuhause</string>
+    <string name="card_pentacles13_up">Eine Königin im Garten, eine Münze im Schoß. Die Karte steht für praktische Fürsorge, Erfindungsgabe und dafür, ein Zuhause einladend zu machen.</string>
+    <string name="card_pentacles13_rev_keys">Vernachlässigte Selbstsorge, Erdrücken</string>
+    <string name="card_pentacles13_rev">Die Fürsorge für andere lässt nichts für einen selbst übrig oder wird zu viel. Sie bittet um Gleichgewicht.</string>
+    <!-- King of Pentacles -->
+    <string name="card_pentacles14_name">König der Münzen</string>
+    <string name="card_pentacles14_up_keys">Fülle, Sicherheit, steter Erfolg</string>
+    <string name="card_pentacles14_up">Ein König zwischen Reben und Münzen, gelassen. Die Karte steht für Wohlstand, Verlässlichkeit und dafür, etwas Solides zu bauen, das andere versorgt.</string>
+    <string name="card_pentacles14_rev_keys">Materialismus, Sturheit</string>
+    <string name="card_pentacles14_rev">Sicherheit wird zum Besitzdenken, oder Erfolg zur Starre. Sie fragt, wofür Wohlstand gut ist.</string>
+
+</resources>

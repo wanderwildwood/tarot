@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tarot</string>
+
+    <!-- Read aloud by a screen reader -->
+    <string name="cd_back">Zurück</string>
+    <string name="cd_about">Über</string>
+    <string name="cd_settings">Einstellungen</string>
+
+    <!-- ============================================================ -->
+    <!-- The four tabs -->
+
+    <string name="tab_today">Heute</string>
+    <string name="tab_spread">Legung</string>
+    <string name="tab_journal">Journal</string>
+    <string name="tab_cards">Karten</string>
+
+    <!-- ============================================================ -->
+    <!-- A card -->
+
+    <!-- After a card's name when it lay upside down. %1$s is the name -->
+    <string name="card_reversed_name">%1$s, umgekehrt</string>
+    <string name="upright">Aufrecht</string>
+    <string name="reversed">Umgekehrt</string>
+    <!-- Over the meaning that applies to the card as it was drawn -->
+    <string name="drawn_upright">Aufrecht gezogen</string>
+    <string name="drawn_reversed">Umgekehrt gezogen</string>
+    <!-- Under a card on its own page -->
+    <string name="zoom_hint">Tippe die Karte an, um sie ganz zu sehen und zu vergrößern.</string>
+    <string name="zoom_how">Doppeltippen zum Vergrößern, zusammenziehen zum Zoomen, ziehen zum Verschieben.</string>
+
+    <!-- ============================================================ -->
+    <!-- Today -->
+
+    <string name="today_title">Die Karte für heute</string>
+    <string name="today_keep">Im Journal aufbewahren</string>
+    <string name="today_kept">Im Journal</string>
+
+    <!-- ============================================================ -->
+    <!-- Spreads -->
+
+    <string name="spread_daily">Tageskarte</string>
+    <string name="spread_one">Eine Karte</string>
+    <string name="spread_three">Vergangenheit, Gegenwart, Zukunft</string>
+    <string name="spread_celtic">Keltisches Kreuz</string>
+    <string name="spread_choose">Halte eine Frage im Kopf, oder keine, und wähle eine Legung. Jede Lesung wird im Journal aufbewahrt.</string>
+    <plurals name="cards_count">
+        <item quantity="one">%1$s Karte</item>
+        <item quantity="other">%1$s Karten</item>
+    </plurals>
+
+    <string name="pos_daily">Heute</string>
+    <string name="pos_one">Die Karte</string>
+
+    <string name="pos_three_1">Vergangenheit</string>
+    <string name="pos_three_2">Gegenwart</string>
+    <string name="pos_three_3">Zukunft</string>
+
+    <string name="pos_celtic_1">Der Kern der Sache</string>
+    <string name="pos_celtic_2">Was sie kreuzt</string>
+    <string name="pos_celtic_3">Was oben ist</string>
+    <string name="pos_celtic_4">Was unten ist</string>
+    <string name="pos_celtic_5">Was vorübergeht</string>
+    <string name="pos_celtic_6">Was kommt</string>
+    <string name="pos_celtic_7">Du</string>
+    <string name="pos_celtic_8">Um dich herum</string>
+    <string name="pos_celtic_9">Hoffnungen und Ängste</string>
+    <string name="pos_celtic_10">Wohin es führt</string>
+
+    <!-- A position in a spread with its number. %1$s is the number, %2$s the name -->
+    <string name="position_numbered">%1$s · %2$s</string>
+
+    <!-- ============================================================ -->
+    <!-- A reading -->
+
+    <string name="note">Notiz</string>
+    <string name="note_add">Notiz hinzufügen</string>
+    <string name="note_edit">Notiz ändern</string>
+    <string name="note_hint">Was gefragt wurde, was dir in den Sinn kam</string>
+    <string name="save">Speichern</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="draw_again">Neu ziehen</string>
+    <string name="delete_reading">Diese Lesung löschen</string>
+    <string name="delete_reading_armed">Löschen — tippe erneut</string>
+    <string name="deleted_done">Die Lesung wurde gelöscht.</string>
+    <string name="deleted_undo">Rückgängig</string>
+
+    <!-- ============================================================ -->
+    <!-- Journal -->
+
+    <string name="journal_empty">Jede Lesung wird hier mit Datum, ihren Karten und einer Notiz aufbewahrt. Es gibt noch keine.</string>
+    <string name="journal_empty_today">Tageskarte</string>
+    <string name="journal_empty_spread">Legung wählen</string>
+    <!-- A journal row's first line. %1$s is the date, %2$s the spread -->
+    <string name="journal_row">%1$s · %2$s</string>
+    <!-- The marker after a reversed card's name in a short list of cards -->
+    <string name="reversed_short">%1$s (u)</string>
+
+    <!-- ============================================================ -->
+    <!-- Settings -->
+
+    <string name="settings_title">Einstellungen</string>
+    <string name="settings_reversals">Umgekehrte Karten</string>
+    <string name="settings_reversals_note">Karten können umgekehrt liegen, mit eigener Bedeutung. Aus ist jede Karte aufrecht, auch die Tageskarte.</string>
+    <string name="settings_guide">Anleitung</string>
+    <string name="settings_export">Journal exportieren</string>
+    <string name="settings_export_note">Eine JSON-Datei, gespeichert, wo du willst</string>
+    <string name="export_done">Das Journal ist gespeichert.</string>
+    <string name="export_failed">Das Journal konnte dort nicht gespeichert werden.</string>
+    <string name="export_file_name">tarot-journal.json</string>
+
+    <!-- ============================================================ -->
+    <!-- Guide -->
+
+    <string name="guide_title">Anleitung</string>
+
+    <string name="guide_deck">Das Deck</string>
+    <string name="guide_deck_1">Ein Tarotdeck hat 78 Karten in zwei Teilen.</string>
+    <string name="guide_deck_2">Die 22 Großen Arkana, oder Trumpfkarten, sind von 0, Der Narr, bis 21, Die Welt, nummeriert. Sie stehen für die großen Themen eines Lebens: Anfänge und Enden, Entscheidungen, Verluste, Wandel und das Zur-Ruhe-Kommen.</string>
+    <string name="guide_deck_3">Die 56 Kleinen Arkana sind vier Farben mit je vierzehn Karten, ähnlich wie Spielkarten: Ass bis Zehn und vier Hofkarten. Sie sprechen vom Alltag: Arbeit, Menschen, Sorgen, kleine Freuden.</string>
+    <string name="guide_deck_4">Eine Lesung legt Karten an Plätze, die jeweils etwas fragen, und lässt die Bilder eine Antwort nahelegen. Die Karten beschreiben; sie entscheiden nichts und sagen die Zukunft nicht voraus.</string>
+
+    <string name="guide_suits">Die Farben</string>
+    <string name="guide_suits_1">Kelche sind das Gefühl: Liebe, Freundschaft, das Herz und was es will.</string>
+    <string name="guide_suits_2">Schwerter sind der Gedanke: Entscheidungen, Worte, Konflikt und Wahrheit und die Sorge, die ein rastloser Kopf macht.</string>
+    <string name="guide_suits_3">Stäbe sind Antrieb und Wille: Energie, Ehrgeiz, der Anfang der Dinge und der Schub, sie durchzuhalten.</string>
+    <string name="guide_suits_4">Münzen sind das Materielle und Praktische: Arbeit, Geld, der Körper, Zuhause und das langsame Aufbauen der Dinge.</string>
+    <string name="guide_suits_5">Die Zahlen laufen grob vom Samen zur Ernte. Ein Ass ist die Farbe in ihrem ersten und reinsten Zustand; die mittleren Zahlen sind ihre Prüfungen und Wendungen; eine Zehn ist die Farbe, so weit getragen, wie sie geht, zum Guten oder Schlechten.</string>
+    <string name="guide_suits_6">Die Hofkarten werden oft als Menschen gelesen oder als Arten zu sein. Ein Bube ist ein Lernender oder eine Botschaft; ein Ritter ist die Farbe in Bewegung, manchmal zu schnell; eine Königin hält die Farbe von innen; ein König hält sie nach außen, mit Autorität.</string>
+
+    <string name="guide_reversed">Umgekehrte Karten</string>
+    <string name="guide_reversed_1">Eine Karte kann umgekehrt liegen. Eine umgekehrte Karte deutet meist auf die blockierte, verzögerte, nach innen gekehrte oder zu weit getriebene Bedeutung der Karte hin, nicht einfach auf ihr Gegenteil.</string>
+    <string name="guide_reversed_2">Jede Karte hier hat eine aufrechte und eine umgekehrte Bedeutung, und ihre Seite zeigt beide, zuerst die, die für ihre Lage gilt.</string>
+    <string name="guide_reversed_3">Manche lesen ganz ohne umgekehrte Karten. Schalte sie in den Einstellungen unter Umgekehrte Karten aus, und jede Karte kommt aufrecht, auch die Tageskarte.</string>
+
+    <string name="guide_spreads">Die Legungen</string>
+    <string name="guide_spreads_1">Halte vor einer Lesung eine Frage im Kopf. Eine offene Frage wirkt besser als eine, die Ja oder Nein verlangt: „Was sollte ich über … wissen“ statt „Wird …“. Ganz ohne Frage geht es auch.</string>
+    <string name="guide_spreads_2">Eine Karte: eine einzelne Karte für die Frage oder für den Tag. Einfach und oft genug.</string>
+    <string name="guide_spreads_3">Vergangenheit, Gegenwart, Zukunft: drei Karten von links nach rechts. Was hierher geführt hat, wo die Dinge stehen und wohin sie zu gehen scheinen, wenn sich nichts ändert.</string>
+    <string name="guide_spreads_4">Keltisches Kreuz: zehn Karten, nach Waite. Im Kreuz: 1, der Kern der Sache; 2, quer darüber gelegt, was hilft oder hindert; 3, oben, worauf es zielt oder was erhofft wird; 4, unten, der Grund, auf dem es steht; 5, was vorübergeht; 6, was kommt.</string>
+    <string name="guide_spreads_5">Den Stab rechts hinauf: 7, du und wie du dem begegnest; 8, die Menschen und der Ort um dich; 9, Hoffnungen und Ängste, die oft dasselbe sind; 10, wohin es führt.</string>
+    <string name="guide_spreads_6">Lies jede Karte an ihrem Platz und sieh dir dann die Legung als Ganzes an: welche Farben sich sammeln, wie viele Trumpfkarten es gibt, wohin die Figuren blicken.</string>
+
+    <string name="guide_about">Über das Deck</string>
+    <string name="guide_about_1">Die Bilder stammen von Pamela Colman Smith, gezeichnet für das Deck, das Arthur Edward Waite entwarf und Rider 1909 in London veröffentlichte.</string>
+    <string name="guide_about_2">Sie stammen von Scans einer Originalausgabe „Roses &amp; Lilies“ von 1909, angefertigt von Saskia Jansen von ihrem eigenen Deck und veröffentlicht auf Wikimedia Commons. Die Zeichnungen sind gemeinfrei. Hier sind sie in sechzehn Graustufen, für diesen Bildschirm.</string>
+    <string name="guide_about_3">Die Bedeutungen sind für diese App in einfachen Worten geschrieben, nach Waites The Pictorial Key to the Tarot (1910), der ebenfalls gemeinfrei ist.</string>
+
+    <!-- ============================================================ -->
+    <!-- About -->
+
+    <string name="about_title">Tarot %1$s</string>
+    <string name="about_what">Eine Tageskarte, Legungen und ein Journal der Lesungen, mit dem Rider-Waite-Smith-Deck von 1909.</string>
+    <string name="about_privacy_title">Datenschutz</string>
+    <string name="about_privacy">Alles, was du in diese App eingibst, bleibt auf diesem Telefon. Sie hat keinen Internetzugang, also wird nichts gesendet und nichts über dich gesammelt. Es gibt keine Werbung, keine Analysen und kein Tracking. Sicherungen und Exporte gehen nur dorthin, wo du sie speicherst. Die beiden Adressen unten öffnen sich nur in deinem Browser, wenn du sie antippst.</string>
+    <string name="about_terms_title">Bedingungen</string>
+    <string name="about_terms">Diese App ist freie Software unter der GNU General Public License v3. Sie kommt ohne Gewährleistung: Nutzung auf eigene Gefahr. Tarot ist zum Nachdenken und zur Unterhaltung. Die Karten beschreiben; sie sagen nichts voraus und ersetzen keinen medizinischen, rechtlichen oder finanziellen Rat.</string>
+    <string name="about_open_title">Open Source</string>
+    <string name="about_licence">Tarot: GNU General Public License, ausschließlich Version 3, Copyright wander wildwood</string>
+    <string name="about_art">Kartenbilder: Pamela Colman Smith, 1909. Scans einer Originalausgabe „Roses &amp; Lilies“ von Saskia Jansen, auf Wikimedia Commons, wo jede Datei als Public domain (PD-old-70-expired) gekennzeichnet ist</string>
+    <string name="about_meanings">Bedeutungen: für diese App geschrieben, nach A. E. Waites The Pictorial Key to the Tarot (1910), gemeinfrei</string>
+    <string name="about_source">github.com/wanderwildwood/tarot</string>
+    <!-- %1$s is a web address -->
+    <string name="about_no_browser_address">Auf diesem Telefon gibt es keinen Browser, um das zu öffnen. Die Adresse lautet %1$s.</string>
+    <string name="about_feed_the_llamas">füttere die Lamas</string>
+    <string name="about_close">Schließen</string>
+    <!-- The folio at the foot of a paged list, "2 / 6"; a tap on it asks for a page -->
+    <string name="folio_of">%1$d / %2$d</string>
+    <string name="folio_go_title">Zu Seite springen</string>
+    <string name="folio_page">Seite %1$d von %2$d</string>
+    <string name="folio_go">Los</string>
+    <string name="folio_cancel">Abbrechen</string>
+    <string name="about_licences">Lizenzen</string>
+    <string name="licences_title">Lizenzen</string>
+    <string name="licences_source_head">Quellcode</string>
+    <string name="licences_licence_head">Lizenz</string>
+    <string name="licences_licence">Tarot ist freie Software unter der GNU General Public License, ausschließlich Version 3 (GPL-3.0-only), Copyright wander wildwood, für das hier Geschriebene. Das Werk, auf dem es aufbaut, behält seine eigene Lizenz, und seine Urheber behalten ihr Copyright, wie unter Baut auf aufgeführt. Der vollständige Text jeder Lizenz steht am Ende dieser Seite.</string>
+    <string name="licences_built_head">Baut auf</string>
+    <string name="licences_back">Zurück</string>
+    <string name="licences_gpl">GNU General Public License, Version 3</string>
+    <string name="licences_apache">Apache License, Version 2.0</string>
+    <string name="licences_mit">MIT License</string>
+    <string name="licences_ofl">SIL Open Font License, Version 1.1</string>
+</resources>
