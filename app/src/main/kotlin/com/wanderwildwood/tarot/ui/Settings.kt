@@ -54,7 +54,8 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
         },
     ) { padding ->
         PagedColumn(
-            modifier = Modifier.padding(padding).fillMaxSize().padding(horizontal = 20.dp).testTag("settings"),
+            modifier = Modifier.padding(padding).fillMaxSize().testTag("settings"),
+            contentPadding = androidx.compose.foundation.layout.PaddingValues(start = 20.dp, end = 12.dp),
         ) {
             item { Spacer(Modifier.height(8.dp)) }
             item(key = "reversals") {
