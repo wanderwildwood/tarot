@@ -159,10 +159,9 @@
     <string name="about_licence">Tarot: GNU General Public License, ausschließlich Version 3, Copyright wander wildwood</string>
     <string name="about_art">Kartenbilder: Pamela Colman Smith, 1909. Scans einer Originalausgabe „Roses &amp; Lilies“ von Saskia Jansen, auf Wikimedia Commons, wo jede Datei als Public domain (PD-old-70-expired) gekennzeichnet ist</string>
     <string name="about_meanings">Bedeutungen: für diese App geschrieben, nach A. E. Waites The Pictorial Key to the Tarot (1910), gemeinfrei</string>
-    <string name="about_source">github.com/wanderwildwood/tarot</string>
     <!-- %1$s is a web address -->
     <string name="about_no_browser_address">Auf diesem Telefon gibt es keinen Browser, um das zu öffnen. Die Adresse lautet %1$s.</string>
-    <string name="about_feed_the_llamas">füttere die Lamas</string>
+    <string name="about_feed_the_llamas">Füttere die Lamas</string>
     <string name="about_close">Schließen</string>
     <!-- The folio at the foot of a paged list, "2 / 6"; a tap on it asks for a page -->
     <string name="about_licences">Lizenzen</string>

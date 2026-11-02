@@ -1,127 +1,37 @@
 package com.wanderwildwood.tarot.ui
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import com.mudita.mmd.components.buttons.OutlinedButtonMMD
-import com.mudita.mmd.components.text.TextMMD
 import com.wanderwildwood.tarot.BuildConfig
 import com.wanderwildwood.tarot.R
 
 /**
- * What this is, its privacy and terms, what it is made of, and where its source is. The text
- * runs to more than a dialog holds, so it turns pages like any list, with Close under it.
+ * This app's About: only the words and the address. The dialog, its one Close button, the
+ * Licences row, the links and the llama are the shared HouseAbout.kt, the same in every app.
  */
 @Composable
 fun AboutDialog(onDismiss: () -> Unit) {
-    val screen = LocalConfiguration.current.screenHeightDp
-    var licences by rememberSaveable { mutableStateOf(false) }
-    EInkDialog(onDismiss = onDismiss) {
-        if (licences) {
-            LicencesScreen(rememberLicencesData(), rememberLicencesLabels(), onBack = { licences = false }, modifier = Modifier.fillMaxWidth().height((screen * 0.7f).dp))
-            return@EInkDialog
-        }
-        TextMMD(
-            text = stringResource(R.string.about_title, BuildConfig.VERSION_NAME),
-            style = MaterialTheme.typography.bodyLarge,
-            fontWeight = FontWeight.Medium,
-        )
-        Spacer(Modifier.height(8.dp))
-        PagedColumn(Modifier.fillMaxWidth().heightIn(max = (screen * 0.6f).dp).testTag("about")) {
-            item { TextMMD(text = stringResource(R.string.about_what), style = MaterialTheme.typography.bodyMedium) }
-            item { Section(R.string.about_privacy_title, R.string.about_privacy) }
-            item { Section(R.string.about_terms_title, R.string.about_terms) }
-            item { Heading(stringResource(R.string.about_open_title)) }
-            for (line in listOf(R.string.about_licence, R.string.about_art, R.string.about_meanings)) {
-                item(key = line) {
-                    TextMMD(
-                        text = stringResource(line),
-                        style = MaterialTheme.typography.bodyMedium,
-                        modifier = Modifier.padding(bottom = 6.dp),
-                    )
-                }
-            }
-            item(key = "licences") {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).clickable { licences = true },
-                ) { TextMMD(text = stringResource(R.string.about_licences), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold) }
-            }
-            item { LinkRow(stringResource(R.string.about_source), "https://github.com/wanderwildwood/tarot") }
-            item { Llama() }
-        }
-        Spacer(Modifier.height(12.dp))
-        HouseButton(stringResource(R.string.about_close), onClick = onDismiss, modifier = Modifier.fillMaxWidth())
-    }
-}
-
-@Composable
-private fun Section(title: Int, body: Int) {
-    Heading(stringResource(title))
-    TextMMD(text = stringResource(body), style = MaterialTheme.typography.bodyMedium)
-}
-
-/** Opens [url] in a real browser (the shared guarded opener), or shows the address when there is none. */
-fun openLink(context: android.content.Context, url: String) =
-    openLink(context, url, context.getString(R.string.about_no_browser_address, url.removePrefix("https://")))
-
-/** A line that is an address and opens it, with a target a thumb can find. */
-@Composable
-private fun LinkRow(text: String, url: String) {
     val context = LocalContext.current
-    Row(
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).clickable { openLink(context, url) },
-    ) {
-        TextMMD(text = text, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
-    }
-}
-
-/**
- * A llama at the foot of the About, which opens the page a donation goes to. The site's
- * address opens the site; the llama and its words open the page. Straight to the checkout,
- * the short square.link form the site itself links to.
- */
-@Composable
-private fun Llama() {
-    val context = LocalContext.current
-    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
-        TextMMD(
-            text = "wanderthe.dev",
-            style = MaterialTheme.typography.bodyMedium,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.heightIn(min = 48.dp).clickable { openLink(context, "https://wanderthe.dev") }
-                .padding(top = 12.dp, end = 12.dp),
-        )
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            modifier = Modifier.heightIn(min = 48.dp).clickable { openLink(context, "https://square.link/u/AGu8oT10") },
-        ) {
-            Image(painter = painterResource(R.drawable.llama), contentDescription = null, modifier = Modifier.size(22.dp))
-            Spacer(Modifier.width(6.dp))
-            TextMMD(text = stringResource(R.string.about_feed_the_llamas), style = MaterialTheme.typography.bodyMedium)
-        }
+    val data = AboutData(
+        title = stringResource(R.string.about_title, BuildConfig.VERSION_NAME),
+        sections = listOf(
+            AboutSection(null, stringResource(R.string.about_what)),
+            AboutSection(stringResource(R.string.about_privacy_title), stringResource(R.string.about_privacy)),
+            AboutSection(stringResource(R.string.about_terms_title), stringResource(R.string.about_terms)),
+            AboutSection(stringResource(R.string.about_open_title), stringResource(R.string.about_licence)),
+            AboutSection(null, stringResource(R.string.about_art)),
+            AboutSection(null, stringResource(R.string.about_meanings)),
+        ),
+        sourceUrl = SOURCE_URL,
+    )
+    val labels = AboutLabels(
+        close = stringResource(R.string.about_close),
+        licences = stringResource(R.string.about_licences),
+        feedTheLlamas = stringResource(R.string.about_feed_the_llamas),
+        noBrowser = { address -> context.getString(R.string.about_no_browser_address, address) },
+    )
+    HouseAboutDialog(data, labels, R.drawable.llama, onDismiss) { modifier, back ->
+        LicencesScreen(rememberLicencesData(), rememberLicencesLabels(), onBack = back, modifier = modifier)
     }
 }
