@@ -168,8 +168,6 @@
     <string name="about_licences">Lizenzen</string>
     <string name="licences_title">Lizenzen</string>
     <string name="licences_source_head">Quellcode</string>
-    <string name="licences_licence_head">Lizenz</string>
-    <string name="licences_licence">Tarot ist freie Software unter der GNU General Public License, ausschließlich Version 3 (GPL-3.0-only), Copyright wander wildwood, für das hier Geschriebene. Das Werk, auf dem es aufbaut, behält seine eigene Lizenz, und seine Urheber behalten ihr Copyright, wie unter Baut auf aufgeführt. Der vollständige Text jeder Lizenz steht am Ende dieser Seite.</string>
-    <string name="licences_built_head">Baut auf</string>
+    <string name="licences_licence">Tarot ist freie Software unter der GNU General Public License, ausschließlich Version 3 (GPL-3.0-only), Copyright wander wildwood, für das hier Geschriebene. Das Werk, auf dem es aufbaut, behält seine eigene Lizenz, und seine Urheber behalten ihr Copyright, jede auf ihrer eigenen Seite.</string>
     <string name="licences_back">Zurück</string>
 </resources>
