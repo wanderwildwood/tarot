@@ -108,6 +108,13 @@
     <string name="export_done">Das Journal ist gespeichert.</string>
     <string name="export_failed">Das Journal konnte dort nicht gespeichert werden.</string>
     <string name="export_file_name">tarot-journal.json</string>
+    <string name="settings_restore">Ein Journal wiederherstellen</string>
+    <string name="settings_restore_note">Liest eine Datei, die mit „Journal exportieren“ gespeichert wurde, und fügt die Lesungen hinzu, die noch nicht hier sind. Lesungen, die schon im Journal stehen, werden weder geändert noch entfernt.</string>
+    <string name="restore_done">Wiederhergestellt. %1$d Lesungen hinzugefügt, %2$d waren schon da.</string>
+    <string name="restore_not_ours">Diese Datei ist kein Journal aus dieser App. Nichts wurde geändert.</string>
+    <string name="restore_newer">Dieses Journal stammt aus einer neueren Version dieser App. Aktualisiere die App und versuche es noch einmal. Nichts wurde geändert.</string>
+    <string name="restore_damaged">Diese Journal-Datei ist beschädigt, deshalb wurde nichts davon verwendet. Nichts wurde geändert.</string>
+    <string name="restore_unreadable">Diese Datei konnte nicht gelesen werden. Nichts wurde geändert.</string>
 
     <!-- ============================================================ -->
     <!-- Guide -->
@@ -185,4 +192,9 @@
     <string name="privacy_rights_title">Deine Rechte</string>
     <string name="privacy_rights">Nach der DSGVO kannst du Auskunft über die Daten verlangen, die über dich gespeichert sind, sie berichtigen oder löschen lassen, ihre Verarbeitung einschränken lassen oder ihr widersprechen, eine Kopie mitnehmen, eine Einwilligung widerrufen und dich bei einer Datenschutzbehörde beschweren. Da die App alles, was sie speichert, nur auf deinem Telefon ablegt, kannst du das meiste davon selbst tun: die Notiz einer Lesung ändern oder eine Lesung in der App löschen, mit „Journal exportieren“ eine Kopie speichern, die App-Daten in den Android-Einstellungen löschen oder die App deinstallieren.</string>
     <!-- /shared-about -->
+    <string name="licences_no_text">%s braucht hier keinen Lizenztext.</string>
+    <string name="licences_full_head">Vollständige Texte</string>
+    <string name="licences_full_gpl">GNU General Public License v3 (vollständiger Text)</string>
+    <string name="licences_full_apache">Apache License 2.0 (vollständiger Text)</string>
+    <string name="licences_full_ofl">SIL Open Font License 1.1 (vollständiger Text)</string>
 </resources>
