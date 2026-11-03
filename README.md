@@ -25,7 +25,7 @@ It will install on any Android 12 device.
   redraw; nothing follows the finger.
 - **Settings** turns reversed cards on or off (on by default; off, every card is upright, today's
   too), opens a short **Guide** to the deck and the spreads, and exports the journal as a JSON
-  file through the phone's own file picker.
+  file through the phone's own file picker, and restores one (adding what is not there yet).
 
 Cards are shuffled with `SecureRandom`. The card for a day is worked out from the date alone, so
 it needs nothing stored and nothing fetched.

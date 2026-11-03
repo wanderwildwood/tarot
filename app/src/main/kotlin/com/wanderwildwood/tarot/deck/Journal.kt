@@ -73,4 +73,54 @@ object JournalCodec {
         }
         return out
     }
+
+    /** Why a file was refused, as a kind the screen turns into a plain sentence. */
+    class JournalException(val kind: Kind) : Exception(kind.name) {
+        enum class Kind { NOT_A_JOURNAL, NEWER, DAMAGED }
+    }
+
+    /**
+     * Reads a journal file whole, for a restore: unlike [decode], which skips what it cannot
+     * read so the app's own file never loses the rest, this refuses the whole file if any
+     * reading in it is unreadable, names a card or spread this deck does not have, repeats an
+     * id, or if the file is not a journal export at all. Nothing is half-read.
+     */
+    fun decodeStrict(text: String): List<Entry> {
+        val root = try {
+            JSONObject(text)
+        } catch (e: Exception) {
+            throw JournalException(JournalException.Kind.NOT_A_JOURNAL)
+        }
+        val list = root.optJSONArray("readings") ?: throw JournalException(JournalException.Kind.NOT_A_JOURNAL)
+        if (!root.has("version")) throw JournalException(JournalException.Kind.NOT_A_JOURNAL)
+        val version = root.optInt("version", -1)
+        if (version > VERSION) throw JournalException(JournalException.Kind.NEWER)
+        if (version < 1) throw JournalException(JournalException.Kind.DAMAGED)
+        try {
+            val out = (0 until list.length()).map { i ->
+                val o = list.getJSONObject(i)
+                val spread = Spread.of(o.getString("spread"))!!
+                val cs = o.getJSONArray("cards")
+                val cards = (0 until cs.length()).map { k ->
+                    val c = cs.getJSONObject(k)
+                    val card = Deck.ids.indexOf(c.getString("card"))
+                    require(card >= 0)
+                    Drawn(card, c.getBoolean("reversed"))
+                }
+                require(cards.size == spread.size)
+                require(cards.map { it.card }.toSet().size == cards.size)
+                Entry(
+                    id = o.getLong("id").also { require(it > 0) },
+                    epochDay = java.time.LocalDate.parse(o.getString("date")).toEpochDay(),
+                    spread = spread,
+                    cards = cards,
+                    note = o.optString("note"),
+                )
+            }
+            require(out.map { it.id }.toSet().size == out.size)
+            return out
+        } catch (e: Exception) {
+            throw JournalException(JournalException.Kind.DAMAGED)
+        }
+    }
 }

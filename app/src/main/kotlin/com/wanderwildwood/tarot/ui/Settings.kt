@@ -41,6 +41,35 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
             Toast.makeText(context, context.getString(R.string.export_failed), Toast.LENGTH_LONG).show()
         }
     }
+    val restore = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri == null) return@rememberLauncherForActivityResult
+        val text = runCatching {
+            context.contentResolver.openInputStream(uri)?.use { s ->
+                val bytes = s.readBytes()
+                if (bytes.size > 20 * 1024 * 1024) null else String(bytes, Charsets.UTF_8)
+            }
+        }.getOrNull()
+        val message = if (text == null) {
+            context.getString(R.string.restore_unreadable)
+        } else {
+            try {
+                val readings = JournalCodec.decodeStrict(text)
+                val added = state.restore(readings)
+                context.getString(R.string.restore_done, added, readings.size - added)
+            } catch (e: JournalCodec.JournalException) {
+                context.getString(
+                    when (e.kind) {
+                        JournalCodec.JournalException.Kind.NOT_A_JOURNAL -> R.string.restore_not_ours
+                        JournalCodec.JournalException.Kind.NEWER -> R.string.restore_newer
+                        JournalCodec.JournalException.Kind.DAMAGED -> R.string.restore_damaged
+                    },
+                )
+            } catch (e: Exception) {
+                context.getString(R.string.restore_unreadable)
+            }
+        }
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+    }
     val fileName = stringResource(R.string.export_file_name)
 
     Scaffold(
@@ -69,6 +98,11 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
             item(key = "export") {
                 SettingRow(stringResource(R.string.settings_export), stringResource(R.string.settings_export_note)) {
                     save.launch(fileName)
+                }
+            }
+            item(key = "restore") {
+                SettingRow(stringResource(R.string.settings_restore), stringResource(R.string.settings_restore_note)) {
+                    runCatching { restore.launch(arrayOf("application/json", "text/plain", "application/octet-stream")) }
                 }
             }
         }

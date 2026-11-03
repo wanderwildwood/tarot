@@ -8,7 +8,7 @@ spread, cards, orientation and note) and its one setting, reversed cards on or o
 backed up by the app, and uninstalling it removes all of it.
 
 **Export the journal** writes a copy to a file you choose through the phone's own file picker,
-and only when you ask.
+and only when you ask. **Restore a journal** reads a file you pick the same way and adds its readings to the journal; it checks the whole file first and changes nothing if the file is wrong.
 
 The About dialog's addresses (the source, the author's site and the donation page) open in your browser, and only when you press them. The app itself never goes online.
 

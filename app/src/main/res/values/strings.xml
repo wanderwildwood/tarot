@@ -104,7 +104,15 @@
     <string name="settings_reversals_note">Cards may come out upside down, with meanings of their own. Off, every card is upright, today’s card too.</string>
     <string name="settings_guide">Guide</string>
     <string name="settings_export">Export the journal</string>
-    <string name="settings_export_note">A JSON file, saved where you choose</string>
+    <string name="settings_export_note">Every reading with its date, cards and note, as a JSON file saved where you choose. The setting for reversed cards is not in it.</string>
+    <string name="settings_restore">Restore a journal</string>
+    <string name="settings_restore_note">Reads a file made by Export the journal and adds the readings that are not here yet. Readings already in the journal are not changed or removed.</string>
+    <!-- %1$d readings added, %2$d already here -->
+    <string name="restore_done">Restored. %1$d readings added, %2$d already here.</string>
+    <string name="restore_not_ours">That file is not a journal from this app. Nothing was changed.</string>
+    <string name="restore_newer">That journal was made by a newer version of this app. Update the app and try again. Nothing was changed.</string>
+    <string name="restore_damaged">That journal file is damaged, so none of it was used. Nothing was changed.</string>
+    <string name="restore_unreadable">That file could not be read. Nothing was changed.</string>
     <string name="export_done">The journal is saved.</string>
     <string name="export_failed">The journal could not be saved there.</string>
     <string name="export_file_name">tarot-journal.json</string>

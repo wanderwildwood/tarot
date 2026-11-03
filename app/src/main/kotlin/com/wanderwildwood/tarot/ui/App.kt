@@ -48,6 +48,9 @@ class AppState(val store: Store) {
         get() = version.let { store.reversals }
         set(v) { store.reversals = v; version++ }
 
+    /** Adds the readings of a restored journal; returns how many were new. */
+    fun restore(readings: List<Entry>): Int = store.merge(readings).also { version++ }
+
     fun put(e: Entry) { store.put(e); version++ }
     /** The reading just deleted, kept until the next thing is done so it can be put back. */
     var deleted by mutableStateOf<Entry?>(null)

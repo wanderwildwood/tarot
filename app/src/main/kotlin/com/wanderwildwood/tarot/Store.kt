@@ -32,6 +32,18 @@ class Store(context: Context) {
 
     fun delete(id: Long) = write(entries().filter { it.id != id })
 
+    /**
+     * Adds the readings of a restored file that are not here yet, in one write; a reading with
+     * an id already in the journal is left as it is. Returns how many were added.
+     */
+    fun merge(restored: List<Entry>): Int {
+        val have = entries()
+        val ids = have.map { it.id }.toSet()
+        val fresh = restored.filter { it.id !in ids }
+        if (fresh.isNotEmpty()) write(have + fresh)
+        return fresh.size
+    }
+
     private fun write(list: List<Entry>) {
         val sorted = list.sortedByDescending { it.id }
         val tmp = File(file.parentFile, "journal.json.tmp")
