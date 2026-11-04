@@ -13,6 +13,7 @@ import androidx.compose.ui.semantics.testTagsAsResourceId
 import com.mudita.mmd.ThemeMMD
 import com.wanderwildwood.tarot.ui.TarotApp
 import com.wanderwildwood.tarot.ui.monochrome
+import com.wanderwildwood.tarot.ui.ArmedScope
 
 class MainActivity : ComponentActivity() {
 
@@ -25,9 +26,11 @@ class MainActivity : ComponentActivity() {
             // for as long as a field has focus.
             CompositionLocalProvider(LocalCursorBlinkEnabled provides false) {
                 ThemeMMD(colorScheme = monochrome) {
-                    // A debug build names its places for the emulator tests; a release names none.
-                    Box(Modifier.semantics { testTagsAsResourceId = BuildConfig.DEBUG }) {
-                        TarotApp(store)
+                    ArmedScope {
+                        // A debug build names its places for the emulator tests; a release names none.
+                        Box(Modifier.semantics { testTagsAsResourceId = BuildConfig.DEBUG }) {
+                            TarotApp(store)
+                        }
                     }
                 }
             }
