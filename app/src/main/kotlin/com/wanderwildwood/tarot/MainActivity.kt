@@ -12,6 +12,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.testTagsAsResourceId
 import com.mudita.mmd.ThemeMMD
 import com.wanderwildwood.tarot.ui.TarotApp
+import com.wanderwildwood.tarot.ui.houseTypography
 import com.wanderwildwood.tarot.ui.monochrome
 import com.wanderwildwood.tarot.ui.ArmedScope
 
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
             // A steady cursor: a blinking one is a repaint twice a second on an e-ink panel
             // for as long as a field has focus.
             CompositionLocalProvider(LocalCursorBlinkEnabled provides false) {
-                ThemeMMD(colorScheme = monochrome) {
+                ThemeMMD(colorScheme = monochrome, typography = houseTypography) {
                     ArmedScope {
                         // A debug build names its places for the emulator tests; a release names none.
                         Box(Modifier.semantics { testTagsAsResourceId = BuildConfig.DEBUG }) {
