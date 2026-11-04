@@ -152,7 +152,7 @@
     <string name="about_title">Tarot %1$s</string>
     <string name="about_what">Eine Tageskarte, Legungen und ein Journal der Lesungen, mit dem Rider-Waite-Smith-Deck von 1909.</string>
     <string name="about_privacy_title">Datenschutz</string>
-    <string name="about_privacy">Alles, was du in diese App eingibst, bleibt auf diesem Telefon. Sie hat keinen Internetzugang, also wird nichts gesendet und nichts über dich gesammelt. Es gibt keine Werbung, keine Analysen und kein Tracking. Sicherungen und Exporte gehen nur dorthin, wo du sie speicherst. Die beiden Adressen unten öffnen sich nur in deinem Browser, wenn du sie antippst.</string>
+    <string name="about_privacy">Alles, was du in diese App eingibst, bleibt auf diesem Telefon. Sie hat keinen Internetzugang, also wird nichts gesendet und nichts über dich gesammelt. Es gibt keine Werbung, keine Analysen und kein Tracking. Sicherungen und Exporte gehen nur dorthin, wo du sie speicherst. Die Adressen unten öffnen sich in deinem Browser und „Schreib an“ in deiner E-Mail-App, nur wenn du sie antippst.</string>
     <string name="about_terms_title">Bedingungen</string>
     <string name="about_terms">Diese App ist freie Software unter der GNU General Public License v3. Sie kommt ohne Gewährleistung: Nutzung auf eigene Gefahr. Tarot ist zum Nachdenken und zur Unterhaltung. Die Karten beschreiben; sie sagen nichts voraus und ersetzen keinen medizinischen, rechtlichen oder finanziellen Rat.</string>
     <string name="about_open_title">Open Source</string>
@@ -169,4 +169,14 @@
     <string name="licences_source_head">Quellcode</string>
     <string name="licences_licence">Tarot ist freie Software unter der GNU General Public License, ausschließlich Version 3 (GPL-3.0-only), Copyright wander wildwood, für das hier Geschriebene. Das Werk, auf dem es aufbaut, behält seine eigene Lizenz, und seine Urheber behalten ihr Copyright, jede auf ihrer eigenen Seite.</string>
     <string name="licences_back">Zurück</string>
+    <!-- shared-about: contact row + privacy section (edit in /opt/projects/shared-about) -->
+    <string name="about_write_to">Schreib an %1$s</string>
+    <string name="about_no_mail_app">Keine E-Mail-App installiert. Die Adresse ist %1$s.</string>
+    <string name="privacy_who_title">Wer wir sind</string>
+    <string name="privacy_who">Diese App stammt von wander wildwood, einem unabhängigen Entwickler: eine Person, keine Firma. Damit ist wander wildwood Verantwortlicher für alles, was die App selbst verarbeitet, und das ist sehr wenig: Was du eingibst, bleibt auf diesem Telefon, außer du schickst es selbst woandershin, und nichts davon erreicht den Entwickler.</string>
+    <string name="privacy_contact_title">So erreichst du uns</string>
+    <string name="privacy_contact">Schreib an email@wanderthe.dev, zu deinen Daten oder zu allem anderen.</string>
+    <string name="privacy_rights_title">Deine Rechte</string>
+    <string name="privacy_rights">Nach der DSGVO kannst du Auskunft über die Daten verlangen, die über dich gespeichert sind, sie berichtigen oder löschen lassen, ihre Verarbeitung einschränken lassen oder ihr widersprechen, eine Kopie mitnehmen, eine Einwilligung widerrufen und dich bei einer Datenschutzbehörde beschweren. Da die App alles, was sie speichert, nur auf deinem Telefon ablegt, kannst du das meiste davon selbst tun: die Notiz einer Lesung ändern oder eine Lesung in der App löschen, mit „Journal exportieren“ eine Kopie speichern, die App-Daten in den Android-Einstellungen löschen oder die App deinstallieren.</string>
+    <!-- /shared-about -->
 </resources>
