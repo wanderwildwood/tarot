@@ -1,0 +1,8 @@
+{
+  "uniqueId": "pictorial-key",
+  "name": "The Pictorial Key to the Tarot (1910)",
+  "description": "The source the meanings draw on. The meanings themselves are written for this app in plain words.",
+  "developers": [{ "name": "A. E. Waite" }],
+  "website": "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot",
+  "licenses": ["public-domain"]
+}

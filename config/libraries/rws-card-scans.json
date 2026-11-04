@@ -1,0 +1,8 @@
+{
+  "uniqueId": "rws-card-scans",
+  "name": "Rider-Waite-Smith card scans (RWS1909, Roses & Lilies)",
+  "description": "The card pictures: Pamela Colman Smith's drawings for the 1909 deck, from scans of an original Roses & Lilies printing by Saskia Jansen on Wikimedia Commons, every file tagged Public domain (PD-old-70-expired). Here in sixteen grays.",
+  "developers": [{ "name": "Pamela Colman Smith; scans by Saskia Jansen" }],
+  "website": "https://commons.wikimedia.org/wiki/Category:Rider-Waite_tarot_deck_(Roses_%26_Lilies)",
+  "licenses": ["public-domain"]
+}

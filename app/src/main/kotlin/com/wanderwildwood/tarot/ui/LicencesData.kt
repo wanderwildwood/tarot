@@ -7,17 +7,6 @@ import com.wanderwildwood.tarot.R
 /** The address of the app's own source code. */
 const val SOURCE_URL = "https://github.com/wanderwildwood/tarot"
 
-/** What the APK carries that is not this app's own code, and the licence each project declares. */
-val LICENCE_COMPONENTS: List<LicenceComponent> = listOf(
-    LicenceComponent("Rider-Waite-Smith card scans (RWS1909, Roses & Lilies)", "Pamela Colman Smith; scans by Saskia Jansen", "Public domain (PD-old-70-expired)", "https://commons.wikimedia.org/wiki/Category:Rider-Waite_tarot_deck_(Roses_%26_Lilies)"),
-    LicenceComponent("The Pictorial Key to the Tarot (1910), source of the meanings", "A. E. Waite", "Public domain", "https://en.wikisource.org/wiki/The_Pictorial_Key_to_the_Tarot"),
-    LicenceComponent("Mudita Mindful Design (MMD)", "Mudita", "Apache-2.0", "https://github.com/mudita/MMD"),
-    LicenceComponent("Lato typeface, supplied with MMD", "\u0141ukasz Dziedzic", "OFL-1.1", "https://www.latofonts.com"),
-    LicenceComponent("AndroidX and Jetpack Compose", "Google", "Apache-2.0", "https://developer.android.com/jetpack"),
-    LicenceComponent("Kotlin and kotlinx.coroutines", "JetBrains", "Apache-2.0", "https://kotlinlang.org"),
-    LicenceComponent("Material Symbols icons", "Google", "Apache-2.0", "https://fonts.google.com/icons"),
-)
-
 /** Each distinct licence text once: family id and the raw resource. */
 val LICENCE_RAW: List<Pair<String, Int>> = listOf(
     "gpl" to R.raw.gpl_3_0,
@@ -30,7 +19,8 @@ fun rememberLicencesData(): LicencesData = LicencesData(
     appName = "Tarot",
     sourceUrl = SOURCE_URL,
     licenceLine = stringResource(R.string.licences_licence),
-    components = LICENCE_COMPONENTS,
+    // One row per artifact in the APK, listed by the build (config/libraries adds what Gradle cannot see).
+    components = rememberGeneratedComponents(R.raw.aboutlibraries),
     texts = LICENCE_RAW.map { (id, raw) ->
         LicenceText(id, stringResource(when (id) {
         "gpl" -> R.string.licences_full_gpl
