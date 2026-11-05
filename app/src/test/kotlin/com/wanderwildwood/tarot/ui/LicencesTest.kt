@@ -40,7 +40,12 @@ class LicencesTest {
     }
 
     @Test fun debugOnlyLibrariesAreLeftOff() {
-        val debugOnly = listOf("androidx.compose.ui:ui-tooling ", "androidx.compose.ui:ui-tooling-data ")
+        // Every artifact build.gradle.kts excludes: they come in only through debugImplementation.
+        val debugOnly = listOf(
+            "androidx.compose.ui:ui-tooling", "androidx.compose.ui:ui-tooling-android",
+            "androidx.compose.ui:ui-tooling-data", "androidx.compose.ui:ui-tooling-data-android",
+            "androidx.compose.material:material", "androidx.compose.material:material-icons-core",
+        ).map { "$it " }
         assertEquals(emptyList<String>(), generated.mapNotNull { it.note }.filter { n -> debugOnly.any { n.startsWith(it) } })
     }
 
