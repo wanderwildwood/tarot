@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -92,20 +93,25 @@ fun CardScreen(drawn: Drawn, position: String?, onBack: () -> Unit, onZoom: () -
                 val order = if (drawn.reversed) listOf(true, false) else listOf(false, true)
                 for (rev in order) {
                     item(key = "m$rev") {
-                        Column(Modifier.padding(horizontal = SIDE, vertical = 12.dp)) {
-                            val label = when {
-                                position != null && rev == drawn.reversed ->
-                                    stringResource(if (rev) R.string.drawn_reversed else R.string.drawn_upright)
-                                else -> stringResource(if (rev) R.string.reversed else R.string.upright)
+                        // A meaning can be selected, for Copy and for Define and the other apps that act
+                        // on text; see TextActions. A press held still selects; a swipe still turns the
+                        // page, since the list takes the drag before the press is long enough.
+                        SelectionContainer(Modifier.textActions()) {
+                            Column(Modifier.padding(horizontal = SIDE, vertical = 12.dp)) {
+                                val label = when {
+                                    position != null && rev == drawn.reversed ->
+                                        stringResource(if (rev) R.string.drawn_reversed else R.string.drawn_upright)
+                                    else -> stringResource(if (rev) R.string.reversed else R.string.upright)
+                                }
+                                TextMMD(text = label, style = MaterialTheme.typography.labelSmall)
+                                TextMMD(
+                                    text = if (rev) words.revKeys[card] else words.upKeys[card],
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    fontWeight = FontWeight.Bold,
+                                )
+                                Spacer(Modifier.height(6.dp))
+                                TextMMD(text = if (rev) words.rev[card] else words.up[card], style = MaterialTheme.typography.bodyMedium)
                             }
-                            TextMMD(text = label, style = MaterialTheme.typography.labelSmall)
-                            TextMMD(
-                                text = if (rev) words.revKeys[card] else words.upKeys[card],
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.Bold,
-                            )
-                            Spacer(Modifier.height(6.dp))
-                            TextMMD(text = if (rev) words.rev[card] else words.up[card], style = MaterialTheme.typography.bodyMedium)
                         }
                     }
                 }
