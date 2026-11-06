@@ -16,6 +16,9 @@
             <action android:name="android.intent.action.PROCESS_TEXT" />
             <data android:mimeType="text/plain" />
         </intent>
+        <!-- Files (Cabinet), which opens and saves the journal backup with its own screens when
+             installed; see FilesPicker. -->
+        <package android:name="com.wanderwildwood.tana" />
     </queries>
 
     <application
