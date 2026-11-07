@@ -44,7 +44,7 @@ fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val kept = state.entries.firstOrNull { it.spread == Spread.DAILY && it.epochDay == today }
     val position = stringResource(R.string.pos_daily)
 
-    PagedColumn(Modifier.fillMaxSize().testTag("today")) {
+    PagedColumn(Modifier.fillMaxSize().testTag("today"), showCutRow = true) {
         // The first page is the card itself, as large as the room under the tabs allows; what it
         // means comes on the next page.
         item {
@@ -110,7 +110,7 @@ fun Meaning(words: CardWords, d: Drawn, modifier: Modifier = Modifier) {
 /** The three spreads. Choosing one draws it, and the reading goes in the journal. */
 @Composable
 fun SpreadTab(state: AppState, go: (Screen) -> Unit) {
-    PagedColumn(Modifier.fillMaxSize()) {
+    PagedColumn(Modifier.fillMaxSize(), showCutRow = true) {
         item {
             TextMMD(
                 text = stringResource(R.string.spread_choose),
@@ -160,7 +160,7 @@ fun JournalTab(state: AppState, go: (Screen) -> Unit, onTab: (Int) -> Unit) {
     }
     val list = rememberLazyListState()
     run {
-        PagedColumn(state = list, modifier = Modifier.fillMaxSize().testTag("journal")) {
+        PagedColumn(state = list, modifier = Modifier.fillMaxSize().testTag("journal"), showCutRow = true) {
             for (e in entries) {
                 item(key = e.id) {
                     val cards = e.cards.map { d ->
@@ -199,7 +199,7 @@ fun CardsTab(go: (Screen) -> Unit) {
     val words = rememberCardWords()
     val list = rememberLazyListState()
     run {
-        PagedColumn(state = list, modifier = Modifier.fillMaxSize().testTag("cards")) {
+        PagedColumn(state = list, modifier = Modifier.fillMaxSize().testTag("cards"), showCutRow = true) {
             for (card in 0 until Deck.SIZE) {
                 item(key = card) {
                     Row(

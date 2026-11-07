@@ -74,7 +74,7 @@ fun CardScreen(drawn: Drawn, position: String?, onBack: () -> Unit, onZoom: () -
         BoxWithConstraints(Modifier.padding(padding).fillMaxSize()) {
             val tall = maxHeight - 24.dp
             val w = min(maxWidth - SIDE * 2, tall / Spread.ASPECT)
-            PagedColumn(Modifier.fillMaxSize().testTag("card_page")) {
+            PagedColumn(Modifier.fillMaxSize().testTag("card_page"), showCutRow = true) {
                 item {
                     Box(Modifier.fillMaxWidth().padding(vertical = 12.dp), contentAlignment = Alignment.Center) {
                         CardArt(

@@ -65,7 +65,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
             )
         },
     ) { padding ->
-        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading")) {
+        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading"), showCutRow = true) {
             item {
                 TextMMD(
                     text = longDate(entry.epochDay),
