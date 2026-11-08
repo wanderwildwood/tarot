@@ -23,7 +23,7 @@
     <string name="card_m02_up_keys">Inner knowing, stillness, what is hidden</string>
     <string name="card_m02_up">A quiet card about what is known without being said. There may be more under the surface of things than is showing yet. It suggests listening, waiting, and trusting a sense that has no words.</string>
     <string name="card_m02_rev_keys">Surface, secrets, intuition ignored</string>
-    <string name="card_m02_rev">The inner voice is drowned out by noise, or set aside in favour of what is easier to explain. Something may be kept back that would be better known. A pause to listen is worth taking.</string>
+    <string name="card_m02_rev">The inner voice is drowned out by noise, or set aside in favor of what is easier to explain. Something may be kept back that would be better known. A pause to listen is worth taking.</string>
     <!-- The Empress -->
     <string name="card_m03_name">The Empress</string>
     <string name="card_m03_up_keys">Abundance, care, growth</string>
@@ -201,7 +201,7 @@
     <!-- Page of Wands -->
     <string name="card_wands11_name">Page of Wands</string>
     <string name="card_wands11_up_keys">Curiosity, enthusiasm, a message</string>
-    <string name="card_wands11_up">A young figure looks up at a sprouting staff. The card is about eager beginnings, exploration and news that sparks interest. It favours trying things.</string>
+    <string name="card_wands11_up">A young figure looks up at a sprouting staff. The card is about eager beginnings, exploration and news that sparks interest. It favors trying things.</string>
     <string name="card_wands11_rev_keys">Restlessness, ideas without follow-through</string>
     <string name="card_wands11_rev">Enthusiasm burns quickly and moves on. Plans may stay half-made. It asks which idea is worth staying with.</string>
     <!-- Knight of Wands -->
@@ -309,7 +309,7 @@
     <!-- Ace of Swords -->
     <string name="card_swords01_name">Ace of Swords</string>
     <string name="card_swords01_up_keys">Clarity, truth, a breakthrough</string>
-    <string name="card_swords01_up">A hand from a cloud holds a crowned sword. The card marks a clear thought, a decision, or a truth that cuts through confusion. It favours honesty.</string>
+    <string name="card_swords01_up">A hand from a cloud holds a crowned sword. The card marks a clear thought, a decision, or a truth that cuts through confusion. It favors honesty.</string>
     <string name="card_swords01_rev_keys">Confusion, harsh words</string>
     <string name="card_swords01_rev">The thought is muddled, or the sword cuts carelessly. Words may wound. It asks for clarity that is also kind.</string>
     <!-- Two of Swords -->
