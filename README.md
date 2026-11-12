@@ -1,7 +1,7 @@
 # Tarot
 
 A tarot deck for the [Mudita Kompakt](https://mudita.com/products/kompakt/): a card for the day,
-three spreads, a journal of readings, and the 1909 Rider-Waite-Smith pictures in sixteen greys.
+three spreads, a journal of readings, and the 1909 Rider-Waite-Smith pictures in sixteen grays.
 It will install on any Android 12 device.
 
 | | |
@@ -34,7 +34,7 @@ it needs nothing stored and nothing fetched.
 
 The pictures are Pamela Colman Smith's, from the deck Rider published in London in 1909, taken
 from scans of an original 1909 "Roses & Lilies" printing on Wikimedia Commons, which are in the
-public domain. Here they are greyscale from the 1909 scans, sixteen greys for this screen, kept at
+public domain. Here they are grayscale from the 1909 scans, sixteen grays for this screen, kept at
 about the scans' own size so the zoom shows her linework. [ART.md](ART.md) says where each
 file came from and what was done to it.
 
@@ -71,7 +71,7 @@ For updates without doing this by hand, add this repository to
 
     https://github.com/wanderwildwood/tarot
 
-## Licence
+## License
 
 GPL-3.0-only. See [LICENSE](LICENSE).
 
