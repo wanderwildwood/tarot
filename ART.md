@@ -23,8 +23,8 @@ and SHA-1.
 
 ## What was done to it
 
-Greyscale from the 1909 scans, for a panel that shows sixteen greys. Approved as shown
-(16 greys, the paper grain kept) on 2026-10-17. `tools/make-art.py` does it, in this order and
+Grayscale from the 1909 scans, for a panel that shows sixteen grays. Approved as shown
+(16 grays, the paper grain kept) on 2026-10-17. `tools/make-art.py` does it, in this order and
 nothing more:
 
 1. **Square it up.** Each scan is rotated, bicubic, by the angle (in tenths of a degree, up to two)
@@ -32,13 +32,13 @@ nothing more:
    tenth of a degree or more.
 2. **Crop to the frame.** Just outside the frame she drew round the picture and its title; the
    cream card margin goes.
-3. **Grey.** Red 0.50, green 0.25, blue 0.25. Plain luminance makes the stencilled yellow the same
-   grey as the paper, since the two differ almost only in blue; this mix keeps paper, yellow and
+3. **Gray.** Red 0.50, green 0.25, blue 0.25. Plain luminance makes the stenciled yellow the same
+   gray as the paper, since the two differ almost only in blue; this mix keeps paper, yellow and
    the pale blue two to three of the sixteen levels apart (the Fool's yellow sky against his
    white sun, the Moon's yellow against her blue sky). A curve of 1.35 then spreads the light end
    apart.
 4. **Levels.** Per card, the paper goes to white and Smith's keyline to black.
-5. **Sixteen levels**, with no dithering: the stencilled areas are flat, so there is nothing to
+5. **Sixteen levels**, with no dithering: the stenciled areas are flat, so there is nothing to
    band. No despeckling, no smoothing, no sharpening: the paper's grain is the scan's, and it stays.
 
 Each card is stored at that size (about 780 x 1340) as lossless WebP, `card_<id>.webp`, and
