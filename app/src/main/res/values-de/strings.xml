@@ -197,4 +197,6 @@
     <string name="licences_full_gpl">GNU General Public License v3 (vollständiger Text)</string>
     <string name="licences_full_apache">Apache License 2.0 (vollständiger Text)</string>
     <string name="licences_full_ofl">SIL Open Font License 1.1 (vollständiger Text)</string>
+    <string name="settings_dark">Dunkelmodus</string>
+    <string name="settings_dark_note">Weiß auf Schwarz, in dieser App. Home hat einen Schalter für alle Apps.</string>
 </resources>
