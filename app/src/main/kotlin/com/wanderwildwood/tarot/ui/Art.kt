@@ -32,7 +32,8 @@ fun CardArt(card: Int, reversed: Boolean, small: Boolean, modifier: Modifier = M
             contentScale = ContentScale.FillBounds,
             // Smith's hatching shrunk with a plain bilinear filter shimmers into moire.
             filterQuality = FilterQuality.High,
-            modifier = Modifier.matchParentSize().let { if (reversed) it.rotate(180f) else it },
+            // The drawing keeps its own greys in dark mode.
+            modifier = Modifier.matchParentSize().keepColors().let { if (reversed) it.rotate(180f) else it },
         )
     }
 }

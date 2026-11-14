@@ -222,7 +222,8 @@ fun ZoomScreen(drawn: Drawn, onBack: () -> Unit) {
                             translationX = offset.x
                             translationY = offset.y
                             rotationZ = if (drawn.reversed) 180f else 0f
-                        },
+                        }
+                        .keepColors(),
                 )
             }
             TextMMD(
