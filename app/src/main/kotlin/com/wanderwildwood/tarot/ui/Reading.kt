@@ -37,6 +37,12 @@ import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
 import com.wanderwildwood.tarot.R
 import com.wanderwildwood.tarot.deck.Entry
 import com.wanderwildwood.tarot.deck.Spread
+import androidx.compose.runtime.withFrameNanos
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
+import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.TextFieldValue
 
 private val SIDE = 20.dp
 
@@ -185,8 +191,18 @@ private fun Layout(entry: Entry, modifier: Modifier, onCard: (Int) -> Unit) {
 
 @Composable
 fun NoteDialog(start: String, onDismiss: () -> Unit, onSave: (String) -> Unit) {
-    var text by remember { mutableStateOf(start) }
+    var text by remember { mutableStateOf(TextFieldValue(start, TextRange(start.length))) }
+    val field = remember { FocusRequester() }
     EInkDialog(onDismiss = onDismiss) {
+        // The field is what the dialog is for: it takes the focus as it opens and the keyboard
+        // comes up. Asked from inside the dialog, a frame after it is drawn: the field lives in
+        // the dialog's own window, which a request from the screen beneath does not reach.
+        val keyboardNow = LocalSoftwareKeyboardController.current
+        LaunchedEffect(Unit) {
+            withFrameNanos { }
+            runCatching { field.requestFocus() }
+            keyboardNow?.show()
+        }
         TextMMD(text = stringResource(R.string.note), style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Medium)
         Spacer(Modifier.height(8.dp))
         TextFieldMMD(
@@ -195,11 +211,11 @@ fun NoteDialog(start: String, onDismiss: () -> Unit, onSave: (String) -> Unit) {
             placeholder = { TextMMD(text = stringResource(R.string.note_hint), style = MaterialTheme.typography.bodyMedium) },
             minLines = 3,
             maxLines = 6,
-            modifier = Modifier.fillMaxWidth().testTag("note_field"),
+            modifier = Modifier.fillMaxWidth().focusRequester(field).testTag("note_field"),
         )
         Spacer(Modifier.height(12.dp))
         HouseButton(stringResource(R.string.save), on = true, modifier = WideRow, onClick = {
-            onSave(text)
+            onSave(text.text)
             onDismiss()
         })
         HouseButton(stringResource(R.string.cancel), onClick = onDismiss, modifier = WideRow)
