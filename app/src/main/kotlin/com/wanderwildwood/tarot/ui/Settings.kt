@@ -1,6 +1,5 @@
 package com.wanderwildwood.tarot.ui
 
-import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.foundation.layout.Spacer
@@ -35,9 +34,9 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
         runCatching {
             context.contentResolver.openOutputStream(uri, "wt")?.use { it.write(json.toByteArray()) } ?: error("no stream")
         }.onSuccess {
-            Toast.makeText(context, context.getString(R.string.export_done), Toast.LENGTH_SHORT).show()
+            Notice.say(context, R.string.export_done)
         }.onFailure {
-            Toast.makeText(context, context.getString(R.string.export_failed), Toast.LENGTH_LONG).show()
+            Notice.say(context, R.string.export_failed)
         }
     }
     val restore = rememberLauncherForActivityResult(FilesOpenDocument(writable = false)) { uri ->
@@ -67,7 +66,7 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
                 context.getString(R.string.restore_unreadable)
             }
         }
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
+        Notice.say(message)
     }
     val fileName = stringResource(R.string.export_file_name)
 

@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
                     ArmedScope {
                         // A debug build names its places for the emulator tests; a release names none.
                         Box(Modifier.semantics { testTagsAsResourceId = BuildConfig.DEBUG }) {
-                            TarotApp(store)
+                            com.wanderwildwood.tarot.ui.NoticeFrame { TarotApp(store) }
                         }
                     }
                 }
