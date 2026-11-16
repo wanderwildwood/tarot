@@ -1,5 +1,6 @@
 package com.wanderwildwood.tarot
 
+import com.wanderwildwood.tarot.ui.DarkSelection
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -26,14 +27,14 @@ class MainActivity : ComponentActivity() {
             // A steady cursor: a blinking one is a repaint twice a second on an e-ink panel
             // for as long as a field has focus.
             CompositionLocalProvider(LocalCursorBlinkEnabled provides false) {
-                ThemeMMD(colorScheme = monochrome, typography = houseTypography) {
+                ThemeMMD(colorScheme = monochrome, typography = houseTypography) { DarkSelection {
                     ArmedScope {
                         // A debug build names its places for the emulator tests; a release names none.
                         Box(Modifier.semantics { testTagsAsResourceId = BuildConfig.DEBUG }) {
                             com.wanderwildwood.tarot.ui.NoticeFrame { TarotApp(store) }
                         }
                     }
-                }
+                } }
             }
         }
     }
