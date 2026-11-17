@@ -14,7 +14,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
@@ -31,7 +35,12 @@ import com.wanderwildwood.tarot.deck.Draw
 import com.wanderwildwood.tarot.deck.Drawn
 import com.wanderwildwood.tarot.deck.Entry
 import com.wanderwildwood.tarot.deck.Spread
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LifecycleEventEffect
+import java.time.Duration
 import java.time.LocalDate
+import java.time.LocalDateTime
+import kotlinx.coroutines.delay
 
 private val SIDE = 20.dp
 
@@ -39,7 +48,15 @@ private val SIDE = 20.dp
 @Composable
 fun TodayTab(state: AppState, go: (Screen) -> Unit) {
     val words = rememberCardWords()
-    val today = LocalDate.now().toEpochDay()
+    // The day is read again whenever the app comes back and at midnight while it is open, so a
+    // phone left with the app open overnight shows the new day's card in the morning.
+    var today by remember { mutableLongStateOf(LocalDate.now().toEpochDay()) }
+    LifecycleEventEffect(Lifecycle.Event.ON_RESUME) { today = LocalDate.now().toEpochDay() }
+    LaunchedEffect(today) {
+        val untilMidnight = Duration.between(LocalDateTime.now(), LocalDate.now().plusDays(1).atStartOfDay())
+        delay(untilMidnight.toMillis() + 1_000)
+        today = LocalDate.now().toEpochDay()
+    }
     val drawn = Draw.daily(today, state.reversals)
     val kept = state.entries.firstOrNull { it.spread == Spread.DAILY && it.epochDay == today }
     val position = stringResource(R.string.pos_daily)
