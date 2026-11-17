@@ -4,10 +4,14 @@ Tarot collects nothing and sends nothing anywhere. It asks for no permissions, a
 internet permission, so it cannot.
 
 It keeps, in its own private storage on the phone: the journal of readings (each one's date,
-spread, cards, orientation and note) and its one setting, reversed cards on or off. None of it is
-backed up by the app, and uninstalling it removes all of it.
+spread, cards, orientation and note) and its two settings, reversed cards and dark mode, on or
+off. None of it is backed up by the app, and uninstalling it removes all of it.
 
-**Export the journal** writes a copy to a file you choose through the phone's own file picker,
+If Home (`com.wanderwildwood.iori`) is installed, Tarot asks it whether its dark mode switch is
+on, a yes or no, keeps the answer beside its settings, and sends nothing to it.
+
+**Export the journal** writes a copy to a file you choose through a file picker (Cabinet's, if
+it is installed, otherwise the phone's own),
 and only when you ask. **Restore a journal** reads a file you pick the same way and adds its readings to the journal; it checks the whole file first and changes nothing if the file is wrong.
 
 The About dialog's addresses (the source, the author's site and the donation page) open in your browser, and Write to email@wanderthe.dev opens your email app, only when you press them. The app itself never goes online.

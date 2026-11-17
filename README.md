@@ -24,8 +24,10 @@ It will install on any Android 12 device.
   tap, a pinch zooms to the nearest step, and a drag moves the zoomed card. Each step is one
   redraw; nothing follows the finger.
 - **Settings** turns reversed cards on or off (on by default; off, every card is upright, today's
-  too), opens a short **Guide** to the deck and the spreads, and exports the journal as a JSON
-  file through the phone's own file picker, and restores one (adding what is not there yet).
+  too) and dark mode (it follows Home's switch when Home is on the phone), opens a short
+  **Guide** to the deck and the spreads, and exports the journal as a JSON file through a file
+  picker (Cabinet's, if it is installed, otherwise the phone's own), and restores one (adding
+  what is not there yet).
 
 Cards are shuffled with `SecureRandom`. The card for a day is worked out from the date alone, so
 it needs nothing stored and nothing fetched.

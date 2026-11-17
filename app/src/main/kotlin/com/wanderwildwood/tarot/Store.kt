@@ -8,7 +8,7 @@ import java.io.FileOutputStream
 import java.io.IOException
 
 /**
- * What the app keeps, all of it on the phone: the one setting in a preferences file, and the
+ * What the app keeps, all of it on the phone: the reversed-cards setting in a preferences file, and the
  * journal as one JSON file in the app's private storage, rewritten whole on each change (a
  * temporary file renamed over it, so a write cut short cannot leave half a journal).
  */
