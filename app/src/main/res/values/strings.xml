@@ -115,6 +115,7 @@
     <string name="restore_unreadable">That file could not be read. Nothing was changed.</string>
     <string name="export_done">The journal is saved.</string>
     <string name="export_failed">The journal could not be saved there.</string>
+    <string name="no_file_app">No app here can save or open a file.</string>
     <string name="journal_not_saved">That could not be saved. The phone may be full.</string>
     <string name="journal_set_aside">The journal could not be read, so a new one was begun. The old file is kept in the app.</string>
     <string name="export_file_name">tarot-journal.json</string>

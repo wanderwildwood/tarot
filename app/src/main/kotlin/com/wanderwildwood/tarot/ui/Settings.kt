@@ -1,5 +1,6 @@
 package com.wanderwildwood.tarot.ui
 
+import android.content.ActivityNotFoundException
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.foundation.layout.Spacer
@@ -43,8 +44,9 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
         if (uri == null) return@rememberLauncherForActivityResult
         val text = runCatching {
             context.contentResolver.openInputStream(uri)?.use { s ->
-                val bytes = s.readBytes()
-                if (bytes.size > 20 * 1024 * 1024) null else String(bytes, Charsets.UTF_8)
+                // Read no further than the cap, so a huge file is turned down without being held.
+                val bytes = readAtMost(s, RESTORE_CAP + 1)
+                if (bytes.size > RESTORE_CAP) null else String(bytes, Charsets.UTF_8)
             }
         }.getOrNull()
         val message = if (text == null) {
@@ -101,12 +103,20 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
             item(key = "guide") { SettingRow(stringResource(R.string.settings_guide), null, onGuide) }
             item(key = "export") {
                 SettingRow(stringResource(R.string.settings_export), stringResource(R.string.settings_export_note)) {
-                    save.launch(fileName)
+                    try {
+                        save.launch(fileName)
+                    } catch (e: ActivityNotFoundException) {
+                        Notice.say(context, R.string.no_file_app)
+                    }
                 }
             }
             item(key = "restore") {
                 SettingRow(stringResource(R.string.settings_restore), stringResource(R.string.settings_restore_note)) {
-                    runCatching { restore.launch(arrayOf("application/json", "text/plain", "application/octet-stream")) }
+                    try {
+                        restore.launch(arrayOf("application/json", "text/plain", "application/octet-stream"))
+                    } catch (e: ActivityNotFoundException) {
+                        Notice.say(context, R.string.no_file_app)
+                    }
                 }
             }
         }
@@ -166,4 +176,19 @@ fun GuideScreen(onBack: () -> Unit) {
             }
         }
     }
+}
+
+/** The largest backup file a restore reads. */
+private const val RESTORE_CAP = 20 * 1024 * 1024
+
+/** Up to [limit] bytes of [input]; InputStream.readNBytes(int) is newer than this app's Android. */
+internal fun readAtMost(input: java.io.InputStream, limit: Int): ByteArray {
+    val out = java.io.ByteArrayOutputStream()
+    val buf = ByteArray(64 * 1024)
+    while (out.size() < limit) {
+        val n = input.read(buf, 0, minOf(buf.size, limit - out.size()))
+        if (n < 0) break
+        out.write(buf, 0, n)
+    }
+    return out.toByteArray()
 }
