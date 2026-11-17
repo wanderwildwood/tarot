@@ -117,7 +117,7 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
                     HouseButton(stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit), onClick = { editing = true }, modifier = WideRow)
                     if (entry.spread != Spread.DAILY) {
                         HouseButton(stringResource(R.string.draw_again), modifier = WideRow, onClick = {
-                            replace(Screen.Reading(state.draw(entry.spread).id))
+                            state.draw(entry.spread)?.let { replace(Screen.Reading(it.id)) }
                         })
                     }
                     ArmedRow(stringResource(R.string.delete_reading), stringResource(R.string.delete_reading_armed)) {

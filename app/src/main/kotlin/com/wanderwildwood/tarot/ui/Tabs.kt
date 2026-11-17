@@ -140,7 +140,7 @@ fun SpreadTab(state: AppState, go: (Screen) -> Unit) {
                 Column(
                     Modifier
                         .fillMaxWidth()
-                        .clickable { go(Screen.Reading(state.draw(s).id)) }
+                        .clickable { state.draw(s)?.let { go(Screen.Reading(it.id)) } }
                         .testTag("spread_${s.key}")
                         .padding(horizontal = SIDE, vertical = 16.dp),
                 ) {

@@ -8,6 +8,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
@@ -40,7 +41,7 @@ sealed interface Screen {
 }
 
 /** The journal and the setting, held so a change redraws what shows them. */
-class AppState(val store: Store) {
+class AppState(val store: Store, private val notSaved: String = "") {
     var version by mutableIntStateOf(0)
         private set
     val entries get() = version.let { store.entries() }
@@ -51,35 +52,41 @@ class AppState(val store: Store) {
     /** Adds the readings of a restored journal; returns how many were new. */
     fun restore(readings: List<Entry>): Int = store.merge(readings).also { version++ }
 
-    fun put(e: Entry) { store.put(e); version++ }
+    /** Keeps [e]; says so on screen, and returns false, when it could not be saved. */
+    fun put(e: Entry): Boolean = store.put(e).also { ok ->
+        version++
+        if (!ok) Notice.say(notSaved)
+    }
     /** The reading just deleted, kept until the next thing is done so it can be put back. */
     var deleted by mutableStateOf<Entry?>(null)
         private set
 
     fun delete(id: Long) {
-        deleted = store.entries().firstOrNull { it.id == id }
-        store.delete(id)
+        val gone = store.entries().firstOrNull { it.id == id }
+        if (store.delete(id)) deleted = gone else Notice.say(notSaved)
         version++
     }
     fun undelete() { deleted?.let { put(it) }; deleted = null }
     fun forgetDeleted() { deleted = null }
 
-    /** Draws [spread] afresh and keeps it in the journal straight away. */
-    fun draw(spread: Spread): Entry {
+    /** Draws [spread] afresh and keeps it in the journal straight away; null if it could not be. */
+    fun draw(spread: Spread): Entry? {
         val e = Entry(
             id = maxOf(System.currentTimeMillis(), (store.entries().maxOfOrNull { it.id } ?: 0) + 1),
             epochDay = LocalDate.now().toEpochDay(),
             spread = spread,
             cards = Draw.cards(spread.size, store.reversals),
         )
-        put(e)
-        return e
+        return if (put(e)) e else null
     }
 }
 
 @Composable
 fun TarotApp(store: Store) {
-    val state = remember { AppState(store) }
+    val notSaved = stringResource(R.string.journal_not_saved)
+    val setAside = stringResource(R.string.journal_set_aside)
+    val state = remember { AppState(store, notSaved) }
+    LaunchedEffect(Unit) { if (store.setAside) Notice.say(setAside) }
     val stack = remember { mutableStateListOf<Screen>(Screen.Tabs) }
     var tab by remember { mutableIntStateOf(0) }
     var about by remember { mutableStateOf(false) }
