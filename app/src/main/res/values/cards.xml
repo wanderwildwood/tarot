@@ -131,7 +131,7 @@
     <string name="card_m20_up_keys">Awakening, reckoning, a call</string>
     <string name="card_m20_up">A trumpet sounds and the figures rise. The card is about waking up to something, taking stock of the past, and answering a call to change. It asks what has been heard.</string>
     <string name="card_m20_rev_keys">Self-doubt, a call ignored</string>
-    <string name="card_m20_rev">The call is heard but not answered, or judgement turns harsh toward oneself. Old things may be weighed without being let go. It asks for honesty without condemnation.</string>
+    <string name="card_m20_rev">The call is heard but not answered, or judgment turns harsh toward oneself. Old things may be weighed without being let go. It asks for honesty without condemnation.</string>
     <!-- The World -->
     <string name="card_m21_name">The World</string>
     <string name="card_m21_up_keys">Completion, wholeness, arrival</string>
@@ -176,7 +176,7 @@
     <string name="card_wands06_rev">Success feels hollow, or the recognition does not come. Confidence may wobble. It asks what success would mean without the crowd.</string>
     <!-- Seven of Wands -->
     <string name="card_wands07_name">Seven of Wands</string>
-    <string name="card_wands07_up_keys">Standing firm, defence, conviction</string>
+    <string name="card_wands07_up_keys">Standing firm, defense, conviction</string>
     <string name="card_wands07_up">Holding high ground against many. The card is about defending a position and keeping courage when outnumbered. It asks what is worth standing up for.</string>
     <string name="card_wands07_rev_keys">Overwhelm, giving ground</string>
     <string name="card_wands07_rev">The pressure is too much, or a position is given up too easily. It may be time to rest, or to choose a smaller ground to hold.</string>
@@ -381,13 +381,13 @@
     <!-- Queen of Swords -->
     <string name="card_swords13_name">Queen of Swords</string>
     <string name="card_swords13_up_keys">Clear thinking, independence, honesty</string>
-    <string name="card_swords13_up">A queen with a raised sword, hand held out. The card is about directness, sharp perception and judgement learned through experience. She sees clearly and says so.</string>
+    <string name="card_swords13_up">A queen with a raised sword, hand held out. The card is about directness, sharp perception and judgment learned through experience. She sees clearly and says so.</string>
     <string name="card_swords13_rev_keys">Coldness, harshness</string>
     <string name="card_swords13_rev">Clarity turns cold or cutting. It asks for directness with care.</string>
     <!-- King of Swords -->
     <string name="card_swords14_name">King of Swords</string>
     <string name="card_swords14_up_keys">Intellect, authority, truth</string>
-    <string name="card_swords14_up">A king seated facing forward, sword upright. The card is about fair judgement, reason and clear authority. Decisions are made by thought, not mood.</string>
+    <string name="card_swords14_up">A king seated facing forward, sword upright. The card is about fair judgment, reason and clear authority. Decisions are made by thought, not mood.</string>
     <string name="card_swords14_rev_keys">Misused authority, cruelty</string>
     <string name="card_swords14_rev">Reason is used to control or hurt. It asks for fairness that remembers the person.</string>
     <!-- Ace of Pentacles -->
