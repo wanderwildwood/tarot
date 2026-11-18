@@ -189,10 +189,13 @@ private fun Layout(entry: Entry, modifier: Modifier, onCard: (Int) -> Unit) {
     }
 }
 
+/** [onSave] returns false when the note could not be kept; the dialog then stays open with it. */
 @Composable
-fun NoteDialog(start: String, onDismiss: () -> Unit, onSave: (String) -> Unit) {
+fun NoteDialog(start: String, onDismiss: () -> Unit, onSave: (String) -> Boolean) {
     var text by remember { mutableStateOf(TextFieldValue(start, TextRange(start.length))) }
     val field = remember { FocusRequester() }
+    // Said inside the dialog: the screen's own notice is under the dialog's window.
+    var failed by remember { mutableStateOf(false) }
     EInkDialog(onDismiss = onDismiss) {
         // The field is what the dialog is for: it takes the focus as it opens and the keyboard
         // comes up. Asked from inside the dialog, a frame after it is drawn: the field lives in
@@ -213,10 +216,13 @@ fun NoteDialog(start: String, onDismiss: () -> Unit, onSave: (String) -> Unit) {
             maxLines = 6,
             modifier = Modifier.fillMaxWidth().focusRequester(field).testTag("note_field"),
         )
+        if (failed) {
+            Spacer(Modifier.height(8.dp))
+            TextMMD(text = stringResource(R.string.journal_not_saved), style = MaterialTheme.typography.bodyMedium)
+        }
         Spacer(Modifier.height(12.dp))
         HouseButton(stringResource(R.string.save), on = true, modifier = WideRow, onClick = {
-            onSave(text.text)
-            onDismiss()
+            if (onSave(text.text)) onDismiss() else failed = true
         })
         HouseButton(stringResource(R.string.cancel), onClick = onDismiss, modifier = WideRow)
     }
