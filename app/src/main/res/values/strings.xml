@@ -113,6 +113,7 @@
     <string name="restore_newer">That journal was made by a newer version of this app. Update the app and try again. Nothing was changed.</string>
     <string name="restore_damaged">That journal file is damaged, so none of it was used. Nothing was changed.</string>
     <string name="restore_unreadable">That file could not be read. Nothing was changed.</string>
+    <string name="restore_not_saved">The readings could not be saved. The phone may be full. Nothing was changed.</string>
     <string name="export_done">The journal is saved.</string>
     <string name="export_failed">The journal could not be saved there.</string>
     <string name="no_file_app">No app here can save or open a file.</string>

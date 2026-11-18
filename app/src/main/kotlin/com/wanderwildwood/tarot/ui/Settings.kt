@@ -22,6 +22,7 @@ import com.mudita.mmd.components.text.TextMMD
 import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
 import com.wanderwildwood.tarot.R
 import com.wanderwildwood.tarot.deck.JournalCodec
+import java.io.IOException
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -64,6 +65,9 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
                         JournalCodec.JournalException.Kind.DAMAGED -> R.string.restore_damaged
                     },
                 )
+            } catch (e: IOException) {
+                // The file was read; the journal it adds to could not be saved.
+                context.getString(R.string.restore_not_saved)
             } catch (e: Exception) {
                 context.getString(R.string.restore_unreadable)
             }

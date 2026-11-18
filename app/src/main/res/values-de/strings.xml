@@ -118,6 +118,7 @@
     <string name="restore_newer">Dieses Journal stammt aus einer neueren Version dieser App. Aktualisiere die App und versuche es noch einmal. Nichts wurde geändert.</string>
     <string name="restore_damaged">Diese Journal-Datei ist beschädigt, deshalb wurde nichts davon verwendet. Nichts wurde geändert.</string>
     <string name="restore_unreadable">Diese Datei konnte nicht gelesen werden. Nichts wurde geändert.</string>
+    <string name="restore_not_saved">Die Lesungen konnten nicht gespeichert werden. Vielleicht ist das Telefon voll. Nichts wurde geändert.</string>
 
     <!-- ============================================================ -->
     <!-- Guide -->
