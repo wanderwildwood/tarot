@@ -66,7 +66,8 @@ class AppState(val store: Store, private val notSaved: String = "") {
         if (store.delete(id)) deleted = gone else Notice.say(notSaved)
         version++
     }
-    fun undelete() { deleted?.let { put(it) }; deleted = null }
+    /** Puts the deleted reading back; if that could not be saved, Undo stays to try again. */
+    fun undelete() { deleted?.let { if (put(it)) deleted = null } }
     fun forgetDeleted() { deleted = null }
 
     /** Draws [spread] afresh and keeps it in the journal straight away; null if it could not be. */
