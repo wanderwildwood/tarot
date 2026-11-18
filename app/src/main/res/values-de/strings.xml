@@ -108,9 +108,13 @@
     <string name="export_failed">Das Journal konnte dort nicht gespeichert werden.</string>
     <string name="no_file_app">Keine App hier kann eine Datei speichern oder öffnen.</string>
     <string name="journal_not_saved">Das konnte nicht gespeichert werden. Vielleicht ist das Telefon voll.</string>
-    <string name="journal_set_aside">Das Journal konnte nicht gelesen werden, darum wurde ein neues begonnen. Die alte Datei bleibt in der App erhalten.</string>
-    <string name="journal_stuck">Das Journal konnte nicht gelesen werden. Es bleibt, wie es ist, und bis die App wieder geöffnet wird, kann nichts Neues gespeichert werden.</string>
+    <string name="journal_set_aside">Das Journal konnte nicht gelesen werden, darum wurde ein neues begonnen. Die alte Datei bleibt erhalten und kann in den Einstellungen exportiert werden.</string>
+    <string name="journal_stuck">Das Journal konnte nicht gelesen werden. Es bleibt, wie es ist, und bis die App wieder geöffnet wird, kann nichts Neues gespeichert werden. In den Einstellungen kann es exportiert werden.</string>
     <string name="export_file_name">tarot-journal.json</string>
+    <string name="settings_export_damaged">Beschädigtes Journal exportieren</string>
+    <string name="settings_export_damaged_note">Zuletzt geschrieben am %1$s. Das Journal, das nicht gelesen werden konnte, unverändert gespeichert, wo du willst, damit es repariert und dann wiederhergestellt werden kann. Nur zu sehen, solange diese Datei aufbewahrt wird.</string>
+    <string name="export_damaged_done">Das beschädigte Journal ist gespeichert.</string>
+    <string name="export_damaged_file_name">tarot-journal-beschaedigt.json</string>
     <string name="settings_restore">Ein Journal wiederherstellen</string>
     <string name="settings_restore_note">Liest eine Datei, die mit „Journal exportieren“ gespeichert wurde, und fügt die Lesungen hinzu, die noch nicht hier sind. Lesungen, die schon im Journal stehen, werden weder geändert noch entfernt.</string>
     <string name="restore_done">Wiederhergestellt. %1$d Lesungen hinzugefügt, %2$d waren schon da.</string>

@@ -53,6 +53,25 @@ class JournalFile(private val dir: File) {
         return bad
     }
 
+    /**
+     * The journal files that could not be read and are still kept, so they can be saved out as
+     * they are: those moved aside, in the order they were set aside, then the journal itself
+     * while it is stuck. Empty when there are none.
+     */
+    fun damaged(): List<File> {
+        entries()
+        val aside = dir.listFiles()?.filter { it.isFile && badNumber(it.name) != null }.orEmpty()
+            .sortedBy { badNumber(it.name) }
+        return if (stuck && file.isFile) aside + file else aside
+    }
+
+    /** 1 for journal.json.bad, n for journal.json.bad-n, null for any other name. */
+    private fun badNumber(name: String): Int? = when {
+        name == "$NAME.bad" -> 1
+        name.startsWith("$NAME.bad-") -> name.removePrefix("$NAME.bad-").toIntOrNull()
+        else -> null
+    }
+
     fun entry(id: Long) = entries().firstOrNull { it.id == id }
 
     /** Each change returns false when it could not be saved; the journal is then as it was. */

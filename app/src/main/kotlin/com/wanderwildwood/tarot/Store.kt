@@ -21,6 +21,9 @@ class Store(context: Context) {
     /** A journal that could not be read is still in its place, and nothing will be saved over it. */
     val stuck get() = journal.stuck
 
+    /** The journal files that could not be read and are kept, to be saved out as they are. */
+    fun damaged(): List<java.io.File> = journal.damaged()
+
     /** Newest first. */
     fun entries(): List<Entry> = journal.entries()
 

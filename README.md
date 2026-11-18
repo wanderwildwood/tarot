@@ -27,7 +27,8 @@ It will install on any Android 12 device.
   too) and dark mode (it follows Home's switch when Home is on the phone), opens a short
   **Guide** to the deck and the spreads, and exports the journal as a JSON file through a file
   picker (Cabinet's, if it is installed, otherwise the phone's own), and restores one (adding
-  what is not there yet).
+  what is not there yet). If the journal file is ever damaged, it is kept aside and a new one
+  begun, and Settings shows a row that saves the damaged file as it is, to be mended and restored.
 
 Cards are shuffled with `SecureRandom`. The card for a day is worked out from the date alone, so
 it needs nothing stored and nothing fetched.

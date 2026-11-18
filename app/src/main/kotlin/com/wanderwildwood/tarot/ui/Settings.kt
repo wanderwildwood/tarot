@@ -12,6 +12,11 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -22,7 +27,10 @@ import com.mudita.mmd.components.text.TextMMD
 import com.mudita.mmd.components.top_app_bar.TopAppBarMMD
 import com.wanderwildwood.tarot.R
 import com.wanderwildwood.tarot.deck.JournalCodec
+import java.io.File
 import java.io.IOException
+import java.time.Instant
+import java.time.ZoneId
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -74,7 +82,26 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
         }
         Notice.say(message)
     }
+    // A journal that could not be read, saved out byte for byte so it can be mended and restored.
+    // Its path is kept across the picker, even if the app is closed behind it.
+    var damagedPicked by rememberSaveable { mutableStateOf<String?>(null) }
+    val saveDamaged = rememberLauncherForActivityResult(FilesCreateDocument("application/json")) { uri ->
+        val source = damagedPicked?.let(::File)
+        damagedPicked = null
+        if (uri == null || source == null) return@rememberLauncherForActivityResult
+        runCatching {
+            source.inputStream().use { input ->
+                context.contentResolver.openOutputStream(uri, "wt")?.use { input.copyTo(it) } ?: error("no stream")
+            }
+        }.onSuccess {
+            Notice.say(context, R.string.export_damaged_done)
+        }.onFailure {
+            Notice.say(context, R.string.export_failed)
+        }
+    }
+    val damaged = remember(state.version) { state.store.damaged() }
     val fileName = stringResource(R.string.export_file_name)
+    val damagedName = stringResource(R.string.export_damaged_file_name)
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.surface,
@@ -111,6 +138,23 @@ fun SettingsScreen(state: AppState, onBack: () -> Unit, onAbout: () -> Unit, onG
                         save.launch(fileName)
                     } catch (e: ActivityNotFoundException) {
                         Notice.say(context, R.string.no_file_app)
+                    }
+                }
+            }
+            for (bad in damaged) {
+                item(key = "damaged:${bad.name}") {
+                    val day = Instant.ofEpochMilli(bad.lastModified()).atZone(ZoneId.systemDefault()).toLocalDate().toEpochDay()
+                    SettingRow(
+                        stringResource(R.string.settings_export_damaged),
+                        stringResource(R.string.settings_export_damaged_note, shortDate(day)),
+                    ) {
+                        damagedPicked = bad.path
+                        try {
+                            saveDamaged.launch(damagedName)
+                        } catch (e: ActivityNotFoundException) {
+                            damagedPicked = null
+                            Notice.say(context, R.string.no_file_app)
+                        }
                     }
                 }
             }

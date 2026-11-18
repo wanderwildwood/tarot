@@ -118,9 +118,14 @@
     <string name="export_failed">The journal could not be saved there.</string>
     <string name="no_file_app">No app here can save or open a file.</string>
     <string name="journal_not_saved">That could not be saved. The phone may be full.</string>
-    <string name="journal_set_aside">The journal could not be read, so a new one was begun. The old file is kept in the app.</string>
-    <string name="journal_stuck">The journal could not be read. It is left as it is, and nothing new can be kept until the app is opened again.</string>
+    <string name="journal_set_aside">The journal could not be read, so a new one was begun. The old file is kept, and Settings can export it.</string>
+    <string name="journal_stuck">The journal could not be read. It is left as it is, and nothing new can be kept until the app is opened again. Settings can export it.</string>
     <string name="export_file_name">tarot-journal.json</string>
+    <string name="settings_export_damaged">Export the damaged journal</string>
+    <!-- %1$s: the date the damaged file was last written -->
+    <string name="settings_export_damaged_note">Last written %1$s. The journal that could not be read, saved as it is where you choose, so it can be mended and then restored. Shown only while that file is kept.</string>
+    <string name="export_damaged_done">The damaged journal is saved.</string>
+    <string name="export_damaged_file_name">tarot-journal-damaged.json</string>
 
     <!-- ============================================================ -->
     <!-- Guide -->

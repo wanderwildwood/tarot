@@ -63,4 +63,36 @@ class JournalFileTest {
         }
         assertEquals("{ damaged", file.readText())
     }
+
+    @Test fun noDamagedFilesWhenTheJournalReads() {
+        val dir = tmp.newFolder()
+        val j = JournalFile(dir)
+        assertTrue(j.put(reading))
+        assertEquals(emptyList<File>(), JournalFile(dir).damaged())
+    }
+
+    @Test fun damagedFilesAreOfferedInTheOrderTheyWereSetAside() {
+        val dir = tmp.newFolder()
+        File(dir, "journal.json.bad").writeText("first")
+        File(dir, "journal.json.bad-10").writeText("tenth")
+        File(dir, "journal.json.bad-2").writeText("second")
+        File(dir, "journal.json.bak").writeText("not ours")
+        File(dir, "journal.json").writeText("eleventh {")
+        val names = JournalFile(dir).damaged().map { it.name }
+        assertEquals(listOf("journal.json.bad", "journal.json.bad-2", "journal.json.bad-3", "journal.json.bad-10"), names)
+        assertEquals("eleventh {", File(dir, "journal.json.bad-3").readText())
+    }
+
+    @Test fun aStuckJournalIsOfferedAsItIs() {
+        val dir = tmp.newFolder()
+        val file = File(dir, "journal.json")
+        file.writeText("{ damaged")
+        dir.setWritable(false)
+        try {
+            assumeFalse(runCatching { File(dir, "probe").createNewFile() }.getOrDefault(false))
+            assertEquals(listOf(file), JournalFile(dir).damaged())
+        } finally {
+            dir.setWritable(true)
+        }
+    }
 }
