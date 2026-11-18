@@ -135,7 +135,7 @@
     <!-- The World -->
     <string name="card_m21_name">The World</string>
     <string name="card_m21_up_keys">Completion, wholeness, arrival</string>
-    <string name="card_m21_up">A cycle closes and things come together. The card is about fulfilment, integration and the satisfaction of a thing done. The dancer moves freely within the wreath.</string>
+    <string name="card_m21_up">A cycle closes and things come together. The card is about fulfillment, integration and the satisfaction of a thing done. The dancer moves freely within the wreath.</string>
     <string name="card_m21_rev_keys">Unfinished, loose ends</string>
     <string name="card_m21_rev">Something is nearly complete but not quite. A last step may be missing, or the ending is being put off. It asks what is needed to close the circle.</string>
     <!-- Ace of Wands -->
@@ -279,7 +279,7 @@
     <!-- Ten of Cups -->
     <string name="card_cups10_name">Ten of Cups</string>
     <string name="card_cups10_up_keys">Harmony, family, lasting happiness</string>
-    <string name="card_cups10_up">A family under a rainbow of cups. The card is about emotional fulfilment, home and a peace shared with others. It is a picture of things going well together.</string>
+    <string name="card_cups10_up">A family under a rainbow of cups. The card is about emotional fulfillment, home and a peace shared with others. It is a picture of things going well together.</string>
     <string name="card_cups10_rev_keys">Disconnection, a strained home</string>
     <string name="card_cups10_rev">Harmony at home is out of tune, or the picture does not match the feeling. It asks what would bring people back together.</string>
     <!-- Page of Cups -->
@@ -459,7 +459,7 @@
     <!-- Knight of Pentacles -->
     <string name="card_pentacles12_name">Knight of Pentacles</string>
     <string name="card_pentacles12_up_keys">Reliability, routine, hard work</string>
-    <string name="card_pentacles12_up">A rider on a heavy horse, standing still in a ploughed field. The card is about patience, method and seeing things through, steadily.</string>
+    <string name="card_pentacles12_up">A rider on a heavy horse, standing still in a plowed field. The card is about patience, method and seeing things through, steadily.</string>
     <string name="card_pentacles12_rev_keys">Stagnation, stubbornness</string>
     <string name="card_pentacles12_rev">Steadiness has become a rut. It asks whether the routine still serves.</string>
     <!-- Queen of Pentacles -->
