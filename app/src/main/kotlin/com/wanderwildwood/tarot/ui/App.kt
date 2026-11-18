@@ -85,8 +85,13 @@ class AppState(val store: Store, private val notSaved: String = "") {
 fun TarotApp(store: Store) {
     val notSaved = stringResource(R.string.journal_not_saved)
     val setAside = stringResource(R.string.journal_set_aside)
+    val stuck = stringResource(R.string.journal_stuck)
     val state = remember { AppState(store, notSaved) }
-    LaunchedEffect(Unit) { if (store.setAside) Notice.say(setAside) }
+    LaunchedEffect(Unit) {
+        // Read first, so a damaged journal is found here whichever tab opens.
+        store.entries()
+        if (store.stuck) Notice.say(stuck) else if (store.setAside) Notice.say(setAside)
+    }
     val stack = remember { mutableStateListOf<Screen>(Screen.Tabs) }
     var tab by remember { mutableIntStateOf(0) }
     var about by remember { mutableStateOf(false) }

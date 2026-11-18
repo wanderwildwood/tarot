@@ -109,6 +109,7 @@
     <string name="no_file_app">Keine App hier kann eine Datei speichern oder öffnen.</string>
     <string name="journal_not_saved">Das konnte nicht gespeichert werden. Vielleicht ist das Telefon voll.</string>
     <string name="journal_set_aside">Das Journal konnte nicht gelesen werden, darum wurde ein neues begonnen. Die alte Datei bleibt in der App erhalten.</string>
+    <string name="journal_stuck">Das Journal konnte nicht gelesen werden. Es bleibt, wie es ist, und bis die App wieder geöffnet wird, kann nichts Neues gespeichert werden.</string>
     <string name="export_file_name">tarot-journal.json</string>
     <string name="settings_restore">Ein Journal wiederherstellen</string>
     <string name="settings_restore_note">Liest eine Datei, die mit „Journal exportieren“ gespeichert wurde, und fügt die Lesungen hinzu, die noch nicht hier sind. Lesungen, die schon im Journal stehen, werden weder geändert noch entfernt.</string>
