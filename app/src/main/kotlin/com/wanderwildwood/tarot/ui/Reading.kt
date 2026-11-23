@@ -71,7 +71,9 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
             )
         },
     ) { padding ->
-        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading"), showCutRow = true) {
+        val fit = rememberWholeLineFit()
+        val body = MaterialTheme.typography.bodyMedium
+        PagedColumn(Modifier.padding(padding).fillMaxSize().testTag("reading").wholeLinePage(fit), showCutRow = true) {
             item {
                 TextMMD(
                     text = longDate(entry.epochDay),
@@ -107,12 +109,15 @@ fun ReadingScreen(state: AppState, id: Long, onBack: () -> Unit, go: (Screen) ->
                     Spacer(Modifier.height(12.dp))
                 }
             }
-            item(key = "note") {
+            if (entry.note.isNotBlank()) {
+                item(key = "note-head") { Column(Modifier.padding(horizontal = SIDE)) { Heading(stringResource(R.string.note)) } }
+                // A long note in rows of whole lines, so a turn never opens on half a line.
+                wholeLineItems("note", entry.note, body, fit) { run, _, textModifier ->
+                    TextMMD(text = run, style = body, modifier = Modifier.padding(horizontal = SIDE).then(textModifier))
+                }
+            }
+            item(key = "note-actions") {
                 Column(Modifier.padding(horizontal = SIDE)) {
-                    if (entry.note.isNotBlank()) {
-                        Heading(stringResource(R.string.note))
-                        TextMMD(text = entry.note, style = MaterialTheme.typography.bodyMedium)
-                    }
                     Spacer(Modifier.height(8.dp))
                     HouseButton(stringResource(if (entry.note.isBlank()) R.string.note_add else R.string.note_edit), onClick = { editing = true }, modifier = WideRow)
                     if (entry.spread != Spread.DAILY) {
