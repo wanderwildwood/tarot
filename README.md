@@ -6,8 +6,8 @@ It will install on any Android 12 device.
 
 | | |
 |---|---|
-| ![The three spreads](screenshots/1-spread.png) | ![The deck, card by card](screenshots/2-cards.png) |
-| ![A card on its own page](screenshots/3-card.png) | ![Settings: reversed cards, the guide, the journal export](screenshots/4-settings.png) |
+| ![Today's card](screenshots/1-today.png) | ![Today's card, with what it means](screenshots/2-meaning.png) |
+| ![A three-card spread: past, present, future](screenshots/3-spread.png) | ![The deck, card by card](screenshots/4-cards.png) |
 
 ## Using it
 
